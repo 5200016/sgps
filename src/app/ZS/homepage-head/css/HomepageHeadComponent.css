@@ -32,65 +32,6 @@ nav ul li a {
 nav li a:hover {
   background-color: #eee;
 }
-
-/* 图片处理 */
-.fruit-middle-one-bottom-right-one-div,
-.fruit-middle-one-bottom-right-one-img{
-  display: inline-block;
-  overflow: hidden;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-.fruit-middle-one-bottom-right-one-img:hover{
-  -webkit-transform: scale(1.11);
-  transform: scale(1.11);
-}
-.fruit-middle-one-bottom-right-two-div,
-.fruit-middle-two-bottom-right-two-img{
-  display: inline-block;
-  overflow: hidden;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-.fruit-middle-two-bottom-right-two-img:hover{
-  -webkit-transform: scale(1.11);
-  transform: scale(1.11);
-}
-.fruit-middle-one-bottom-left,
-.fruit-middle-one-bottom-left-img{
-  display: inline-block;
-  overflow: hidden;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-.fruit-middle-one-bottom-left-img:hover{
-  -webkit-transform: scale(1.11);
-  transform: scale(1.11);
-}
-
-/* 图片遮盖 */
-.info {
-  width:31%;
-  height: 600px;
-  float: left;
-  position: absolute;
-  text-align: center;
-  -webkit-backface-visibility: hidden;/* 隐藏旋转元素的背面*/
-  backface-visibility: hidden;
-  background: white;   /*后面这个0.6是指的背景的透明度*/
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;   /*规定提示信息怎样出现ease-in-out以慢速度开始和结束*/
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-a:hover .info {
-  opacity: 0.86;    /*有opacity有0变成1*/
-}
-.info-look:hover{
-  cursor: pointer;
-  background-color: #65A031;
-  color: white;
-}
 /* 首页头部 */
 .homepage-head{
   width: 100%;
