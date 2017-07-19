@@ -18,6 +18,7 @@ import { FixedPackagesComponent } from './ZS/fixed-packages/FixedPackagesCompone
 import { CustomPackagesComponent } from './ZS/custom-packages/CustomPackagesComponent';
 import { HomepageComponent } from './ZS/homepage/HomepageComponent';
 import { MineComponent } from './ZS/mine/MineComponent';
+import { ProductDetailsComponent } from './ZS/product-details/product-details.component';
 
 declare var $: any;
 @NgModule({
@@ -35,7 +36,8 @@ declare var $: any;
     FixedPackagesComponent,
     CustomPackagesComponent,
     MineComponent,
-    HomepageComponent
+    HomepageComponent,
+    ProductDetailsComponent
   ],
   imports: [
     KSSwiperModule,
