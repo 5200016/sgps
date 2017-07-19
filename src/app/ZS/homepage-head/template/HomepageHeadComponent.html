@@ -1,0 +1,38 @@
+<div class="homepage-head">
+  <div class="homepage-head-first">
+    <div class="homepage-head-first-small">
+       <a class="homepage-head-first-small-one-a"><img class="homepage-head-first-small-one-img" src="../../../../assets/icon/my.png"><label class="homepage-head-first-small-one-lab">请登陆</label></a>
+       <a class="homepage-head-first-small-one-a"><img class="homepage-head-first-small-one-img" src="../../../../assets/icon/register.png"><label class="homepage-head-first-small-one-lab">快速注册</label></a>
+       <a class="homepage-head-first-small-one-a"><img class="homepage-head-first-small-one-img" src="../../../../assets/icon/phone.png"><label class="homepage-head-first-small-one-lab">手机果园</label></a>
+       <a class="homepage-head-first-small-one-a"><img class="homepage-head-first-small-one-img" src="../../../../assets/icon/call.png"><label class="homepage-head-first-small-one-lab">400-720-0770</label></a>
+    </div>
+  </div>
+  <div class="homepage-head-second">
+    <div class="homepage-head-second-small">
+      <div class="homepage-head-second-left">
+           <img class="homepage-head-second-left-img" src="../../../../assets/img/fruit-title.png">
+      </div>
+      <div class="homepage-head-second-two">
+        <div class="input-group" id="input-group-one">
+          <input type="text" class="input-search">
+          <span><img class="input-search-img" src="../../../../assets/fruit/search.png"></span>
+        </div>
+        <nav>
+          <ul>
+            <li><a [routerLink]="['home']">&nbsp;&nbsp;首页&nbsp;&nbsp;|</a></li>
+            <li><a [routerLink]="['fresh-fruit']">&nbsp;&nbsp;鲜果&nbsp;&nbsp;|</a></li>
+            <li><a [routerLink]="['fixed-packages']">&nbsp;&nbsp;固定套餐&nbsp;&nbsp;|</a></li>
+            <li><a [routerLink]="['custom-packages']">&nbsp;&nbsp;自定义套餐&nbsp;&nbsp;|</a></li>
+            <li><a [routerLink]="['mine']">&nbsp;&nbsp;我的中心&nbsp;&nbsp;</a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="homepage-head-three">
+        <label class="homepage-head-three-lab">我的购物车</label>
+        <img class="homepage-head-three-img" src="../../../../assets/fruit/biggouwuche.png">
+    </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

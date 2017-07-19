@@ -1,0 +1,80 @@
+.fruit-login-bottom{
+  width: 100%;
+  height: 230px;
+  border-top: 1px solid #ECECEC;
+}
+.fruit-login-bottom-small{
+  border-bottom: 1px solid #ECECEC;
+  width: 100%;
+  height: 180px;
+}
+.fruit-login-bottom-small-new{
+  width: 1150px;
+  margin: 0 auto;
+  height: 180px;
+}
+.fruit-login-bottom-one{
+  width: 13%;
+  height: 180px;
+  float: left;
+  text-align: center;
+}
+.fruit-login-bottom-one-we{
+  margin-top: 10px;
+}
+.fruit-login-bottom-one-lab{
+  font-size: 14px;
+  margin-top: 10px;
+  color: #666666;
+}
+.fruit-login-bottom-two{
+  width:74%;
+  height: 180px;
+  float: left;
+}
+.fruit-login-bottom-two-first{
+  width:20%;
+  height: 100%;
+  float: left;
+}
+.fruit-login-bottom-two-first-span{
+  display: block;
+  margin-left: 48px;
+  margin-top: 10px;
+}
+.fruit-login-bottom-two-first-span-two{
+  display: block;
+  margin-left: 48px;
+  margin-top: 21px;
+  font-size: 14px;
+  color: #666666;
+}
+.fruit-login-bottom-two-first-span-three{
+  display: block;
+  margin-left: 48px;
+  color: #666666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.fruit-login-bottom-one{
+  width: 13%;
+  height: 180px;
+  float: left;
+  text-align: center;
+}
+.fruit-login-bottom-four{
+  width: 100%;
+  height: 40px;
+  float: left;
+  text-align: center;
+  margin-top: 10px;
+}
+.fruit-login-bottom-four-span{
+  display: block;
+  font-size: 10px;
+  color: #666666;
+}
+.fruit-login-bottom-four-small{
+  width: 1150px;
+  margin: 0 auto;
+}
