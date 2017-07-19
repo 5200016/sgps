@@ -1,0 +1,304 @@
+<!-- 产品详情界面 -->
+<div class="l-content typepage">
+  <!-- 第一部分  头部标题 -->
+  <div class="l-bread">
+    <strong class="l-that">
+      <a routerLink="/home">首页</a>
+    </strong>
+    <span class="l-that">
+       >
+      <a routerLink="/fruit">新鲜水果</a>
+       >
+    </span>
+    <span class="l-this">凤梨</span>
+  </div>
+  <!-- 第二部分 -->
+  <div  id="l-goods">
+    <!-- 焦点图 -->
+    <div id="l-gd-imgs">
+      <!-- 商品图片预览 -->
+        <!--大图-->
+        <div class="l-box" id="l-box">
+          <div id="l-smallBox" class="l-small ">
+            <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg" width="420" height="370"/>
+            <div id="l-mask" class="l-mask"></div>
+          </div>
+          <div id="l-bigBox" class="l-big">
+            <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg" alt="" id="l-bigPic">
+          </div>
+        </div>
+        <!--切换图-->
+      <div id="ifocus_btn">
+        <ul>
+          <li class="current">
+            <a href="#">
+              <img src="http://img.guocool.com/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg"  width="100" height="59">
+            </a>
+          </li>
+          <li class="normal">
+            <a href="#">
+              <img src="http://img.guocool.com/product/2017/06/23/ce887eb685ff4731855c5a33dbfeb674.jpg" width="100" height="59">
+            </a>
+          </li>
+          <li class="normal">
+            <a href="#">
+              <img src="http://img.guocool.com/product/2017/06/23/281b2251e32b4252ba531b902a63b035.jpg" width="100" height="59">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <!--商品信息 -->
+    <div id="l-gd-des">
+      <!--商品id-->
+      <input id="l-gd-des-id" value="" type="hidden">
+      <div id="l-gd-des-name">
+        <h3>台湾凤梨</h3>
+      </div>
+      <!--价格-->
+      <ul id="l-gd-des-pri">
+        <li>
+          商品价格：
+          <span id="l-gdp">￥ 19.90</span>
+        </li>
+      </ul>
+      <!--规格-->
+      <ul id="l-gd-des-spe">
+        <li>规格
+          <span>1kg/个</span>
+        </li>
+        <li>服务
+          <span>由xx负责发货，并提供售后服务。</span>
+        </li>
+      </ul>
+      <!--数量-->
+      <ul id="l-gd-des-num" class="l-clear">
+        <li id="l-gdn-num">数量</li>
+        <li id="l-gd-des-aia">
+          <input  class="l-gda-a min" id="min" name="" type="button" value="-" />
+          <input class="l-text-box" value="1" id="l-gda-inp" maxlength="4" type="text">
+          <input class="l-gda-a add" id="add" name="" type="button" value="+" />
+        </li>
+      </ul>
+      <!--购物车相关功能-->
+      <ul id="l-gd-des-opt" class="l-clear">
+        <li>
+          <a id="l-gdo-buy">立刻购买</a>
+        </li>
+        <li>
+          <div id="l-gdo-car">
+            <i id="l-gdo-car-img"></i>
+            <span>加入购物车</span>
+          </div>
+        </li>
+        <li>
+          <div id="l-gdo-fol">
+            <i id="l-gdo-fol-img"></i>
+            <span>加入收藏</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 产品信息结束 -->
+  <div class="l-gh"></div>
+  <!-- 第三部分 -->
+  <div id="comment-text">
+    <div class="l-left-part">
+      <div id="text_fiexd" class="l-good-details" style="position: relative">
+        <span id="l-jianjie" [ngStyle]="getStyle()" (click)="goodDes()" [class.tab_focus]="textShow==1">商品简介</span>
+        <span id="l-comment" (click)="goodComs()" [class.tab_focus]="textShow==2">
+          顾客评论
+          <b id="l-comment-count">(3)</b>
+        </span>
+        <a href="javascript:;" class="l-btn-lg" title="加入购物车" role="button">
+          <div class="l-car-btn" id="l-car-btn">
+            <i class="l-car-img"></i>
+            <span>加入购物车</span>
+          </div>
+          <div class="l-thefruit" style="display: none;" id="l-thefruit">
+            <div class="l-fruitleft">
+              <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
+            </div>
+            <div class="l-fruitright">
+              <span>台湾凤梨</span>
+              <p>￥19.90 / 1个</p>
+              <p class="l-frnum">X1</p>
+              <div class="anniu" id="anniu">
+                确认
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="l-good-comments">
+        <!-- 商品简介 -->
+        <div [style.display]="textShow==1?'':'none'">
+          <table width="100%" class="l-table">
+            <tbody>
+            <tr>
+              <th width="10%">温馨提示</th>
+              <td width="80%">加工类产品采用健康无添加工艺制成，请您收到后尽快食用</td>
+            </tr>
+              <tr>
+                <th width="10%">产地</th>
+                <td width="80%">南非</td>
+              </tr>
+              <tr>
+                <th width="10%">存储方法</th>
+                <td width="80%">0度</td>
+              </tr>
+              <tr>
+                <th width="10%">营养成分</th>
+                <td width="80%">含有大量的果糖，葡萄糖，维生素A、B、C，磷，柠檬酸和蛋白酶等物</td>
+              </tr>
+              <tr>
+                <th width="10%">功效</th>
+                <td width="80%">有清热解暑、生津止渴、利小便的功效，可用于伤暑、身热烦渴、腹中痞闷、消化不良、小便不利、头昏眼花等症</td>
+              </tr>
+              <tr>
+                <th width="10%">饮食禁忌</th>
+                <td width="80%">
+                  1.不宜与白萝卜同吃，两者同吃，易引起甲状腺肿大。<br/>
+                  2.不宜与牛奶同吃，两者同吃，波罗中的果酸会使牛奶中的蛋白质凝固，影响蛋白质消化吸收。<br/>
+                  3.不宜与鸡蛋同吃，波萝中的果酸与鸡蛋中的蛋白质结合，是蛋白质凝固，不利消化。
+                </td>
+              </tr>
+              <tr>
+                <th width="10%">宜搭</th>
+                <td width="80%">草莓、香蕉</td>
+              </tr>
+              <tr>
+                <th width="10%">食用小知识</th>
+                <td width="80%">
+                  1、削皮后不能直接食用<br/>
+                  菠萝削了皮之后还不能直接食用，因为新鲜菠萝含有一种生物苷，食用时会刺激口腔黏膜，引起麻痒感，咽下去后嗓子会感觉非常不舒服。<br/>
+                  2、菠萝要用盐水泡<br/>
+                  菠萝削皮后，应该用淡盐水浸泡半个小时以上。因为盐可以使蛋白质变性从而破坏掉菠萝蛋白酶。而且盐水还能将菠萝中的生物苷溶解，让菠萝吃起来更可口。</td>
+              </tr>
+            </tbody>
+          </table>
+          <img src="http://img.guocool.com/goodsdescript/2016/06/03/3e56dba7e0494df0ac33c1de048b49ad.jpg" width="100%">
+          <img src="http://img.guocool.com/goodsdescript/2016/06/03/e933c551817646bebe783c7e2160de29.jpg" width="100%">
+        </div>
+        <!-- 顾客评论 -->
+        <div [style.display]="textShow==2?'':'none'">
+          <div class="l-com-title">
+            <div class="l-com-title1">
+              <p>99%</p>
+              <p>好评度</p>
+            </div>
+            <div class="l-com-title2">
+              <div class="l-pl-user">
+                <div>不错呦</div>
+                <div class="l-dj-good">
+                  <div id="l-dj-goodImg" style="width: 99%;"></div>
+                </div>
+                <div id="l-dj-goodRate">99%</div>
+              </div>
+              <div class="l-pl-user">
+                <div>待提高</div>
+                <div class="l-dj-good">
+                  <div id="l-dj-normalImg" style="width: 1%;"></div>
+                </div>
+                <div id="l-dj-normalRate">99%</div>
+              </div>
+              <div class="l-pl-user">
+                <div>小失落</div>
+                <div class="l-dj-good">
+                  <div id="l-dj-badImg" style="width: 0%;"></div>
+                </div>
+                <div id="l-dj-badRate">0%</div>
+              </div>
+            </div>
+            <div class="l-com-title3">
+              <p>发布评论即可获5积分</p>
+              <p>APP上传图片并晒单即可获得5积分。</p>
+            </div>
+          </div>
+          <div class="l-com-user">
+            <div class="l-com-detailTitle">
+              <ul>
+                <li id="l-all-com">
+                  <s class="l-icon" [ngStyle]="getAllcom()"></s>
+                  全部评论（<span> 3</span>）
+                </li>
+                <li id="l-good-com">
+                  <s class="l-icon"></s>
+                  不错呦（<span> 2</span>）
+                </li>
+                <li id="l-normal-com">
+                  <s class="l-icon"></s>
+                  待提高（<span> 1</span>）
+                </li>
+                <li id="l-bad-com">
+                  <s class="l-icon"></s>
+                  小失落（<span> 0</span>）
+                </li>
+              </ul>
+            </div>
+            <div id="l-com-box" class="l-det-allsays">
+              <!--评论循环-->
+              <div class="l-user-says" *ngFor="let com of coms">
+                  <div class="l-user-says-left">
+                    <img class="img-circle" src="https://imgjd2.fruitday.com/up_images/default_userpic.png">
+                    <p>{{ com.name }}</p>
+                  </div>
+                  <div class="l-user-says-right">
+                    <ul>
+                      <li>
+                        <p class="l-num">评分</p>
+                        <p class="l-play-start">
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                          <span class="star"></span>
+                        </p>
+                      </li>
+                      <li>
+                        <p class="cont">内容</p>
+                        <p class="user-ping">{{ com.content }}</p>
+                      </li>
+                      <li>
+                        <p class="cont pull-left">晒图</p>
+                        <img src="{{ com.img }}">
+                      </li>
+                      <li>
+                        <span class="gray">{{ com.date }}</span>
+                      </li>
+                      <li><ul></ul></li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <!--页码-->
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 商品推荐 （4个）-->
+    <div class="l-right-part">
+        <div class="l-run-title">
+          商品推荐
+        </div>
+        <div class="l-rum-fruit">
+          <!--商品推荐循环-->
+          <div class="l-rum-fruit1" *ngFor="let rum of rums">
+            <a class="l-rum-img" href="#">
+              <img src="{{ rum.img }}">
+            </a>
+            <div class="l-rum-price">
+              <span>{{ rum.name }}</span>
+              <p>￥{{ rum.price }}/{{ rum.num }}</p>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+
+</div>
