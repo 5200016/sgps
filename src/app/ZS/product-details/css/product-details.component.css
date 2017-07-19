@@ -13,7 +13,7 @@ ul{
 .l-content.typepage{
   width: 1200px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .l-bread .l-that{
   color: #64a131;
@@ -374,24 +374,22 @@ li{
   float: left;
 }
 .l-com-title1{
-  width: 178px;
+  width: 20%;
   height: 100px;
-  padding: 6px 20px;
+  padding: 10px 20px;
   text-align: center;
   border-right: 1px solid #ccc;
 }
 .l-com-title1>p:first-child{
   font: 40px/100% 'Hiragino Sans GB W6','Microsoft YaHei';
   color: #f6ab00;
-  margin-top: 0px;
 }
 .l-com-title1>p:last-child{
   font: 14px/100% 'Hiragino Sans GB W6','Microsoft YaHei';
-  margin-top: -30px;
 }
 .l-com-title2{
-  width: 300px;
-  padding: 11px 38px;
+  width: 40%;
+  padding: 10px 46px;
   border-right: 1px solid #ccc;
 }
 .l-pl-user{
@@ -428,7 +426,7 @@ li{
   background-color: #f6ab00;
 }
 .l-com-title3{
-  width: 394px;
+  width: 40%;
   padding-top: 0px;
   padding-left: 0px;
   text-align: center;
