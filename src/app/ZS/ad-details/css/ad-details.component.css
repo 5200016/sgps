@@ -1,0 +1,163 @@
+/* 广告界面 */
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+}
+.l-ad-outWrapper {
+  background-color: rgb(225,250,247);
+  padding-bottom: 50px;
+  position: absolute;
+}
+.l-ad-inWrapper{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+
+}
+/* 头部 */
+.l-ad-header{
+  position: relative;
+  width: 100%;
+  min-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+}
+.l-ad-header>img{
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+ /* 中间内容 */
+.l-ad-inContainer{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.l-ad-inContainer>div{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background-repeat: repeat;
+  background-position: top center;
+  height: 500px;
+}
+.l-inContainer{
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+.l-inContainer>div{
+  width: 100%;
+  min-width: 1100px;
+  margin-top: 50px;
+}
+.l-inContainer-title{
+  font-size: 30px;
+}
+.l-inContainer-title>i,span{
+  margin-right: 10px;
+}
+.l-in-icon{
+  width: 19px;
+  height: 16px;
+  background: url(http://www.guocool.com/images/inner.png) no-repeat -19px 1px;
+  display: inline-block;
+}
+.l-inContainer-content{
+  background-color: #fff;
+  float: left;
+  position: relative;
+}
+.l-inContainer-content>div{
+  float: left;
+}
+.l-inContainer-img{
+  width: 600px;
+  height: 400px;
+  cursor: pointer;
+}
+.l-inContainer-detail{
+  width: 500px;
+  float: right;
+}
+.l-inContainer-detail>div{
+  margin: 60px;
+}
+.l-inContainer-ms>div{
+  margin-top: 20px;
+  color: #000;
+  padding: 0 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.l-inContainer-ms>.ms2{
+  color: #999;
+}
+.l-inContainer-ms>.ms3>span{
+  font-size: 40px;
+}
+.l-inContainer-btn>a{
+  color: #fff;
+  background: #64a131;
+  padding: 10px 50px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.l-inContainer-btn{
+  padding: 10px;
+}
+.l-inContainer-img>.l-inContainer-ms{
+  padding: 30px;
+}
+/* 购物车 */
+.l-shopCart-on{
+  position: fixed;
+  left: 50%;
+  margin-left: 640px;
+  top: 30px;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,.3), -1px -1px 5px 1px rgba(0,0,0,.3);
+  z-index: 50;
+  /*background: rgb(226,101,49);*/
+  background-color: #64a131;
+}
+.on-shop-cart{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 64px;
+  width: 64px;
+  z-index: 3;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background: url(https://huodongcdnws.fruitday.com/sale/cmsAPP/images/shop_cart.svg) no-repeat 49% 61%;
+  background-size: 40px auto;
+}
+/* 返回顶部按钮 */
+.l-go-back{
+  position: fixed;
+  left: 50%;
+  margin-left: 640px;
+  bottom: 25px;
+  width: 60px;
+  height: 60px;
+  background: url(https://huodongcdnws.fruitday.com/sale/cmsAPP/images/backtop.png) no-repeat center 0;
+  opacity: .8;
+  background-size: 100%;
+  z-index: 30;
+  cursor: pointer;
+  display: none;
+}

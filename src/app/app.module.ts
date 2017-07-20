@@ -19,6 +19,7 @@ import { CustomPackagesComponent } from './ZS/custom-packages/CustomPackagesComp
 import { HomepageComponent } from './ZS/homepage/HomepageComponent';
 import { MineComponent } from './ZS/mine/MineComponent';
 import { ProductDetailsComponent } from './ZS/product-details/product-details.component';
+import {AdDetailsComponent} from "./ZS/ad-details/ad-details.component";
 
 declare var $: any;
 @NgModule({
@@ -37,7 +38,8 @@ declare var $: any;
     CustomPackagesComponent,
     MineComponent,
     HomepageComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AdDetailsComponent
   ],
   imports: [
     KSSwiperModule,
