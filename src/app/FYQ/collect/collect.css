@@ -1,0 +1,138 @@
+.f-tanchu{
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+}
+.f-shop-collect{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  width: 524px;
+  height: 288px;
+  padding: 6px;
+  margin: -144px 0 0 -262px;
+  border: 8px;
+  border-color: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.16);
+}
+.f-shop-top {
+  height: 40px;
+  padding-right: 17px;
+  background-color: #eaeaea;
+}
+
+.f-shop-collect .f-shop-top .top-right {
+  float: right;
+  position: relative;
+  padding-top: 8px;
+  
+}
+img{
+  vertical-align: middle;
+}
+img{
+  border:0;
+}
+.f-shop-collect .f-shop-content{
+  background-color: #fff;
+}
+.f-shop-collect .f-shop-content .f-title{
+  padding: 28px 90px 0;
+  margin-bottom: 22px;
+}
+
+.f-shop-collect .f-shop-content .f-title .sure{
+  width: 60px;
+  height: 68px;
+  background: url("../../assets/collect/sure.png");
+}
+.f-shop-collect .f-shop-content .f-title .adds{
+  font-size: 30px;
+  margin: 13px 0;
+  font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color: #555;
+  white-space: nowrap;
+  padding-left: 20px;
+}
+.pull-left {
+  float: left !important;
+}
+.f-shop-collect .f-shop-content .f-title .adds p{
+  margin: 0;
+}
+.f-shop-collect .f-shop-content p.f-row2{
+  font-size: 18px;
+  font-family: "Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color: #999;
+  white-space: nowrap;
+  padding-left: 4px;
+  text-align: center;
+}
+p {
+  margin:93px;
+}
+.f-shop-collect .f-shop-content p.f-row2 em {
+  color: #f6ab00;
+  font-style: normal;
+}
+.f-shop-content .f-buy{
+  padding: 28px;
+  padding-bottom: 25px;
+}
+.fr-buy {
+  margin-right: 11px;
+  margin-left: 61px;
+  margin-top: -79px;
+}
+.f-shop-content .f-buy .btn.active {
+  box-shadow: none;
+}
+.f-buy .fr-buy a{
+  color: #64a131;
+  background: #f5ffed;
+  border: 1px solid #64a131;
+}
+.fr-buy a{
+  display: block;
+  width: 147px;
+  height: 21px;
+  font-family: "Hiragino Sans GB","microsoft yahei",sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 21px;
+  text-decoration: none;
+}
+.fr-buy .btn {
+  border-radius: 4px;
+}
+.fr-add.pull-left{
+  margin-left: 254px;
+  margin-top: -79px;
+}
+.fr-add .btn{
+  color: #eff4ec;
+  background: #64a131;
+  border-color: #64a131;
+}
+.fr-add a{
+  display: block;
+  width: 147px;
+  height: 21px;
+  float: right;
+  font-family: "Hiragino Sans GB","microsoft yahei",sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 21px;
+  text-decoration: none;
+}
+.fr-add .btn {
+  border-radius: 4px;
+}
+.btn-lg{
+  padding: 10px 16px;
+}

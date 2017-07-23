@@ -1,0 +1,175 @@
+.f-component-order{
+  width:1050px;
+  margin: 0 auto;
+  padding-top: 39px;
+  padding-bottom: 20px;
+}
+.f-component-order h3{
+  color: #555;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  margin-top: -33px;
+}
+.pull-right{
+  float: right;
+}
+.f-icons-cart {
+  margin-top: -30px;
+}
+#cart_flow {
+  float: right;
+  width: 483px;
+}
+.clear {
+  zoom: 1;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent;
+  font-style: normal;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+#cart_flow .c_f_li_cur {
+  color: #ff9900;
+}
+#cart_flow .c_f_li {
+  width: 160px;
+  text-align: center;
+  padding: 10px 0px;
+}
+#cart_flow li {
+  float: left;
+  font-size: 14px;
+  color:#888;
+}
+li{
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-style: normal;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+}
+.f-component-order>h4{
+  padding: 20px 0 0;
+  margin: 40px 0 0;
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #555;
+}
+h4{
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.f-component-order>h4>a {
+  font-size: 14px;
+  color: #5157a6;
+}
+.pull-right {
+  float: right !important;
+}
+a{
+  text-decoration: none;
+}
+.f-component-order .f-order-item{
+  margin: 0 30px;
+}
+.f-component-order .f-order-item>.order-item-addresslist {
+  margin: 10px 0 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.f-component-order .f-order-item>.order-item-addresslist>li {
+  height: 36px;
+  margin: 10px 0 0;
+  line-height: 36px;
+  color: #555;
+}
+.f-component-order .f-order-item>.order-item-addresslist .more {
+  display: block;
+  width: 140px;
+  cursor: pointer;
+}
+b {
+  font-weight: bold;
+}
+.f-component-order .f-order-item>.order-item-addresslist .more>a.f-b-u {
+  background: url(../../assets/balance-scontent/addr.png) no-repeat 0 -10px;
+}
+.f-component-order .f-order-item>.order-item-addresslist .more>a {
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  line-height: 10px;
+  width: 9px;
+}
+.f-component-order .f-order-item>.order-item-paylist {
+  margin: 10px 0 0;
+}
+.f-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.f-component-order .f-order-item>.order-item-paylist>li {
+  position: relative;
+  float: left;
+  width: 140px;
+  height: 36px;
+  margin: 10px 15px 0 0;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}
+.f-component-order .f-order-item>.order-item-paylist>li.payarrival {
+  min-width: 165px;
+  width: auto;
+  padding: 0 10px;
+}
+p {
+  margin: 0 0 10px;
+}
+.f-component-order .f-order-item>.order-item-paylist>li>.payways {
+  width: 200px;
+  margin: 0 -3px;
+  left: -30%;
+}
+.f-component-order .f-order-item>.order-item-paylist>li>.paytips {
+  position: absolute;
+  top: 50px;
+  min-width: 240px;
+  padding: 5px 10px;
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.25);
+  border-radius: 4px;
+}
+.f-component-order .f-order-item>.order-item-paylist>li>.payways>p {
+  padding: 0 6px;
+  height: 36px;
+  line-height: 36px;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
