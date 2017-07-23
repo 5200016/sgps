@@ -75,17 +75,8 @@ document.getElementById("min").onclick=function(){
   }
 }
 
-<!--加入购物车 弹出框-->
-document.getElementById('l-gdo-car').onclick=function () {
-  $('.l-bg').show(500);
-  $('.add-shop-car').show(1000);
-};
-function addCancel() {
-  $('.l-bg').hide(1000);
-  $('.add-shop-car').hide(500);
-}
 
-<!--收藏 弹出框-->
+/*<!--收藏 弹出框-->
 document.getElementById('l-gdo-fol').onclick=function () {
   $('.l-bg').show(500);
   $('.l-goods-follow').show(1000);
@@ -93,7 +84,7 @@ document.getElementById('l-gdo-fol').onclick=function () {
 function folCancel() {
   $('.l-bg').hide(1000);
   $('.l-goods-follow').hide(500);
-}
+}*/
 
 <!--滚动条滚到一定高度，商品简介、评论栏定位为固定定位-->
 /*var rightTextH = $('#comment-text').height();

@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./css/ProductDetailsComponent.css'],
 })
 export class ProductDetailsComponent {
+  s_confirm_flag: boolean = false;
+  s_confirm_content: string =  '';
+  s_confirm_subTitle: string = '';
   textShow: number = 1 ;
   coms: any = [
     {
@@ -53,5 +56,15 @@ export class ProductDetailsComponent {
     return{
       'background':  'url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -151px ',
     };
+  }
+
+  $confirm_add_goods () {
+    this.s_confirm_subTitle = '加入购物车成功！';
+    this.s_confirm_content = '购物车中共<span class="tip">1</span>件商品 | 商品小计<span class="tip">￥19.90</span>';
+    this.s_confirm_flag = true;
+  }
+
+  $confirm_sure_click() {
+    console.log('add goods ok')
   }
 }

@@ -12,106 +12,7 @@
   background-color: #000;
   opacity: .5;
 }
-/* 加入购物车 弹出框 */
-.add-shop-car{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 99999;
-  width: 524px;
-  height: 288px;
-  padding: 6px;
-  margin: -144px 0 0 -262px;
-  border: 8px;
-  border-color: rgba(0,0,0,0.5);
-  background: rgba(0,0,0,0.16);
-}
-.l-shop-top{
-  height: 40px;
-  padding-right: 17px;
-  background-color: #eaeaea;
-}
-.l-shop-top>.l-cancel{
-  margin-top: 4px;
-  cursor: pointer;
-  float: right;
-  font-size: 30px;
-  color: #999;
-}
-.l-shop-content{
-  background-color: #fff;
-  height: 248px;
-}
-.l-prompt-title{
-  padding: 28px 90px 10px;
-  margin-bottom: 80px;
-}
-.l-prompt-title>div{
-  float: left;
-}
-.l-success{
-  width: 60px;
-  height: 68px;
-  background: url(http://www.fruitday.com/images/common/icons.png) no-repeat -8px -247px;
-}
-.l-adds{
-  font-size: 30px;
-  margin: 13px 0;
-  color: #555;
-  white-space: nowrap;
-  padding-left: 20px;
-}
-.l-adds>p{
-  margin: 0;
-}
-.l-shop-count{
-  font-size: 18px;
-  color: #999;
-  white-space: nowrap; /* 规定段落中的文本不进行换行 */
-  text-align: center;
-  margin-bottom: 30px;
-}
-.l-shop-count>em{
-  color: #f6ab00;
-  font-style: normal;
-}
-.l-shop-buy{
-  padding-bottom: 25px;
-}
-.l-shop-buy>div{
-  float: left;
-}
-.l-shop-buy .l-fr-buy{
-  margin-right: 16px;
-  margin-left: 110px;
-}
-.l-shop-buy .l-fr-buy a{
-  color: #64a131;
-  background: #f5ffed;
-  border: 1px solid #64a131;
-  display: block;
-  width: 140px;
-  height: 46px;
-  text-align: center;
-  line-height: 18px;
-  text-decoration: none;
-}
-.sure-btn{
-  box-shadow: none;
-  border-radius: 4px;
-  padding:14px;
-}
-.l-shop-buy  .l-fr-add a{
-  border-color: #7DAF57;
-  color: #eff4ec;
-  background: #64a131;
-  display: block;
-  width: 140px;
-  height: 46px;
-  text-align: center;
-  line-height: 18px;
-  text-decoration: none;
-}
+
 /* 收藏 弹出框 */
 .l-goods-follow{
   position: fixed;
@@ -189,4 +90,9 @@
 }
 #l-addr-cancel{
   margin-left: 0;
+}
+
+
+.confirm-wrapper .tip {
+  color: orange;
 }

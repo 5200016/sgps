@@ -83,12 +83,12 @@
               <td>
                 <ul>
                   <li class="l-order-img">
-                    <a href="#/product-details">
+                    <a routerLink="/index/product-details">
                       <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
                     </a>
                   </li>
                   <li class="l-order-name">
-                    <a href="#/product-details">台湾凤梨</a>
+                    <a routerLink="/index/product-details">台湾凤梨</a>
                   </li>
                 </ul>
               </td>
@@ -288,7 +288,7 @@
             <td>
               <p>
                 <span>编辑</span>
-                <span style="color: #b1000f;" id="l-deladdr-btn">删除</span>
+                <span style="color: #b1000f;" id="l-deladdr-btn" (click)="$remove_addr()">删除</span>
               </p>
             </td>
           </tr>
@@ -310,4 +310,5 @@
     </div>
   </div>
 
+  <ele-confirm [(show)] = "s_confirm_flag" [content]="s_confirm_content" (sure)="$confirm_sure_click()"></ele-confirm>
 </div>

@@ -7,8 +7,9 @@ import { MineComponent } from './ZS/mine/MineComponent';
 import {HomepageComponent} from './ZS/homepage/HomepageComponent';
 import {ProductDetailsComponent} from './ZS/product-details/ProductDetailsComponent';
 import {AdDetailsComponent} from './ZS/ad-details/AdDetailsComponent';
-
-const routes: Routes = [
+import { HomepageHeadComponent } from './ZS/homepage-head/HomepageHeadComponent'
+/* 二级路由 */
+const childRoutes: Routes = [
   { path:  '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomepageComponent },
   { path: 'fresh-fruit', component: FreshFruitComponent },
@@ -16,8 +17,17 @@ const routes: Routes = [
   { path: 'custom-packages', component: CustomPackagesComponent },
   { path: 'mine', component: MineComponent },
   { path: 'product-details', component: ProductDetailsComponent },
-  { path: 'ad-details', component: AdDetailsComponent },
-  { path: 'mine', component: MineComponent },
+  { path: 'mine', component: MineComponent }
+]
+/* 一级路由 */
+const routes: Routes = [
+  {path: 'ad-details', component: AdDetailsComponent },
+  {path: '', redirectTo: 'index', pathMatch: 'full'},
+  {
+    path: 'index',
+    component: HomepageHeadComponent,
+    children: childRoutes
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash: true})],

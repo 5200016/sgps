@@ -87,7 +87,7 @@
           <a id="l-gdo-buy">立刻购买</a>
         </li>
         <li>
-          <div id="l-gdo-car">
+          <div (click)="$confirm_add_goods()" id="l-gdo-car">
             <i id="l-gdo-car-img"></i>
             <span>加入购物车</span>
           </div>
@@ -301,4 +301,5 @@
     </div>
   </div>
 
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="去结算" sureText="继续购物"  [(show)] = "s_confirm_flag" [content]="s_confirm_content" (sure)="$confirm_sure_click()"></ele-confirm>
 </div>

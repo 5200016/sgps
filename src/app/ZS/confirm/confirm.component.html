@@ -1,0 +1,19 @@
+<div class="confirm-wrapper" *ngIf = "show">
+  <div class="content-wrapper">
+    <div class="top">
+      <span class="title"> {{title}} </span>
+      <span (click)="$hideClick()">X</span>
+    </div>
+    <div class="content">
+      <div class="logo" *ngIf="subTitle">
+        <img src="../../../assets/icon/success.png" alt="">
+        <span>{{subTitle}}</span>
+      </div>
+      <div class="content-html" [innerHtml]="content"></div>
+    </div>
+    <div class="op">
+      <div class="sure" (click)="$sureClick()">{{sureText}}</div>
+      <div class="cancel" (click)="$cancelClick()">{{cancelText}}</div>
+    </div>
+  </div>
+</div>

@@ -7,5 +7,4 @@ import { KSSwiperContainer } from 'angular2-swiper';
 })
 
 export class HomepageHeadComponent{
-
 }
