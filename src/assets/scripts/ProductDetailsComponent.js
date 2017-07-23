@@ -95,16 +95,6 @@ function folCancel() {
   $('.l-goods-follow').hide(500);
 }
 
-<!--商品简介和评论切换-->
-document.getElementById("l-jianjie").onclick=function () {
-  $('#l-jianjie').css({"border-top":"3px solid #64a131","background-color": "#ffffff"});
-  $('#l-comment').css({"border-top":"none","background-color": "#f1f1f1"})
-}
-document.getElementById("l-comment").onclick=function () {
-  $('#l-comment').css({"border-top":"3px solid #64a131","background-color": "#ffffff"});
-  $('#l-jianjie').css({"border-top":"none","background-color": "#f1f1f1"});
-}
-
 <!--滚动条滚到一定高度，商品简介、评论栏定位为固定定位-->
 /*var rightTextH = $('#comment-text').height();
  $(window).scroll(function(){

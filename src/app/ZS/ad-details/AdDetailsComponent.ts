@@ -4,8 +4,8 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'ad-details',
-  templateUrl: './templates/ad-details.component.html',
-  styleUrls: ['./css/ad-details.component.css'],
+  templateUrl: './templates/AdDetailsComponent.html',
+  styleUrls: ['./css/AdDetailsComponent.css'],
 })
 export class AdDetailsComponent {
 

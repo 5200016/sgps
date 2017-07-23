@@ -4,8 +4,8 @@
 import { Component } from '@angular/core';
 @Component({
   selector: 'product-details',
-  templateUrl: './templates/product-details.component.html',
-  styleUrls: ['./css/product-details.component.css'],
+  templateUrl: './templates/ProductDetailsComponent.html',
+  styleUrls: ['./css/ProductDetailsComponent.css'],
 })
 export class ProductDetailsComponent {
   textShow: number = 1 ;
@@ -48,13 +48,6 @@ export class ProductDetailsComponent {
   }
   goodComs() {
     this.textShow = 2;
-  }
-
-  getStyle() {
-    return{
-      'border-top': '3px solid #64a131',
-      'background-color':  '#ffffff',
-    };
   }
   getAllcom() {
     return{

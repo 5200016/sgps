@@ -256,6 +256,10 @@ li{
   border-left: none;
   border-right: none;
 }
+.l-good-details>span.tab_focus{
+ border-top: 3px solid #64a131;
+ background-color: #ffffff;
+}
 .l-good-details>span{
   float: left;
   font: 16px/200% 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
