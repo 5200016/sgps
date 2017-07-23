@@ -1,1 +1,31 @@
+<login-head></login-head>
+<div class="fruit-login-middle">
+  <div class="fruit-login-middle-small">
+    <div class="fruit-login-middle-small-left">
+      <div class="fruit-login-middle-small-left-one-quick">
+        <label class="fruit-login-middle-small-left-one-prompt">手机号</label>
+        <input class="fruit-login-middle-small-left-one-input" type="text">
+      </div>
+      <div class="fruit-login-middle-small-left-one">
+        <label class="fruit-login-middle-small-left-one-prompt">手机验证码</label>
+        <input class="fruit-login-middle-small-left-input-left-quick" type="text">
+        <button class="fruit-login-middle-small-left-input-left-btn-quick">获取验证码</button>
+      </div>
+      <button class="login-btn">短信登陆</button>
+      <a href="" class="go-to-value-login">会员登陆</a>
+    </div>
+    <div class="fruit-login-middle-small-right-quick">
+      <div class="myslides" style="margin-left: 52px;height: 400px;">
+        <ks-swiper-container [options]="swipeOptions">
+          <ks-swiper-slide *ngFor="let item of data">
+            <img src="../../../assets/img/banner0{{item}}.jpg" style="width: 100%; height:400px">
+          </ks-swiper-slide>
+        </ks-swiper-container>
+      </div>
+    </div>
+  </div>
+</div>
+<login-bottom></login-bottom>
+
+
 
