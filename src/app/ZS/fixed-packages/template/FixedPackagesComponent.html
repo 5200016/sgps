@@ -1,1 +1,170 @@
-<h2>固定套餐</h2>
+<div class="content special special-content">
+  <!--筛选器-->
+  <div class="select f-clearfix">
+    <!--分类-->
+    <div class="oc f-clearfix pull-left f-li">
+      <h5 class="pull-left">种类</h5>
+      <div class="f-select pull-left f-clearfix">
+        <div class="pull-left left">
+          <a href="#" class="active">
+            <span class="f-all line">全部</span>
+          </a>
+        </div>
+        <div class="pull-left right">
+          <a href="#"><span class="line">儿童喜欢</span></a>
+          <a href="#"><span class="line">老少皆宜</span></a>
+          <a href="#"><span class="line">美白必备</span></a>
+          <a href="#"><span class="line">充分维E</span></a>
+          <a href="#"><span class="line">养生美体</span></a>
+        </div>
+      </div>
+    </div>
+    <!--产地-->
+    <div class="oc f-clearfix pull-left f-li">
+      <h5 class="pull-left">规格</h5>
+      <div class="f-select pull-left f-clearfix">
+        <div class="pull-left left">
+          <a href="#" class="active">
+            <span class="f-all line">全部</span>
+          </a>
+        </div>
+        <div class="pull-left right">
+          <a href="#"><span class="line">单品</span></a>
+          <a href="#"><span class="line">礼盒</span></a>
+          <a href="#"><span class="line">套餐</span></a>
+          <a href="#"><span class="line">劵卡</span></a>
+        </div>
+      </div>
+    </div>
+    <!--价格-->
+    <div class="oc f-clearfix pull-left f-li f-pai">
+      <h5 class="pull-left">排序</h5>
+      <div class="f-select pull-left f-clearfix">
+        <div class="pull-left left">
+          <a href="#" class="active">
+            <span class="f-all line">默认</span>
+          </a>
+        </div>
+        <div class="pull-left right">
+          <a href="#"><span class="line">价格从低到高</span></a>
+          <a href="#"><span class="line">价格从高到低</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--列表-->
+  <div class="list f-clearfix">
+    <div class="part pull-content">
+      <ul>
+        <li *ngFor="let fruits of fruitsList">
+          <div class="wrapper">
+            <div class="img">
+              <a href="#">
+                <img class="lazy" src="{{fruits.img}}">
+              </a>
+            </div>
+            <div class="f-info">
+              <div class="f-name">{{fruits.name}}</div>
+              <span class="f-unit">￥{{fruits.price}}/斤</span>
+              <div class="f-shopping"></div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="img">
+              <a href="#">
+                <img class="lazy" src="../../../assets/specialOffer/fruit1.jpg">
+              </a>
+            </div>
+            <div class="f-info">
+              <div class="f-name">荷兰青啤梨</div>
+              <span class="f-unit">￥39.90/斤</span>
+              <div class="f-shopping"></div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="img">
+              <a href="#">
+                <img class="lazy" src="../../../assets/specialOffer/fruit1.jpg">
+              </a>
+            </div>
+            <div class="f-info">
+              <div class="f-name">荷兰青啤梨</div>
+              <span class="f-unit">￥39.90/斤</span>
+              <div class="f-shopping"></div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="img">
+              <a href="#">
+                <img class="lazy" src="../../../assets/specialOffer/fruit3.jpg">
+              </a>
+            </div>
+            <div class="f-info">
+              <div class="f-name">荷兰青啤梨</div>
+              <span class="f-unit">￥39.90/斤</span>
+              <div class="f-shopping"></div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="img">
+              <a href="#">
+                <img class="lazy" src="../../../assets/specialOffer/fruit2.jpg">
+              </a>
+            </div>
+            <div class="f-info">
+              <div class="f-name">荷兰青啤梨</div>
+              <span class="f-unit">￥39.90/斤</span>
+              <div class="f-shopping"></div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="img">
+              <a href="#">
+                <img class="lazy" src="../../../assets/specialOffer/fruit2.jpg">
+              </a>
+            </div>
+            <div class="f-info">
+              <div class="f-name">荷兰青啤梨</div>
+              <span class="f-unit">￥39.90/斤</span>
+              <div class="f-shopping"></div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="wrapper">
+            <div class="img">
+              <a href="#">
+                <img class="lazy" src="../../../assets/specialOffer/fruit2.jpg">
+              </a>
+            </div>
+            <div class="f-info">
+              <div class="f-name">荷兰青啤梨</div>
+              <span class="f-unit">￥39.90/斤</span>
+              <div class="f-shopping"></div>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</div>
+
