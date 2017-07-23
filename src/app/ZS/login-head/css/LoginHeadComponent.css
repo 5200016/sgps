@@ -7,6 +7,11 @@
   box-shadow: 0 2px 8px rgba(230,230,230,0.75);
   border-bottom: 1px solid #f1f1f1;
 }
+.fruit-login-head-small{
+  width: 1280px;
+  margin: 0 auto;
+  height: 110px;
+}
 .fruit-logo{
   margin-left: 10px;
   margin-top: 12px;

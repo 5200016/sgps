@@ -35,7 +35,8 @@
 
 /* 图片遮盖 */
 .info {
-  width:31%;
+  /*width:31%;*/
+  width: 420px;
   height: 600px;
   float: left;
   position: absolute;
@@ -55,4 +56,237 @@ a:hover .info {
   cursor: pointer;
   background-color: #65A031;
   color: white;
+}
+/* 首页开始 */
+.fruit-middle-three{
+  width: 100%;
+  height: 322px;
+  margin-top: 50px;
+}
+.fruit-middle-three-small{
+  margin: 0 auto;
+  width: 1155px;
+  height: 320px;
+}
+.fruit-middle-three-small-top{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+.fruit-middle-three-small-top-div{
+  color: white;
+  background-color: #65A031;
+  margin-left: 540px;
+  width: 115px;
+  height: 50px;
+  padding-top: 7px;
+  font-size: 22px;
+  font-weight: bolder;
+}
+.fruit-middle-three-small-bottom{
+  width: 100%;
+  height: 273px;
+  border-left: 1px solid #ECECEC;
+  border-right: 1px solid #ECECEC;
+  border-bottom: 1px solid #ECECEC;
+  border-top: 3px solid #65A031;
+}
+.fruit-middle-three-small-bottom-div-one{
+  width: 24%;
+  height: 270px;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #ECECEC;
+}
+.fruit-middle-three-small-bottom-div-one-img{
+  width: 94%;
+  height: 210px;
+}
+.fruit-middle-three-small-bottom-div-another{
+  width: 100%;
+  height: 55px;
+}
+.fruit-middle-three-small-bottom-div-another-one{
+  display: block;
+  font-size: 15px;
+  color: #999;
+}
+.fruit-middle-three-small-bottom-div-another-two{
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #65A031;
+}
+.fruit-middle-three-small-bottom-div-two{
+  width: 4%;
+  height: 270px;
+  border-right: 1px solid #ECECEC;
+  float: left;
+  text-align: center;
+}
+.fruit-middle-three-small-bottom-div-two-lab{
+  display: block;
+  height: 100%;
+  width: 32px;
+  font-size: 20px;
+  margin-left: 7px;
+  padding-top: 65px;
+}
+.fruit-middle-one{
+  width: 100%;
+  height: 668px;
+  margin-top: 20px;
+}
+.fruit-middle-one-top{
+  width: 1280px;
+  margin: 0 auto;
+  height: 68px;
+  border-top: 1px solid #ECECEC;
+}
+.fruit-middle-one-top-first{
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 16px;
+}
+.fruit-middle-one-top-second{
+  float: right;
+  margin-top: 30px;
+  font-size: 14px;
+  margin-right: 8px;
+}
+.fruit-middle-one-bottom{
+  width: 1280px;
+  margin: 0 auto;
+  height: 600px;
+}
+.fruit-middle-one-bottom-right-one{
+  width: 20%;
+  height: 50%;
+  float:left;
+}
+.fruit-middle-one-bottom-right-one-div{
+  width: 96%;
+  height: 230px;
+  margin-left: 2%;
+}
+.fruit-middle-one-bottom-right-one-img{
+  width:100%;
+  height: 230px;
+}
+.fruit-middle-one-bottom-right-one-div-home{
+  width: 96%;
+  height: 60px;
+  margin-left: 2%;
+}
+.fruit-middle-one-bottom-right-one-div-first{
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+}
+.fruit-middle-one-bottom-right-one-div-second{
+  display: block;
+  font-size: 14px;
+}
+.fruit-middle-one-bottom-right-one-div-icon{
+  float: right;
+  width: 38px;
+  height: 36px;
+  margin-top: -55px;
+  margin-right: 12px;
+}
+.fruit-middle-two{
+  width: 100%;
+  height:668px;
+  margin-top: 60px;
+}
+.fruit-middle-two-top{
+  width: 1280px;
+  margin: 0 auto;
+  height: 68px;
+  border-top: 1px solid #ECECEC;
+}
+.fruit-middle-two-top-first{
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 16px;
+}
+.fruit-middle-two-top-second{
+  float: right;
+  margin-top: 30px;
+  font-size: 14px;
+  margin-right: 8px;
+}
+.fruit-middle-two-bottom{
+  width: 1280px;
+  margin: 0 auto;
+  height: 600px;
+}
+.meal{
+  display: block;
+  width: 33%;
+  height:600px;
+  float: left;
+}
+.fruit-middle-two-bottom-left{
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.fruit-middle-two-bottom-left-img{
+  width: 100%;
+  height: 100%;
+}
+.info-look{
+  border: 1px solid #65A031;
+  width: 135px;
+  height: 40px;
+  padding-top: 3px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 250px;
+  margin-left: 150px;
+}
+.fruit-middle-two-bottom-right{
+  width: 67%;
+  height: 100%;
+  float:left;
+}
+.fruit-middle-two-bottom-right-one{
+  width: 1%;
+  height: 100%;
+  float: left;
+}
+.fruit-middle-two-bottom-right-two{
+  width:33%;
+  height: 50%;
+  float:left;
+}
+.fruit-middle-one-bottom-right-two-div{
+  width: 96%;
+  margin-left: 2%;
+}
+.fruit-middle-two-bottom-right-two-img{
+  width: 100%;
+  height: 230px;
+}
+.fruit-middle-two-bottom-right-two-div{
+  width: 96%;
+  height: 60px;
+  margin-left: 2%;
+}
+.fruit-middle-two-bottom-right-two-la{
+  display: block;
+  margin-top: 5px;
+  font-size: 15px;
+}
+.fruit-middle-two-bottom-right-two-lab{
+  display: block;
+  font-size: 14px;
+}
+.fruit-middle-one-bottom-right-one-div-icon{
+  float: right;
+  width: 38px;
+  height: 36px;
+  margin-top: -55px;
+  margin-right: 12px;
 }

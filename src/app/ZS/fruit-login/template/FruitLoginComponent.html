@@ -1,4 +1,7 @@
+<!-- 会员登陆页面 -->
+<!-- 头部公用部分 -->
 <login-head></login-head>
+<!-- 会员登陆部分 -->
 <div class="fruit-login-middle">
   <div class="fruit-login-middle-small">
       <div class="fruit-login-middle-small-left">
@@ -22,7 +25,7 @@
            <button class="login-btn">登陆</button>
           <a href="" class="go-to-register">去注册</a>
       </div>
-      <div class="fruit-login-middle-small-right" style="width: 50%;height: 100%;float: left;">
+      <div class="fruit-login-middle-small-right">
         <div class="myslides" style="margin-left: 52px;height: 400px;">
           <ks-swiper-container [options]="swipeOptions">
             <ks-swiper-slide *ngFor="let item of data">
@@ -33,6 +36,7 @@
       </div>
   </div>
 </div>
+<!-- 尾部公共部分 -->
 <login-bottom></login-bottom>
 
 
