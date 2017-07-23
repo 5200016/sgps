@@ -121,7 +121,7 @@
   cursor: pointer;
 }
 /* 最近订单 */
-.l-recent-order>h6{
+.l-per-right h6{
   font-size: 16px;
   color: #555;
   text-align: left;
@@ -310,6 +310,149 @@
   margin-right: 5px;
   cursor: pointer;
 }
+/* 基本资料 */
+.l-basic-information{
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  min-height: 350px;
+  padding: 23px 0 50px 12px;
+}
+.l-basic-information ul li{
+  height:30px;
+}
+.l-basic-information ul li>span{
+  float: left;
+  margin-right: 40px;
+}
+.l-basic-information ul li>div{
+  float: left;
+}
+.l-basic-information ul li>a{
+  float: left;
+}
+.l-basic-information ul li>select{
+  float: left;
+}
+.l-basic-information ul li>input{
+  float: left;
+}
+.l-basic-information ul li.l-basicinfo-pic{
+  margin-bottom: 14px;
+  height: 76px;
+}
+.l-basic-information ul li.l-basicinfo-pic>span{
+  margin-right: 10px;
+}
+.l-basic-information ul li.l-basicinfo-pic>div{
+  width: 76px;
+  margin-right: 13px;
+}
+.l-basic-information ul li.l-basicinfo-pic>div>img{
+  width: 76px;
+  height: 76px;
+}
+.l-basic-information ul li a{
+  color: #64a131;
+  position: relative;
+  top: 50px;
+  outline: none;
+}
+/*昵称*/
+.l-basicinfo-nickname{
+  margin-bottom: 13px;
+}
+.l-basicinfo-nickname>span{
+  line-height: 30px;
+}
+.l-basicinfo-nickname input{
+  border: 1px solid #ddd;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+/*性别*/
+.l-basicinfo-sex{
+  margin-bottom: 5px;
+}
+.l-basicinfo-sex .l-csex{
+  width: 190px;
+}
+.l-basicinfo-sex .l-csex input{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.l-basicinfo-sex .l-csex label{
+  font-weight: normal;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: -4px;
+}
+/*生日*/
+.l-basicinfo-birth{
+  margin-bottom: 13px;
+}
+.l-basicinfo-birth>span{
+  margin-right: 23px;
+  line-height: 30px;
+}
+.l-basicinfo-birth .l-birth-inpSel{
+  position: relative;
+  width: 84px;
+  height: 30px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #555;
+  border-radius: 4px;
+}
+.l-basicinfo-birth div{
+  margin: 0 5px;
+  line-height: 30px;
+}
+/*手机号*/
+.l-basicinfo-telphone{
+  margin-bottom: 13px;
+}
+.l-basicinfo-telphone>span{
+  line-height: 30px;
+}
+.l-basicinfo-telphone input{
+  border: 1px solid #ddd;
+  height: 30px;
+  margin-right: 5px;
+  line-height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+/* 邮箱 */
+.l-basicinfo-mail{
+  margin-bottom: 18px;
+}
+.l-basicinfo-mail span{
+  line-height: 30px;
+}
+.l-basicinfo-mail input{
+  border: 1px solid #ddd;
+  height: 30px;
+  margin-right: 5px;
+  line-height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+.l-basic-information .l-basic-submit{
+  color: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  width: 100px;
+  margin-left: 70px;
+  float: left;
+}
+.l-basic-information .l-basic-submit:hover{
+  background: #5e972e;
+  outline: 0;
 
-
-
+}
