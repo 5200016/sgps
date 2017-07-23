@@ -82,8 +82,8 @@
   float: left;
 }
 .l-shop-buy .l-fr-buy{
-  margin-right: 11px;
-  margin-left: 86px;
+  margin-right: 16px;
+  margin-left: 110px;
 }
 .l-shop-buy .l-fr-buy a{
   color: #64a131;
@@ -91,7 +91,7 @@
   border: 1px solid #64a131;
   display: block;
   width: 140px;
-  height: 30px;
+  height: 46px;
   text-align: center;
   line-height: 18px;
   text-decoration: none;
@@ -99,15 +99,15 @@
 .sure-btn{
   box-shadow: none;
   border-radius: 4px;
-  padding:14px 14px 0px;
+  padding:14px;
 }
-.l-fr-add a{
+.l-shop-buy  .l-fr-add a{
   border-color: #7DAF57;
   color: #eff4ec;
   background: #64a131;
   display: block;
   width: 140px;
-  height: 30px;
+  height: 46px;
   text-align: center;
   line-height: 18px;
   text-decoration: none;
@@ -135,14 +135,14 @@
   border: 1px solid #64a131;
   display: block;
   width: 140px;
-  height: 30px;
+  height: 46px;
   text-align: center;
   line-height: 18px;
   text-decoration: none;
 }
 .l-follow-content{
   background-color: #fff;
-  height: 230px;
+  height: 216px;
 }
 .l-follow-prompt{
   padding: 28px 64px 10px;
@@ -150,4 +150,43 @@
 }
 .l-follow-prompt>div{
   float: left;
+}
+/* 删除收货人信息 */
+.l-delAddress-title{
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.l-delete-address{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  width: 460px;
+  padding: 6px;
+  margin: -144px 0 0 -210px;
+  border: 8px;
+  border-color: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.16);
+}
+.l-delAddress-button{
+  min-height: 80px;
+  padding-top: 30px;
+  background: #fff;
+}
+.l-addr-formitem{
+  width: 100%;
+  line-height: 30px;
+  padding-bottom: 30px;
+}
+.l-addr-formitem>button{
+  min-width: 90px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+#l-addr-sure{
+  margin-left: 120px;
+}
+#l-addr-cancel{
+  margin-left: 0;
 }

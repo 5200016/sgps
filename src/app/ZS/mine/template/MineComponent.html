@@ -1,1 +1,313 @@
-<h2>我的中心</h2>
+<!--个人中心界面-->
+<div class="l-per-usercenter">
+  <div class="l-per-layout">
+    <!--左边部分-->
+    <div class="l-per-left">
+      <ul>
+        <li [class.tab_focus]="textShow==1" (click)="perOne()">
+          <span>我的账户</span>
+        </li>
+        <li [class.tab_focus]="textShow==2" (click)="perTwo()">
+          <span>我的订单</span>
+        </li>
+        <li [class.tab_focus]="textShow==3" (click)="perThree()">
+          <span>我的积分</span>
+        </li>
+        <li [class.tab_focus]="textShow==4" (click)="perFour()">
+          <span>收货地址</span>
+        </li>
+        <li [class.tab_focus]="textShow==5" (click)="perFive()">
+          <span>基本资料</span>
+        </li>
+        <li [class.tab_focus]="textShow==6" (click)="perSix()">
+          <span>密码修改</span>
+        </li>
+        <li [class.tab_focus]="textShow==7" (click)="perSeven()">
+          <span>我的收藏</span>
+        </li>
+        <li [class.tab_focus]="textShow==8" (click)="perEight()">
+          <span>通知设置</span>
+        </li>
+      </ul>
+    </div>
+    <!--右边部分-->
+    <div class="l-per-right" [style.display]="textShow==1?'':'none'">
+      <!--个人信息-->
+      <div class="l-per-tabmenu">
+        <ul>
+          <li class="l-tabmenu-info">
+            <div class="l-tabmenu-head">
+              <img src="https://imgjd2.fruitday.com/up_images/default_userpic.png">
+            </div>
+            <div class="l-tabmenu-name">
+              <p>左婷</p>
+              <p>您已消费0次</p>
+            </div>
+          </li>
+          <li class="l-tabmenu-content">
+            <p>订单数</p>
+            <p>0</p>
+            <p [class.tab_focus]="textShow==2" (click)="perTwo()">订单明细  ></p>
+          </li>
+          <li class="l-tabmenu-content">
+            <p>积分</p>
+            <p>0</p>
+            <p [class.tab_focus]="textShow==3" (click)="perThree()">积分明细  ></p>
+          </li>
+        </ul>
+      </div>
+      <!--最近订单-->
+      <div class="l-recent-order">
+        <h6>最近订单： </h6>
+        <table>
+          <thead>
+            <tr>
+              <th width="40%">商品</th>
+              <th width="10%">价格</th>
+              <th width="10%">数量</th>
+              <th width="10%">商品操作</th>
+              <th width="10%">实付金额</th>
+              <th width="10%">交易操作</th>
+              <th width="10%">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr></tr>
+            <tr>
+              <td colspan="7">
+                <span class="l-order-time">2017-07-22</span>
+                <span>订单号:170714064473</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li class="l-order-img">
+                    <a href="#/product-details">
+                      <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
+                    </a>
+                  </li>
+                  <li class="l-order-name">
+                    <a href="#/product-details">台湾凤梨</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <p>￥39.90</p>
+              </td>
+              <td>
+                <p>1</p>
+              </td>
+              <td>
+                <p>退款/退货</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <p>￥59.90</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <p>已取消</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <P>查看订单</P>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="l-per-right" [style.display]="textShow==2?'':'none'">
+      <div class="l-right-nav">
+        <ul>
+          <li>
+            <a href="javascript:void (0);">
+              <span>所有订单</span>
+              <i>|</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void (0);">
+              <span>未完成</span>
+              <i>|</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void (0);">
+              <span>已完成</span>
+              <i>|</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void (0);">
+              <span>已取消</span>
+              <i>|</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void (0);">
+              <span>已收货</span>
+              <i>|</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="l-recent-order">
+        <table>
+          <thead>
+            <tr>
+              <th width="40%">商品</th>
+              <th width="10%">价格</th>
+              <th width="10%">数量</th>
+              <th width="10%">商品操作</th>
+              <th width="10%">实付金额</th>
+              <th width="10%">交易操作</th>
+              <th width="10%">操作</th>
+            </tr>
+          </thead>
+          <tbody>  <!-- 遍历tbody -->
+            <tr></tr>
+            <tr>
+              <td colspan="7">
+                <span class="l-order-time">2017-07-22</span>
+                <span>订单号:170714064473</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li class="l-order-img">
+                    <a href="#/product-details">
+                      <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
+                    </a>
+                  </li>
+                  <li class="l-order-name">
+                    <a href="#/product-details">台湾凤梨</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <p>￥39.90</p>
+              </td>
+              <td>
+                <p>1</p>
+              </td>
+              <td>
+                <p>退款/退货</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <p>￥59.90</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <p>已取消</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <P>查看订单</P>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="l-per-right" [style.display]="textShow==3?'':'none'">
+      <div class="l-integral-title">
+        <div>
+          您当前的积分为：<span>0</span>
+        </div>
+        <div>注：订单积分会在确认收货后48小时内到账</div>
+      </div>
+      <div class="l-integral-content">
+        <table>
+          <thead>
+          <tr>
+            <th width="35%">交易记录</th>
+            <th width="20%">积分</th>
+            <th width="25%">日期</th>
+            <th width="20%">备注</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr></tr>
+            <tr class="l-integral-detail">  <!-- 遍历tr.l-integral-detail -->
+              <td>
+                <ul>
+                  <li class="l-integral-img">
+                    <a href="#/product-details">
+                      <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
+                    </a>
+                  </li>
+                  <li class="l-integral-name">
+                    <a href="#/product-details">台湾凤梨</a>
+                    <p>编号：1003870002260814020</p>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <p style=" color: #64a131; font-size: 30px;">+5</p>
+              </td>
+              <td>
+                <p>2017年6月22日 14:43:48</p>
+              </td>
+              <td>
+                <p>交易获得</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="l-per-right" [style.display]="textShow==4?'':'none'">
+      <div class="l-address-title">
+        <div>收货人信息</div>
+        <div>新增收货地址</div>
+      </div>
+      <div class="l-integral-content">
+        <table>
+          <thead>
+          <tr>
+            <th width="10%">姓名</th>
+            <th width="10%">手机号</th>
+            <th width="45%">地址</th>
+            <th width="10%">备注</th>
+            <th width="15%">操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr></tr>
+          <tr class="l-integral-detail">  <!-- 遍历tr.l-integral-detail -->
+            <td>
+              <p>刘婷</p>
+            </td>
+            <td>
+              <p>18851191915</p>
+            </td>
+            <td>
+              <p>江苏省南京市栖霞区仙林街道羊山北路1号南京工业职业职业技</p>
+            </td>
+            <td>
+              <p style="cursor: pointer">默认</p>
+            </td>
+            <td>
+              <p>
+                <span>编辑</span>
+                <span style="color: #b1000f;" id="l-deladdr-btn">删除</span>
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="l-per-right" [style.display]="textShow==5?'':'none'">
+      基本资料
+    </div>
+    <div class="l-per-right" [style.display]="textShow==6?'':'none'">
+      密码修改
+    </div>
+    <div class="l-per-right" [style.display]="textShow==7?'':'none'">
+      我的收藏
+    </div>
+    <div class="l-per-right" [style.display]="textShow==7?'':'none'">
+      通知设置
+    </div>
+  </div>
+
+</div>

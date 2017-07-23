@@ -1,0 +1,315 @@
+.l-per-usercenter ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.l-per-usercenter a{
+  text-decoration: none;
+}
+.l-per-usercenter{
+  width: 100%;
+  max-width: 1920px;
+  margin: 30px auto;
+  padding: 0;
+  text-align: center;
+  color: #555;
+}
+.l-per-layout{
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+/* 左边部分 */
+.l-per-left{
+  float: left;
+  width: 210px;
+  min-height: 560px;
+  transition: -webkit-transform .75s cubic-bezier(.175, .885, .62, 1.06);
+  -webkit-transition: -webkit-transform .75s cubic-bezier(.175, .885, .62, 1.06);
+}
+.l-per-left>ul{
+  border: 1px solid #ddd;
+  padding-left: 0;
+}
+.l-per-left>ul>li{
+  padding-left: 0;
+  cursor: pointer;
+  color: #555;
+}
+.l-per-left li.tab_focus{
+  color: #fff !important;
+  background-color: #64a131 !important;
+}
+.l-per-left>ul>li:hover{
+  background: #ddd;
+}
+.l-per-left>ul>li>span{
+  display: block;
+  height: 36px;
+  padding: 0 10px;
+  margin: 0 0;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  transition: background .6s,color .3s;
+}
+/* 右边部分 */
+.l-per-right{
+  width: 860px;
+  min-height: 560px;
+  float: right;
+}
+/* 个人信息 */
+.l-per-tabmenu{
+  border: 1px solid #ddd;
+  overflow: hidden;
+  width: 860px;
+}
+.l-per-tabmenu>ul>li{
+  float: left;
+}
+.l-tabmenu-info{
+  padding: 26px 20px;
+}
+.l-tabmenu-info>div{
+  float: left;
+}
+.l-tabmenu-head{
+  width: 104px;
+  position: relative;
+  margin-right: 26px;
+}
+.l-tabmenu-head>img{
+  width: 104px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  height: 104px;
+}
+.l-tabmenu-name{
+  padding-top: 6px;
+  width: 132px;
+  overflow: hidden;
+}
+.l-tabmenu-name>p:first-child{
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  width: 132px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.l-tabmenu-content{
+  border-left: 1px solid #ddd;
+  padding: 0 88px;
+  margin-top: 16px;
+}
+.l-tabmenu-content>p{
+  font-size: 18px;
+  color: #64a131;
+  padding-bottom: 8px;
+}
+.l-tabmenu-content>p:nth-child(2){
+  color: #555;
+}
+.l-tabmenu-content>p:last-child{
+  font-size: 16px;
+  color: #64a131;
+  cursor: pointer;
+}
+/* 最近订单 */
+.l-recent-order>h6{
+  font-size: 16px;
+  color: #555;
+  text-align: left;
+  padding-top: 17px;
+  width: 100%;
+}
+.l-recent-order>table{
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.l-recent-order>table>thead>tr{
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 38px;
+  background: #f1f1f1;
+  margin-bottom: 8px;
+}
+.l-recent-order>table>thead>tr>th{
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 38px;
+  text-align: center;
+}
+.l-recent-order>table>tbody>tr:first-child{
+  height: 8px;
+}
+.l-recent-order>table>tbody>tr>td{
+  vertical-align: top;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.l-recent-order>table>tbody>tr:nth-child(2)>td{
+  padding: 8px 0;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  text-align: left;
+}
+.l-order-time{
+  padding-right: 34px;
+  padding-left: 8px;
+  color: #555;
+  font-size: 14px;
+}
+.l-recent-order>table>tbody>tr:last-child{
+  border: 1px solid #ddd;
+}
+.l-recent-order>table>tbody>tr>td>ul>li{
+  float: left;
+  padding-top: 0;
+  margin: 5px 5px;
+}
+.l-recent-order>table>tbody>tr>td>ul>li.l-order-img{
+  width: 70px;
+}
+.l-recent-order>table>tbody>tr>td>ul>li.l-order-img img{
+  width: 100%;
+}
+.l-recent-order>table>tbody>tr>td>ul>li.l-order-name{
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.l-recent-order>table>tbody>tr>td>ul>li.l-order-name>a{
+  color: #555;
+  font-size: 14px;
+}
+.l-recent-order>table>tbody>tr>td>p{
+  margin-top: 30px;
+}
+.l-recent-order>table>tbody>tr>td:last-child>p{
+  cursor: pointer;
+  color: #64a131;
+}
+.l-per-right>.l-right-nav{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.l-per-right>.l-right-nav>ul{
+  height: 30px;
+  margin: 0;
+  border-bottom: 2px solid #ddd;
+}
+.l-per-right>.l-right-nav>ul>li{
+  float: left;
+  width: 90px;
+  height: 100%;
+  text-align: center;
+}
+.l-per-right>.l-right-nav>ul>li:hover{
+  border-bottom: 2px solid #64A131;
+  margin-top: 1px;
+}
+.l-per-right>.l-right-nav>ul>li>a{
+  display: block;
+  position: relative;
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #555;
+}
+.l-per-right>.l-right-nav>ul>li>a>i{
+  background-color: #e7e7e7;
+  margin-top: 2px;
+  width: 1px;
+  height: 14px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  font-size: 0;
+  color: #ddd;
+}
+.l-per-right>.l-integral-title>div{
+  float: left;
+  padding: 10px 0;
+}
+.l-per-right>.l-integral-title>div:first-child>span{
+  color: #64a131;
+}
+.l-per-right>.l-integral-title>div:last-child{
+  float: right;
+  font-size: 12px;
+}
+.l-integral-content>table{
+  width: 100%;
+  color: #555;
+  font-size: 14px;
+}
+.l-integral-content>table>thead>tr{
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 38px;
+  background: #f1f1f1;
+  margin-bottom: 8px;
+}
+.l-integral-content>table>thead>tr>th{
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 38px;
+  text-align: center;
+  padding: 15px 10px;
+}
+.l-integral-content>table>tbody>tr:first-child{
+  height: 8px;
+}
+.l-integral-content>table>tbody>tr.l-integral-detail{
+  border: 1px solid #ddd;
+}
+.l-integral-content>table>tbody>tr>td{
+  padding-top: 10px;
+}
+.l-integral-content>table>tbody>tr>td>ul>li{
+  float: left;
+  padding-top: 0;
+  margin: 5px 5px;
+}
+.l-integral-content>table>tbody>tr>td>ul>li.l-integral-img{
+  width: 70px;
+}
+.l-integral-content>table>tbody>tr>td>ul>li.l-integral-img img{
+  width: 100%;
+}
+.l-integral-content>table>tbody>tr>td>ul>li.l-integral-name>a{
+  color: #555;
+  font-size: 14px;
+  float: left;
+}
+.l-integral-name>p{
+  margin-top: 40px;
+}
+.l-address-title>div{
+  float: left;
+  padding: 10px 0;
+}
+.l-address-title>div:last-child{
+  float: right;
+  color: #64A131;
+  cursor: pointer;
+}
+.l-integral-content>table>tbody>tr>td>p>span{
+  color: #64A131;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+
+

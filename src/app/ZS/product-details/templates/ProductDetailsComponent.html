@@ -107,7 +107,7 @@
   <div id="comment-text">
     <div class="l-left-part">
       <div id="text_fiexd" class="l-good-details" style="position: relative">
-        <span id="l-jianjie" [ngStyle]="getStyle()" (click)="goodDes()" [class.tab_focus]="textShow==1">商品简介</span>
+        <span id="l-jianjie" (click)="goodDes()" [class.tab_focus]="textShow==1">商品简介</span>
         <span id="l-comment" (click)="goodComs()" [class.tab_focus]="textShow==2">
           顾客评论
           <b id="l-comment-count">(3)</b>
@@ -282,7 +282,7 @@
     <!-- 商品推荐 （4个）-->
     <div class="l-right-part">
         <div class="l-run-title">
-          商品推荐
+          商品搭配
         </div>
         <div class="l-rum-fruit">
           <!--商品推荐循环-->
