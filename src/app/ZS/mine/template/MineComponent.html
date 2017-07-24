@@ -357,13 +357,67 @@
       </form>
     </div>
     <div class="l-per-right" [style.display]="textShow==6?'':'none'">
-      密码修改
+      <h6>密码修改</h6>
+      <div class="l-password-box">
+        <div>
+          <label>原密码:</label>
+          <input id="l-oldPass" type="password" name="password">
+        </div>
+        <div>
+          <label>新密码:</label>
+          <input id="l-newPass" type="password" name="password">
+        </div>
+        <div>
+          <label class="sure-password">确认密码:</label>
+          <input id="l-sure-newPass" type="password" name="password">
+        </div>
+        <div class="l-basic-submit btn btn-success">确认提交</div>
+      </div>
     </div>
     <div class="l-per-right" [style.display]="textShow==7?'':'none'">
-      我的收藏
+      <h6>我的收藏</h6>
+      <div class="l-collection-content">
+        <table>
+          <thead>
+          <tr>
+            <th width="30%"></th>
+            <th width="20%">商品</th>
+            <th width="20%">价格</th>
+            <th width="30%">操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr></tr>
+          <tr class="l-integral-detail">  <!-- 遍历tr.l-integral-detail -->
+            <td>
+              <p>
+                <a>
+                  <img src="https://imgjd2.fruitday.com/images/product_pic/2862/1/1-180x180-2862-2RFUX31R.jpg">
+                </a>
+              </p>
+            </td>
+            <td>
+              <p>
+                <a>优选南非葡萄柚</a>
+              </p>
+            </td>
+            <td>
+              <p>￥39.90</p>
+            </td>
+            <td>
+              <p>
+                <span>加入购物车</span>
+                <span style="color: #b1000f;" id="l-cancleFollow-btn" (click)="$remove_addr()">取消收藏</span>
+              </p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="l-per-right" [style.display]="textShow==7?'':'none'">
-      通知设置
+    <div class="l-per-right" [style.display]="textShow==8?'':'none'">
+      <h6>通知设置</h6>
+
     </div>
   </div>
 

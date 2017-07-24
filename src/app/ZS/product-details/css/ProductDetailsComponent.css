@@ -460,10 +460,11 @@ li{
 .l-com-detailTitle>ul>li>s{
   display: inline-block;
   width: 14px;
-  height: 16px;
-  padding-right: 25px;
-  margin-top: 10px;
-  background: url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px;
+  height: 14px;
+  margin-top: -7px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  background: #fff;
 }
 .l-user-says{
   height: auto;

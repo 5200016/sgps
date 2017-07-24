@@ -13,7 +13,7 @@ export class ConfirmComponent{
   @Input() show: boolean = false;
   @Output() showChange: EventEmitter<any> = new EventEmitter();
   @Input() title: string = "消息提示";
-  @Input() content: string = "提示内容";
+  @Input() content: string = "";
   @Input() subTitle: string = "";
   @Input() sureText: string = "确定";
   @Input() cancelText: string = "取消";

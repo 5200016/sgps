@@ -93,7 +93,7 @@
           </div>
         </li>
         <li>
-          <div id="l-gdo-fol">
+          <div (click)="$confirm_folllow_goods()" id="l-gdo-fol">
             <i id="l-gdo-fol-img"></i>
             <span>加入收藏</span>
           </div>
@@ -301,5 +301,6 @@
     </div>
   </div>
 
-  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="去结算" sureText="继续购物"  [(show)] = "s_confirm_flag" [content]="s_confirm_content" (sure)="$confirm_sure_click()"></ele-confirm>
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="去结算" sureText="继续购物"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" (sure)="$confirm_sure_click()"></ele-confirm>
+  <ele-confirm [subTitle]="s_confirm_subTitle" [(show)] = "s_confirm_folflag" (sure)="$confirm_sure_click()"></ele-confirm>
 </div>
