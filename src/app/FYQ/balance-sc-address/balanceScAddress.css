@@ -1,0 +1,55 @@
+.f-dialog-mask {
+/*  opacity: 0.7;*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.36);
+  z-index: 999;
+}
+.f-dialog{
+  pointer-events: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -358px;
+  margin-top: -248px;
+  width: 716px;
+  padding: 8px;
+  background: rgba(0,0,0,0.16);
+  z-index: 1000;
+}
+.f-dialog>.f-dialog-til {
+  position: relative;
+  height: 40px;
+  padding: 0 15px;
+  background: #eaeaea;
+  margin: 0;
+  font-size: 16px;
+  line-height: 40px;
+  color: #555;
+}
+.f-dialog>.f-dialog-til>.iconfont {
+  font-size: 22px;
+  cursor: pointer;
+}
+.f-dialog>.f-dialog-til>span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+  opacity: 1;
+}
+.pull-right{
+  float: right;
+}
+.f-dialog-con{
+  background: #fff;
+  padding: 20px;
+  min-height: 300px;
+}
