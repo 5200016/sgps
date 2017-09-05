@@ -19,8 +19,8 @@ import { CustomPackagesComponent } from './ZS/custom-packages/CustomPackagesComp
 import { HomepageComponent } from './ZS/homepage/HomepageComponent';
 import { MineComponent } from './ZS/mine/MineComponent';
 import { ProductDetailsComponent } from './ZS/product-details/ProductDetailsComponent';
-import {AdDetailsComponent} from './ZS/ad-details/AdDetailsComponent';
-
+import { AdDetailsComponent } from './ZS/ad-details/AdDetailsComponent';
+import { ConfirmComponent } from './ZS/confirm/confirm.component'
 declare var $: any;
 @NgModule({
   declarations: [
@@ -39,7 +39,8 @@ declare var $: any;
     MineComponent,
     HomepageComponent,
     ProductDetailsComponent,
-    AdDetailsComponent
+    AdDetailsComponent,
+    ConfirmComponent
   ],
   imports: [
     KSSwiperModule,
@@ -51,7 +52,7 @@ declare var $: any;
   providers: [
   ],
 /*  bootstrap: [AppComponent]*/
-  bootstrap: [HomepageHeadComponent]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule {

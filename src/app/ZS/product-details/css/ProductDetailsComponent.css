@@ -460,76 +460,61 @@ li{
 .l-com-detailTitle>ul>li>s{
   display: inline-block;
   width: 14px;
-  height: 16px;
-  padding-right: 25px;
-  margin-top: 10px;
-  background: url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px;
+  height: 14px;
+  margin-top: -7px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  background: #fff;
 }
 .l-user-says{
   height: auto;
   float: left;
   padding-top: 15px;
   border-bottom: 1px solid #ccc;
+  width: 100%;
 }
 .l-user-says>div{
   float: left;
 }
 .l-user-says-left{
-  width: 120px;
-  padding-left: 30px;
+  width: 85%;
   padding-top: 10px;
 }
-.l-user-says-left>img{
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-}
-.l-user-says-left>p{
-  padding-top: 12px;
-  text-align: center;
-  padding-bottom: 14px;
-}
-.l-user-says-right{
-  padding-top: 10px;
-  width: 840px;
-}
-.l-user-says-right>ul>li{
+.l-user-says-left>ul>li{
   float: left;
   width: 100%;
   margin-bottom: 10px;
 }
-.l-user-says-right>ul>li>p{
+.l-user-says-left>ul>li>p{
   float: left;
   font-size: 14px;
   width: 750px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.l-user-says-right>ul>li>p:first-child{
-  width:50px;
-}
-.l-play-start{
-  width: 150px;
-  float: left;
-}
-.l-user-says-right ul li span{
+.l-user-says-left ul li span{
   font-size: 12px;
 }
-.l-play-start .star{
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  background: url(http://www.fruitday.com/images/common/icons.png) no-repeat -7px -167px;
-}
-.l-user-says-right>ul>li>img{
+.l-user-says-left>ul>li>img{
   width: 100px;
   height: 75px;
   margin-right: 3px;
   overflow: hidden;
 }
-.gray{
-  padding-left: 50px;
-  margin-right: 10px;
+.l-user-says-right{
+  padding-top: 10px;
+  width: 15%;
+  text-align: center;
+}
+.l-user-says-right>img{
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+}
+.l-user-says-right>p{
+  padding-top: 12px;
+  text-align: center;
+  padding-bottom: 14px;
 }
 /*商品推荐*/
 .l-right-part {

@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 })
 
 export class MineComponent {
+  s_confirm_flag: boolean = false;
+  s_confirm_content: string =  '';
   textShow: number = 1 ;
   constructor() {
   }
@@ -37,5 +39,11 @@ export class MineComponent {
   perEight() {
     this.textShow = 8;
   }
-
+  $remove_addr() {
+    this.s_confirm_content =  '您确定要删除该条收货地址？';
+    this.s_confirm_flag = true;
+  }
+  $confirm_sure_click () {
+    console.log('cancel ok');
+  }
 }

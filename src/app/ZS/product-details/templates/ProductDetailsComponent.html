@@ -87,13 +87,13 @@
           <a id="l-gdo-buy">立刻购买</a>
         </li>
         <li>
-          <div id="l-gdo-car">
+          <div (click)="$confirm_add_goods()" id="l-gdo-car">
             <i id="l-gdo-car-img"></i>
             <span>加入购物车</span>
           </div>
         </li>
         <li>
-          <div id="l-gdo-fol">
+          <div (click)="$confirm_folllow_goods()" id="l-gdo-fol">
             <i id="l-gdo-fol-img"></i>
             <span>加入收藏</span>
           </div>
@@ -242,27 +242,21 @@
               <!--评论循环-->
               <div class="l-user-says" *ngFor="let com of coms">
                   <div class="l-user-says-left">
-                    <img class="img-circle" src="https://imgjd2.fruitday.com/up_images/default_userpic.png">
-                    <p>{{ com.name }}</p>
-                  </div>
-                  <div class="l-user-says-right">
                     <ul>
+                      <!--  <li>
+                          <p class="l-num">评分</p>
+                          <p class="l-play-start">
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                            <span class="star"></span>
+                          </p>
+                        </li>-->
                       <li>
-                        <p class="l-num">评分</p>
-                        <p class="l-play-start">
-                          <span class="star"></span>
-                          <span class="star"></span>
-                          <span class="star"></span>
-                          <span class="star"></span>
-                          <span class="star"></span>
-                        </p>
-                      </li>
-                      <li>
-                        <p class="cont">内容</p>
                         <p class="user-ping">{{ com.content }}</p>
                       </li>
                       <li>
-                        <p class="cont pull-left">晒图</p>
                         <img src="{{ com.img }}">
                       </li>
                       <li>
@@ -270,6 +264,10 @@
                       </li>
                       <li><ul></ul></li>
                     </ul>
+                  </div>
+                  <div class="l-user-says-right">
+                    <img class="img-circle" src="https://imgjd2.fruitday.com/up_images/default_userpic.png">
+                    <p>{{ com.name }}</p>
                   </div>
               </div>
             </div>
@@ -301,4 +299,6 @@
     </div>
   </div>
 
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="去结算" sureText="继续购物"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" (sure)="$confirm_sure_click()"></ele-confirm>
+  <ele-confirm [subTitle]="s_confirm_subTitle" [(show)] = "s_confirm_folflag" (sure)="$confirm_sure_click()"></ele-confirm>
 </div>

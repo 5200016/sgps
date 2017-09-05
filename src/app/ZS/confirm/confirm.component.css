@@ -1,0 +1,71 @@
+.confirm-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 3s all linear 0s;
+}
+.content-wrapper{
+  width: 430px;
+  min-height: 250px;
+  margin: 200px auto;
+  background: #fff;
+  border: 1px solid #eeece8;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+.content-wrapper>div{
+  float: left;
+  width: 100%;
+}
+.content-wrapper .top{
+  padding: 10px;
+  background: rgba(96, 92, 92, 0.2);
+}
+.content-wrapper .top .title{
+  float: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+.content-wrapper .top .hide-icon{
+  float: right;
+  font-size: 20px;
+  font-weight: 700;
+  margin: -2px;
+  cursor: pointer;
+}
+.content-wrapper .content{
+  font-size: 24px;
+  margin: 24px auto;
+  text-align: center;
+}
+.content-wrapper .content .logo{
+  margin-bottom: 10px;
+}
+.content-wrapper .op>div{
+  float: left;
+  border-radius: 4px;
+  width: 147px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 18px;
+  padding: 10px;
+  cursor: pointer;
+}
+.content-wrapper .op .sure{
+  margin-right: 8px;
+  margin-left: 58px;
+  color: #eff4ec;
+  background: #64a131;
+  border-color: #7DAF57;
+}
+.content-wrapper .op .cancel{
+  color: #64a131;
+  background: #f5ffed;
+  border: 1px solid #64a131;
+}
+.content-html{
+  color: #999;
+}

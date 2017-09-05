@@ -75,26 +75,6 @@ document.getElementById("min").onclick=function(){
   }
 }
 
-<!--加入购物车 弹出框-->
-document.getElementById('l-gdo-car').onclick=function () {
-  $('.l-bg').show(500);
-  $('.add-shop-car').show(1000);
-};
-function addCancel() {
-  $('.l-bg').hide(1000);
-  $('.add-shop-car').hide(500);
-}
-
-<!--收藏 弹出框-->
-document.getElementById('l-gdo-fol').onclick=function () {
-  $('.l-bg').show(500);
-  $('.l-goods-follow').show(1000);
-};
-function folCancel() {
-  $('.l-bg').hide(1000);
-  $('.l-goods-follow').hide(500);
-}
-
 <!--滚动条滚到一定高度，商品简介、评论栏定位为固定定位-->
 /*var rightTextH = $('#comment-text').height();
  $(window).scroll(function(){
@@ -112,30 +92,4 @@ document.getElementById("l-car-btn").onclick=function () {
 }
 document.getElementById("anniu").onclick=function () {
   $('#l-thefruit').hide(500);
-}
-
-<!--不同评论切换-->
-document.getElementById('l-all-com').onclick=function () {
-  $('#l-all-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -151px ');
-  $('#l-good-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-normal-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-bad-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-}
-document.getElementById('l-good-com').onclick=function () {
-  $('#l-good-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -151px ');
-  $('#l-all-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-normal-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-bad-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-}
-document.getElementById('l-normal-com').onclick=function () {
-  $('#l-normal-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -151px ');
-  $('#l-all-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-good-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-bad-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-}
-document.getElementById('l-bad-com').onclick=function () {
-  $('#l-bad-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -151px ');
-  $('#l-all-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-good-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
-  $('#l-normal-com>s').css( 'background','url(http://www.fruitday.com/images/common/icons.png) no-repeat -532px -170px ');
 }
