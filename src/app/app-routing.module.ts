@@ -20,7 +20,10 @@ const childRoutes: Routes = [
   { path: 'custom-packages', component: CustomPackagesComponent },
   { path: 'mine', component: MineComponent },
   { path: 'product-details', component: ProductDetailsComponent },
+<<<<<<< HEAD
   { path: 'mine', component: MineComponent },
+=======
+>>>>>>> 6ee918734e0e1b5d6951d619c755183aab9de115
 ]
 /* 一级路由 */
 const routes: Routes = [
