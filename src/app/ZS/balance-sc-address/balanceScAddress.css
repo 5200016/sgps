@@ -16,7 +16,7 @@
   margin-left: -358px;
   margin-top: -248px;
   width: 716px;
-  padding: 8px8i918899;
+  padding: 8px;
   background: rgba(0,0,0,0.16);
   z-index: 1000;
 }
@@ -52,4 +52,31 @@
   background: #fff;
   padding: 20px;
   min-height: 300px;
+}
+.f-dialog-con .f-form-formitem{
+  width: 100%;
+  line-height: 30px;
+  margin: 0 0 15px;
+}
+.f-dialog-con .f-form-formitem>label{
+  float: left;
+  width: 90px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-weight: normal;
+  color: #999;
+  white-space: nowrap;
+}
+.VI-color1 {
+  color: #f6ab00;
+}
+.f-dialog-con .f-form-formitem>input.inpText {
+  float: left;
+  width: 160px;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0 15px 0 0;
+  border: 1px solid #ddd;
+  color: #555;
+  border-radius: 5px;
 }

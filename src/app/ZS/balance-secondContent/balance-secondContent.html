@@ -1,0 +1,137 @@
+<balanceHead></balanceHead>
+<div class="cart w-750">
+  <div class="f-component-order">
+    <div style=" width: 35px;margin-left: -35px;"><img src="../../assets/balance-scontent/shopping.png"></div>
+    <h3>填写并核对订单信息</h3>
+    <div class="f-icons-cart pull-right">
+      <img src="../../assets/balance-scontent/second.png">
+      <ul id="cart-flow" class="clear">
+        <li class="c_f_li" style="margin-left: 36px;">1.我的购物车</li>
+        <li class="c_f_li c_f_li_cur" style="color: #ff9900; margin-top: -20px; margin-left: 177px;">2.填写核对订单信息</li>
+        <li class="c_f_li" style=" margin-top: -20px;margin-left: 356px;">3.成功提交订单</li>
+      </ul>
+    </div>
+    <h4>
+      <a href="/" class="pull-right" id="newAddress" [routerLink]="['/balanceScAddress']">新增收获地址</a>收获人信息
+    </h4>
+    <div class="f-order-item">
+      <ul class="f-list-unstyled clearfix order-item-addresslist" id="orderAddressList">
+      </ul>
+      <ul class="f-list-unstyled order-item-addresslist" id="orderAddressSwitch">
+        <li>
+          <span class="more">
+            <b>收起地址</b>
+            <a class="f-b-u"></a>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <h4>支付方式</h4>
+    <div class="f-order-item">
+      <ul class="f-list-unstyled clearfix order-item-paylist" >
+        <li data-id="1|0">在线支付</li>
+       <!-- <li id="f_sc_payoff" data-id="7|0" class="balancepay payarrival">
+          <p id="offname">线下支付</p>
+          &lt;!&ndash;线下支付列表&ndash;&gt;
+          <div class="f-paytips payways" style="display: none;">
+            <p class="curr">
+              货到付现金
+              <em style="display: none">|1</em>
+            </p>
+          </div>
+        </li>-->
+      </ul>
+    </div>
+    <h4 style="margin-top: 85px;"><a href="/" class="pull-right">修改购物车</a>
+    配送信息
+    </h4>
+    <div class="f-order-item clearfix">
+      <ul class="f-order-item-cartlist f-list-unstyled pull-right">
+        <li>
+            <img src="../../assets/specialOffer/fruit1.jpg">
+            <div class="f-protitle">
+              越南火龙果
+            </div>
+            <div class="f-proinfo" >
+              ￥19.90 / 2个
+              <span>x 1</span>
+            </div>
+        </li>
+        <li>
+            <img src="../../assets/specialOffer/fruit1.jpg">
+            <div class="f-protitle">
+              越南火龙果
+            </div>
+            <div class="f-proinfo" >
+              ￥19.90 / 2个
+              <span>x 1</span>
+            </div>
+        </li>
+      </ul>
+      <div class="f-order-item-sendinfo pull-left">
+        <h5 class="clearfix">
+          <a href="javascript:;" class="pull-right" id="modifyTime">修改</a>
+          <span class="pull-left">配送时间</span>
+          <p class="pull-left">无</p>
+        </h5>
+        <h5 class="clearfix">
+          <a href="javascript:;" class="pull-right" id="fpxx">修改</a>
+          <span class="pull-left">发票信息</span>
+          <p class="pull-left">无</p>
+        </h5>
+        <h5 class="f-end clearfix">
+          <textarea class="f-form-control pull-right" rows="3" placeholder="请填写备注信息" id="mzxx"></textarea>
+          <span class="pull-left">备注信息</span>
+        </h5>
+        <div class="f-font-color">
+          <span>运费：</span>
+          <span class="YF-color2">￥0.00</span>
+        </div>
+      </div>
+    </div>
+    <h4>使用积分优惠券</h4>
+    <div class="f-order-item f-order-item-discount">
+      <p>
+        最多可抵扣￥0.00元，已抵扣
+        <input type="text" class="form-control" placeholder="0" value="0.00" id="jf" data-last-id="0.00" data-limit-id="0.00">
+        元
+      </p>
+    </div>
+    <div class="f-order-item-inall">
+      <p class="text-right">
+        商品总金额：
+        <span>￥167.90</span>
+      </p>
+      <p class="text-right">
+        运费：
+        <span>￥0.00</span>
+      </p>
+      <p class="text-right">
+        商品减免：
+        <span>￥0</span>
+      </p>
+      <p class="text-right">
+        积分抵扣：
+        <span>￥0.00</span>
+      </p>
+      <p class="text-right">
+        优惠券抵扣：
+        <span>￥0.00</span>
+      </p>
+      <p class="text-right">
+        其他抵扣：
+        <span>￥0.00</span>
+      </p>
+    </div>
+    <div class="f-footer">
+      <div class="f-cart-buy pull-right">
+            <span>
+             应付金额
+            </span>
+        <span class="f-all-order">￥207.70</span>
+        <a id="f-btngopay" class="go-pay">提交订单</a>
+      </div>
+    </div>
+
+  </div>
+</div>

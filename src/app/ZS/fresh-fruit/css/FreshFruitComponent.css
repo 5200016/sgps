@@ -4,6 +4,8 @@
 }
 .content .select {
   padding-top: 26px;
+  width: 85%;
+  margin-left: 120px;
 }
 .content .select .oc {
   width: 100%;
@@ -31,7 +33,9 @@ h5, .h5 {
   font-size: 14px;
 }
 .content .select .f-select {
-  width: 1230px;
+  width: 1243px;
+  margin-left: 40px;
+  margin-top: -22px;
 }
 .content .select .f-select .left {
   width: 48px;
@@ -79,6 +83,8 @@ a {
 /*列表*/
 .list{
   margin-top: 27px;
+  width: 85%;
+  margin-left: 120px;
 }
 .list .part{
   width: 100%;

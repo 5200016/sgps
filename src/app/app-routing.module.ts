@@ -7,7 +7,10 @@ import { MineComponent } from './ZS/mine/MineComponent';
 import {HomepageComponent} from './ZS/homepage/HomepageComponent';
 import {ProductDetailsComponent} from './ZS/product-details/ProductDetailsComponent';
 import {AdDetailsComponent} from './ZS/ad-details/AdDetailsComponent';
-import { HomepageHeadComponent } from './ZS/homepage-head/HomepageHeadComponent'
+import { HomepageHeadComponent } from './ZS/homepage-head/HomepageHeadComponent';
+import { BalanceFirstContentComponent } from './ZS/balance-firstContent/balance-firstContent.component';
+import { BalanceSecondContentComponent } from './ZS/balance-secondContent/balance-secondContent.component';
+import { BalanceScAddressComponent } from './ZS/balance-sc-address/balanceScAddress.component';
 /* 二级路由 */
 const childRoutes: Routes = [
   { path:  '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +20,7 @@ const childRoutes: Routes = [
   { path: 'custom-packages', component: CustomPackagesComponent },
   { path: 'mine', component: MineComponent },
   { path: 'product-details', component: ProductDetailsComponent },
-  { path: 'mine', component: MineComponent }
+  { path: 'mine', component: MineComponent },
 ]
 /* 一级路由 */
 const routes: Routes = [
@@ -27,12 +30,24 @@ const routes: Routes = [
     path: 'index',
     component: HomepageHeadComponent,
     children: childRoutes
-  }
+  },
+  {
+    path: 'balance-firstContent',
+    component: BalanceFirstContentComponent
+  },
+  {
+    path: 'balance-secondContent',
+    component: BalanceSecondContentComponent
+  },
+  {
+    path: 'balanceScAddress',
+    component: BalanceScAddressComponent
+  },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule {
 }

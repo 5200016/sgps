@@ -20,7 +20,12 @@ import { HomepageComponent } from './ZS/homepage/HomepageComponent';
 import { MineComponent } from './ZS/mine/MineComponent';
 import { ProductDetailsComponent } from './ZS/product-details/ProductDetailsComponent';
 import { AdDetailsComponent } from './ZS/ad-details/AdDetailsComponent';
-import { ConfirmComponent } from './ZS/confirm/confirm.component'
+import { ConfirmComponent } from './ZS/confirm/confirm.component';
+import { BalanceFirstContentComponent } from './ZS/balance-firstContent/balance-firstContent.component';
+import { BalanceSecondContentComponent } from './ZS/balance-secondContent/balance-secondContent.component';
+import { BalanceHeadComponent } from './ZS/balance-head/balanceHead.component';
+import { BalanceScAddressComponent } from './ZS/balance-sc-address/balanceScAddress.component';
+
 declare var $: any;
 @NgModule({
   declarations: [
@@ -40,7 +45,11 @@ declare var $: any;
     HomepageComponent,
     ProductDetailsComponent,
     AdDetailsComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    BalanceFirstContentComponent,
+    BalanceSecondContentComponent,
+    BalanceHeadComponent,
+    BalanceScAddressComponent
   ],
   imports: [
     KSSwiperModule,

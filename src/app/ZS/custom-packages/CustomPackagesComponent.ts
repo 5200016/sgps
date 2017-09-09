@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './template/CustomPackagesComponent.html',
   styleUrls: ['./css/CustomPackagesComponent.css']
 })
-
 export class CustomPackagesComponent{
   freshFruits = [
     {

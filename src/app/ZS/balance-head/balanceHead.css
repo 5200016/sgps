@@ -1,0 +1,55 @@
+.f-balance-content{
+  padding: 15px 0;
+  height: 76px;
+  width: 1371px;
+  margin: 0px auto;
+  box-shadow: 0 2px 8px rgba(230,230,230,0.75);
+  border-bottom: 1px solid #f1f1f1;
+}
+.f-balance-content .navbar{
+  height: 100%;
+  margin-bottom: 0;
+}
+.navbar{
+  border-radius: 4px;
+  position: relative;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
+.f-balance-content .f-contain-fluid{
+  height: 100%;
+  margin-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.navbar-header {
+  height: 100%;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  float: left;
+}
+.f-balance-content .f-contain-head .f-logo{
+  width: 300px;
+  height: 100%;
+  background-image: url(../../../assets/balanceHead/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: black;
+}
+.f-contain-fluid .f-head-step{
+  margin-right: 0;
+  margin-left: 0;
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+  width: auto;
+  border-top: 0;
+  box-shadow: none;
+  padding-right: 15px;
+  padding-left: 15px;
+}
