@@ -80,3 +80,15 @@
   color: #555;
   border-radius: 5px;
 }
+.f-dialog-con .f-form-formitem>input.inpCheck{
+  float: left;
+  margin: 8px 5px 0 80px;
+}
+.f-dialog-con .f-form-formitem>label{
+  width: 90px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-weight: normal;
+  color: #999;
+  white-space: nowrap
+}
