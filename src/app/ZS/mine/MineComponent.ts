@@ -4,6 +4,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'mine',
   templateUrl: './template/MineComponent.html',
   styleUrls: ['./css/MineComponent.css']
@@ -41,6 +42,10 @@ export class MineComponent {
   }
   $remove_addr() {
     this.s_confirm_content =  '您确定要删除该条收货地址？';
+    this.s_confirm_flag = true;
+  }
+  $remove_follow() {
+    this.s_confirm_content =  '您确定要取消收藏该商品？';
     this.s_confirm_flag = true;
   }
   $confirm_sure_click () {

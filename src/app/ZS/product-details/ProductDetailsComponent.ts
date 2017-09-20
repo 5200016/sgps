@@ -1,18 +1,28 @@
 /**
  * Created by 刘婷 on 2017/7/14.
  */
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/switchMap';
+import { Http, Response } from '@angular/http';
+
 @Component({
+  // moduleId: module.id,
   selector: 'product-details',
   templateUrl: './templates/ProductDetailsComponent.html',
   styleUrls: ['./css/ProductDetailsComponent.css'],
+  // providers: [ ProductDetailsService ] // service接口
 })
-export class ProductDetailsComponent {
+export class ProductDetailsComponent implements OnInit {
+
   s_confirm_addflag: boolean = false;
   s_confirm_folflag: boolean = false;
   s_confirm_content: string =  '';
   s_confirm_subTitle: string = '';
   textShow: number = 1 ;
+  // 评论
   coms: any = [
     {
       id: '1',
@@ -29,6 +39,7 @@ export class ProductDetailsComponent {
       date: new Date,
     }
   ];
+  // 推荐类型物品
   rums: any = [
     {
       id: '1',
@@ -44,8 +55,33 @@ export class ProductDetailsComponent {
       price: '29.90',
       num: '2斤',
     }
-  ]
-  constructor() {
+  ];
+
+  good: any;
+
+// 商品的属性
+  id: string;
+  goodsName: string;
+  goodsPrice: string;
+  goodsImage: string;
+  goodsClassify: number;
+  goodsIntroduction: string;
+  temperature: number;
+  nutritionInfo: string;
+  effect: string;
+  hot: number;
+  createTime: any;
+  updateTime: any;
+
+  constructor(private http: Http) {
+  }
+  // 生命周期
+  ngOnInit(): void {
+    this.http.get('http://www.mobilebooks.cn/api/t-goods/2')
+      .subscribe((res: Response) => {
+        this.good = res.json();
+        console.log(this.good);
+      })
   }
   goodDes() {
     this.textShow = 1;
@@ -74,3 +110,4 @@ export class ProductDetailsComponent {
     this.s_confirm_folflag = true;
   }
 }
+
