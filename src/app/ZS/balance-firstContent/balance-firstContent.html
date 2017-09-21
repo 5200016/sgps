@@ -24,25 +24,25 @@
     </ul>
     <!--商品详情-->
     <ul class="f-list-unstyled">
-      <li type="normal">
+      <li type="normal" *ngFor="let fruits of cars">
         <div class="cartbox clearfix">
           <!--商品图-->
           <div class="f-cart-imgs pull-left">
             <a href="">
-              <img src="../../assets/specialOffer/fruit1.jpg">
+              <img [src]="fruits.goodsImage">
             </a>
           </div>
           <!--商品名称-->
           <div class="f-cart-name pull-left">
-            <p><a href="/" >越南火龙果</a></p>
+            <p><a href="/" >{{fruits.goodsName}}</a></p>
           </div>
           <!--商品规格-->
           <div class="f-spec-num pull-left">
-            <p>2个</p>
+            <p>{{fruits.goodCount}}个</p>
           </div>
           <!--商品价格-->
           <div class="f-price-singular pull-left">
-            <p>￥19.90</p>
+            <p>￥{{fruits.goodsPrice}}</p>
           </div>
           <!--数量-->
           <div class="f-num-sel f-cart-good pull-left">
@@ -60,37 +60,37 @@
           </div>
         </div>
       </li>
-      <li type="normal">
+     <!-- <li type="normal">
         <div class="cartbox clearfix">
-          <!--商品图-->
+          &lt;!&ndash;商品图&ndash;&gt;
           <div class="f-cart-imgs pull-left">
             <a href="">
               <img src="../../assets/specialOffer/fruit1.jpg">
             </a>
           </div>
-          <!--商品名称-->
+          &lt;!&ndash;商品名称&ndash;&gt;
           <div class="f-cart-name pull-left">
             <p><a href="/" >越南火龙果</a></p>
           </div>
-          <!--商品规格-->
+          &lt;!&ndash;商品规格&ndash;&gt;
           <div class="f-spec-num pull-left">
             <p>2个</p>
           </div>
-          <!--商品价格-->
+          &lt;!&ndash;商品价格&ndash;&gt;
           <div class="f-price-singular pull-left">
             <p>￥19.90</p>
           </div>
-          <!--数量-->
+          &lt;!&ndash;数量&ndash;&gt;
           <div class="f-num-sel f-cart-good pull-left">
             <span class="inC num pull-left btn-minus">-</span>
             <input class="pull-left" type="tel" disabled="" name="qty" autocomplete="on" value="1">
             <span class="deC num pull-left btn-plus">+</span>
           </div>
-          <!--商品总价-->
+          &lt;!&ndash;商品总价&ndash;&gt;
           <div class="f-sum pull-left">
             <p>￥59.90</p>
           </div>
-          <!--操作-->
+          &lt;!&ndash;操作&ndash;&gt;
           <div class="f-delete pull-left">
             <p class="f-cartlist-delete">删除</p>
           </div>
@@ -98,35 +98,35 @@
       </li>
       <li type="normal">
         <div class="cartbox clearfix">
-          <!--商品图-->
+          &lt;!&ndash;商品图&ndash;&gt;
           <div class="f-cart-imgs pull-left">
             <a href="">
               <img src="../../assets/specialOffer/fruit1.jpg">
             </a>
           </div>
-          <!--商品名称-->
+          &lt;!&ndash;商品名称&ndash;&gt;
           <div class="f-cart-name pull-left">
             <p><a href="/" >越南火龙果</a></p>
           </div>
-          <!--商品规格-->
+          &lt;!&ndash;商品规格&ndash;&gt;
           <div class="f-spec-num pull-left">
             <p>2个</p>
           </div>
-          <!--商品价格-->
+          &lt;!&ndash;商品价格&ndash;&gt;
           <div class="f-price-singular pull-left">
             <p>￥19.90</p>
           </div>
-          <!--数量-->
+          &lt;!&ndash;数量&ndash;&gt;
           <div class="f-num-sel f-cart-good pull-left">
             <span class="inC num pull-left btn-minus">-</span>
             <input class="pull-left" type="tel" disabled="" name="qty" autocomplete="on" value="1">
             <span class="deC num pull-left btn-plus">+</span>
           </div>
-          <!--商品总价-->
+          &lt;!&ndash;商品总价&ndash;&gt;
           <div class="f-sum pull-left">
             <p>￥59.90</p>
           </div>
-          <!--操作-->
+          &lt;!&ndash;操作&ndash;&gt;
           <div class="f-delete pull-left">
             <p class="f-cartlist-delete">删除</p>
           </div>
@@ -134,40 +134,40 @@
       </li>
       <li type="normal">
         <div class="cartbox clearfix">
-          <!--商品图-->
+          &lt;!&ndash;商品图&ndash;&gt;
           <div class="f-cart-imgs pull-left">
             <a href="">
               <img src="../../assets/specialOffer/fruit1.jpg">
             </a>
           </div>
-          <!--商品名称-->
+          &lt;!&ndash;商品名称&ndash;&gt;
           <div class="f-cart-name pull-left">
             <p><a href="/" >越南火龙果</a></p>
           </div>
-          <!--商品规格-->
+          &lt;!&ndash;商品规格&ndash;&gt;
           <div class="f-spec-num pull-left">
             <p>2个</p>
           </div>
-          <!--商品价格-->
+          &lt;!&ndash;商品价格&ndash;&gt;
           <div class="f-price-singular pull-left">
             <p>￥19.90</p>
           </div>
-          <!--数量-->
+          &lt;!&ndash;数量&ndash;&gt;
           <div class="f-num-sel f-cart-good pull-left">
             <span class="inC num pull-left btn-minus">-</span>
             <input class="pull-left" type="tel" disabled="" name="qty" autocomplete="on" value="1">
             <span class="deC num pull-left btn-plus">+</span>
           </div>
-          <!--商品总价-->
+          &lt;!&ndash;商品总价&ndash;&gt;
           <div class="f-sum pull-left">
             <p>￥59.90</p>
           </div>
-          <!--操作-->
+          &lt;!&ndash;操作&ndash;&gt;
           <div class="f-delete pull-left">
             <p class="f-cartlist-delete">删除</p>
           </div>
         </div>
-      </li>
+      </li>-->
       <!--尾部-->
       <li>
         <div class="f-footer">

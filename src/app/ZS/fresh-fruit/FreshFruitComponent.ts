@@ -11,23 +11,37 @@ import {Http, Response} from '@angular/http';
 })
 
 export class FreshFruitComponent implements OnInit {
-  data: Object;
   id: string;
-  goods_name: string;
-  goods_image: string;
-  goods_price: string;
-  classify_name: string;
-  classify_type: number;
+  goodsName: string;
+  goodsImage: string;
+  goodsPrice: string;
+  /*goodsClassify:number;*/
+  classifyName: string;
+  data: any;
+  place:any;
+  good:any;
   /*
   构造方法
    */
   constructor(private http: Http){
   }
+
   /*初始化方法*/
   ngOnInit(){
-    this.http.get('http://www.mobilebooks.cn/api/t-classifies').subscribe((res: Response) => {
+    //品类
+    this.http.get('http://www.mobilebooks.cn/api/t-classType-0').subscribe((res: Response) => {
       this.data = res.json();
       console.log(this.data);
+    });
+    //产地
+    this.http.get('http://www.mobilebooks.cn/api/t-classType-1').subscribe((res: Response) => {
+      this.place = res.json();
+      console.log(this.place);
+    });
+    //商品
+    this.http.get('http://www.mobilebooks.cn/api/t-classifies/2').subscribe((res: Response) => {
+      this.good = res.json();
+      console.log(this.good);
     })
   }
 

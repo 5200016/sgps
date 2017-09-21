@@ -17,8 +17,32 @@
         <label>
           <span class="VI-color1">*</span>选择地区
         </label>
-        <div class="inpSel">
-
+        <div class="inpSel act">
+          <input type="hidden">
+          <span>省/直辖市</span>
+          <ul class="list-unstyled" style="display: block;">
+            <li data-id="144252">广东省</li>
+            <li data-id="143983">河北省</li>
+            <li data-id="144005">天津省</li>
+            <li data-id="143949">北京</li>
+            <li data-id="106340">安徽省</li>
+            <li data-id="1">江苏省</li>
+            <li data-id="54351">浙江省</li>
+            <li data-id="145855">上海崇明</li>
+            <li data-id="106092">上海</li>
+          </ul>
+        </div>
+        <div class="inpSel disabl">
+          <input type="hidden" value="" id="city">
+          <span id="spcity">市</span>
+          <ul id="lscity" class="list-unstyled">
+          </ul>
+        </div>
+        <div class="inpSel sel1 disabl">
+          <input type="hidden" value="" id="area">
+          <span id="sparea">区／县</span>
+          <ul id="lsarea" class="list-unstyled">
+          </ul>
         </div>
       </div>
       <div class="f-form-formitem clearfix">
@@ -33,10 +57,13 @@
         </label>
         <input type="text" class="inpText" maxlength="15" value="" id="phone">
       </div>
-      <!--<div class="f-form-formitem clearfix">
-        <input type="checkbox" id="def" class="inpCheck";>
+      <div class="f-form-formitem clearfix">
+        <input type="checkbox" id="def" class="inpCheck">
         <label for="def" style="width:auto;">设为默认收货地址</label>
-      </div>-->
+      </div>
+      <div class="f-form-formitem clearfix">
+        <button type="button" class="btn btn-success" id="submit">保存收获人信息</button>
+      </div>
     </form>
   </div>
 </div>

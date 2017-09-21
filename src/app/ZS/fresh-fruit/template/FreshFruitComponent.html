@@ -11,8 +11,8 @@
           </a>
         </div>
         <div class="pull-left right">
-          <a href="#"><span class="line">国产水果</span></a>
-          <a href="#"><span class="line">时令水果</span></a>
+          <a href="#"><span class="line" *ngFor="let classifys of data">{{classifys.classifyName}}</span></a>
+          <!--<a href="#"><span class="line">时令水果</span></a>
           <a href="#"><span class="line">瓜类</span></a>
           <a href="#"><span class="line">柑橘橙柚</span></a>
           <a href="#"><span class="line">苹果</span></a>
@@ -26,7 +26,7 @@
           <a href="#"><span class="line">桃子</span></a>
           <a href="#"><span class="line">西梅</span></a>
           <a href="#"><span class="line">荔枝</span></a>
-          <a href="#"><span class="line">柠檬</span></a>
+          <a href="#"><span class="line">柠檬</span></a>-->
         </div>
       </div>
     </div>
@@ -40,16 +40,7 @@
           </a>
         </div>
         <div class="pull-left right">
-          <a href="#"><span class="line">中国</span></a>
-          <a href="#"><span class="line">美国</span></a>
-          <a href="#"><span class="line">智利</span></a>
-          <a href="#"><span class="line">泰国</span></a>
-          <a href="#"><span class="line">西班牙</span></a>
-          <a href="#"><span class="line">意大利</span></a>
-          <a href="#"><span class="line">马来西亚</span></a>
-          <a href="#"><span class="line">马来西亚</span></a>
-          <a href="#"><span class="line">日本</span></a>
-          <a href="#"><span class="line">阿根廷</span></a>
+          <a href="#"><span class="line" *ngFor="let places of place" >{{places.classifyName}}</span></a>
         </div>
       </div>
     </div>
@@ -68,27 +59,37 @@
         </div>
       </div>
     </div>
+    <!--特价-->
+    <div class="oc f-clearfix pull-left f-li">
+      <h5 class="pull-left">特价</h5>
+      <div class="f-select pull-left f-clearfix">
+        <div class="pull-left left">
+          <a href="#" class="active">
+            <span class="f-all line">全部</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <!--列表-->
   <div class="list f-clearfix">
     <div class="part pull-content">
       <ul>
-        <li *ngFor="let fruits of fruitsList">
+        <li *ngFor="let item of good.goods">
           <div class="wrapper">
             <div class="img">
               <a href="#">
-                <img class="lazy" src="{{fruits.img}}">
+                <img class="lazy" [src]="item.goodsImage">
               </a>
             </div>
             <div class="f-info">
-              <div class="f-name">{{fruits.name}}</div>
-              <span class="f-unit">￥{{fruits.price}}/斤</span>
+              <div class="f-name"> {{ item.goodsName}} </div>
+              <span class="f-unit">￥{{item.goodsPrice}}/斤</span>
               <div class="f-shopping"></div>
             </div>
-
           </div>
         </li>
-        <li>
+      <!--  <li>
           <div class="wrapper">
             <div class="img">
               <a href="#">
@@ -177,7 +178,7 @@
             </div>
 
           </div>
-        </li>
+        </li>-->
       </ul>
 
     </div>
