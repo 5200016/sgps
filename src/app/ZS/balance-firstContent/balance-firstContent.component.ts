@@ -11,13 +11,14 @@ import { Http, Response } from '@angular/http';
   providers: []
 })
 export class BalanceFirstContentComponent {
-  data:Object;
   id: string;
-  goods_name: string;
-  goods_image: string;
-  goods_classify: string;
-  goods_price: string;
-
+  userId: string;
+  goodsId: number;
+  goodCount:number;
+  goodsName: string;
+  goodsImage: string;
+  goodsPrice: string;
+  cars: any;
   constructor(private http: Http){
   }
   /*
@@ -26,11 +27,9 @@ export class BalanceFirstContentComponent {
   ngOnInit(){
   }
   makeRequest():void{//定义一个点击事件的实现方法
-    this.http.get('http://www.mobilebooks.cn/api/t-goods').subscribe((res: Response) => {
-      this.data = res.json();
-
-      console.log(this.data);
-
+    this.http.get('http://www.mobilebooks.cn/api/t-shopping-cars/2').subscribe((res: Response) => {
+      this.cars = res.json();
+      console.log(this.cars);
     })
   }
 }

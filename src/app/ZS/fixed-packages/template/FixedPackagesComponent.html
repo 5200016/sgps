@@ -11,11 +11,7 @@
           </a>
         </div>
         <div class="pull-left right">
-          <a href="#"><span class="line">儿童喜欢</span></a>
-          <a href="#"><span class="line">老少皆宜</span></a>
-          <a href="#"><span class="line">美白必备</span></a>
-          <a href="#"><span class="line">充分维E</span></a>
-          <a href="#"><span class="line">养生美体</span></a>
+          <a href="#"><span class="line" *ngFor="let classifys of data">{{classifys.classifyName}}</span></a>
         </div>
       </div>
     </div>
@@ -29,10 +25,7 @@
           </a>
         </div>
         <div class="pull-left right">
-          <a href="#"><span class="line">单品</span></a>
-          <a href="#"><span class="line">礼盒</span></a>
-          <a href="#"><span class="line">套餐</span></a>
-          <a href="#"><span class="line">劵卡</span></a>
+          <a href="#"><span class="line" *ngFor="let sizes of size" >{{sizes.classifyName}}</span></a>
         </div>
       </div>
     </div>
@@ -56,22 +49,22 @@
   <div class="list f-clearfix">
     <div class="part pull-content">
       <ul>
-        <li *ngFor="let fruits of fruitsList">
+        <li *ngFor="let fruits of fruit.goods">
           <div class="wrapper">
             <div class="img">
               <a href="#">
-                <img class="lazy" src="{{fruits.img}}">
+                <img class="lazy" [src]="fruits.goodsImage">
               </a>
             </div>
             <div class="f-info">
-              <div class="f-name">{{fruits.name}}</div>
-              <span class="f-unit">￥{{fruits.price}}/斤</span>
+              <div class="f-name">{{fruits.goodsName}}</div>
+              <span class="f-unit">￥{{fruits.goodsPrice}}/斤</span>
               <div class="f-shopping"></div>
             </div>
 
           </div>
         </li>
-        <li>
+        <!--<li>
           <div class="wrapper">
             <div class="img">
               <a href="#">
@@ -160,7 +153,7 @@
             </div>
 
           </div>
-        </li>
+        </li>-->
       </ul>
 
     </div>

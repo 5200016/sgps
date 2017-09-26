@@ -67,6 +67,58 @@
   color: #999;
   white-space: nowrap;
 }
+.f-dialog-con .f-form-formitem>.inpSel.act{
+  border-color: #64a131;
+  border-width: 1px;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.025),0 0 8px rgba(100,161,49,0.6);
+}
+.f-dialog-con .f-form-formitem>.inpSel>span {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.f-dialog-con .f-form-formitem>.inpSel {
+  position: relative;
+  float: left;
+  width: 160px;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0 15px 0 0;
+  background: url(../../../assets/balance-scontent/selbg.png) no-repeat right 0;
+  border: 1px solid #ddd;
+  color: #555;
+  border-radius: 5px;
+}
+.f-dialog-con .f-form-formitem>.inpSel>ul {
+  display: none;
+  position: absolute;
+  top: 29px;
+  left: -1px;
+  width: 160px;
+  max-height: 150px;
+  overflow: auto;
+  background: #eee;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 5px rgba(175, 175, 175, 0.75);
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+ul{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.inpSel>ul>li {
+  padding: 0 10px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .VI-color1 {
   color: #f6ab00;
 }
@@ -84,11 +136,22 @@
   float: left;
   margin: 8px 5px 0 80px;
 }
-.f-dialog-con .f-form-formitem>label{
-  width: 90px;
+.f-dialog-con .f-form-formitem>label {
+  float: left;
   margin-right: 10px;
   margin-bottom: 0;
   font-weight: normal;
   color: #999;
   white-space: nowrap
+}
+.f-dialog-con .f-form-formitem>button{
+  margin-left: 100px;
+  min-width: 90px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+.btn-success {
+  background: #64a131;
+  color: #fff;
+  border-color: #4cae4c;
 }
