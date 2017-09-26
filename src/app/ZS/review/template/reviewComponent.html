@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<!--评价界面-->
+<div class="l-review-wrapper">
+  <div class="l-review-layout">
+    <form class="tb-review-goods">
+      <!--评论框-->
+      <div class="tb-review-box">
+        <div class="tb-box-hd">
+          <h3 class="hd-title">评价宝贝</h3>
+        </div>
+        <div class="tb-box-bd">
+          <div class="bd-itecmlist">
+            <ul class="bd-rate-list">
+              <li class="bd-rate-box">
+                <div class="bd-item-info">
+                    <a routerLink="/index/product-details" class="db-detail-img" target="_blank">
+                      <img src="../../../../assets/fruit/newfruit01.jpg">
+                    </a>
+                    <div class="bd-item-title">
+                      <a routerLink="/index/product-details" titl="葡萄" target="_blank">葡萄</a>
+                    </div>
+                </div>
+                <div class="bd-item-main">
+                  <div class="on">
+                      <textarea class="textInput-msg" placeholder="亲，写点评价吧，你的评价对其他买家有很大帮助的。"></textarea>
+                  </div>
+                  <div class="under">
+                      <span> + 晒图片</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!--动态评分-->
+            <div class="db-dtpf">
+              <span>动态评分</span>
+              <ul class="score">
+                <li>
+                  <label>宝贝与描述相符</label>
+                  <div class="scoreDetil">
+                      <input type="radio" value="0" name="radio">不错呦
+                      <input type="radio" value="1" name="radio">待提高
+                      <input type="radio" value="2" name="radio">小失落
+                  </div>
+                </li>
+                <li>
+                  <label>卖家的服务态度</label>
+                  <div class="scoreDetil">
+                    <input type="radio" value="0" name="radio">不错呦
+                    <input type="radio" value="1" name="radio">待提高
+                    <input type="radio" value="2" name="radio">小失落
+                  </div>
+                </li>
+                <li>
+                  <label>物流服务的质量</label>
+                  <div class="scoreDetil">
+                    <input type="radio" value="0" name="radio">不错呦
+                    <input type="radio" value="1" name="radio">待提高
+                    <input type="radio" value="2" name="radio">小失落
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--发表评论-->
+      <div class="tb-review-submitBox">
+        <button class="tb-submitBtn" type="submit">发表评论</button>
+      </div>
+    </form>
+  </div>
+</div>

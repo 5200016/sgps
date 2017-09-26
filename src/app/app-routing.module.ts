@@ -11,6 +11,7 @@ import { HomepageHeadComponent } from './ZS/homepage-head/HomepageHeadComponent'
 import { BalanceFirstContentComponent } from './ZS/balance-firstContent/balance-firstContent.component';
 import { BalanceSecondContentComponent } from './ZS/balance-secondContent/balance-secondContent.component';
 import { BalanceScAddressComponent } from './ZS/balance-sc-address/balanceScAddress.component';
+import { ReviewComponent } from './ZS/review/reviewComponent';
 /* 二级路由 */
 const childRoutes: Routes = [
   { path:  '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const childRoutes: Routes = [
   { path: 'custom-packages', component: CustomPackagesComponent },
   { path: 'mine', component: MineComponent },
   { path: 'product-details', component: ProductDetailsComponent },
-  { path: 'mine', component: MineComponent }
+  { path: 'mine', component: MineComponent },
+  { path: 'review', component: ReviewComponent }
 ]
 /* 一级路由 */
 const routes: Routes = [
