@@ -240,7 +240,7 @@
             </div>
             <div id="l-com-box" class="l-det-allsays">
               <!--评论循环-->
-              <div class="l-user-says" *ngFor="let com of coms">
+              <div class="l-user-says" *ngFor="let com of review">
                   <div class="l-user-says-left">
                     <ul>
                       <li>
@@ -250,14 +250,14 @@
                         <img src="{{ com.img }}">
                       </li>
                       <li>
-                        <span class="gray">{{ com.date }}</span>
+                        <span class="gray">{{ com.create_time }}</span>
                       </li>
                       <li><ul></ul></li>
                     </ul>
                   </div>
                   <div class="l-user-says-right">
-                    <img class="img-circle" src="https://imgjd2.fruitday.com/up_images/default_userpic.png">
-                    <p>{{ com.name }}</p>
+                    <img class="img-circle" src="{{ com.head_image }}">
+                    <p>{{ com.nickname }}</p>
                   </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ import {Component, Input, Output , EventEmitter} from '@angular/core';
   styleUrls: ['./confirm.component.css']
 })
 
-export class ConfirmComponent{
+export class ConfirmComponent {
   @Input() show: boolean = false;
   @Output() showChange: EventEmitter<any> = new EventEmitter();
   @Input() title: string = "消息提示";

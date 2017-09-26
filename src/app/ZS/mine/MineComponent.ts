@@ -13,6 +13,7 @@ import { Component } from '@angular/core';
 export class MineComponent {
   s_confirm_flag: boolean = false;
   s_confirm_content: string =  '';
+  s_addAdress_flag: boolean = false;
   textShow: number = 1 ;
   constructor() {
   }
@@ -40,6 +41,12 @@ export class MineComponent {
   perEight() {
     this.textShow = 8;
   }
+  perNine() {
+    this.textShow = 9;
+  }
+  perTen() {
+    this.textShow = 10;
+  }
   $remove_addr() {
     this.s_confirm_content =  '您确定要删除该条收货地址？';
     this.s_confirm_flag = true;
@@ -48,7 +55,11 @@ export class MineComponent {
     this.s_confirm_content =  '您确定要取消收藏该商品？';
     this.s_confirm_flag = true;
   }
+  $add_address() {
+    this.s_addAdress_flag = true;
+  }
   $confirm_sure_click () {
     console.log('cancel ok');
   }
+
 }

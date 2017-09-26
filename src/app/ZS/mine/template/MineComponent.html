@@ -31,6 +31,7 @@
       </ul>
     </div>
     <!--右边部分-->
+    <!--我的账户-->
     <div class="l-per-right" [style.display]="textShow==1?'':'none'">
       <!--个人信息-->
       <div class="l-per-tabmenu">
@@ -62,59 +63,60 @@
         <table>
           <thead>
           <tr>
-            <th width="40%">商品</th>
-            <th width="10%">价格</th>
+            <th width="35%">商品</th>
+            <th width="10%">价格(元）</th>
             <th width="10%">数量</th>
             <th width="10%">商品操作</th>
-            <th width="10%">实付金额</th>
+            <th width="15%">实付金额(元）</th>
+            <th width="10%">交易状态</th>
             <th width="10%">交易操作</th>
-            <th width="10%">操作</th>
           </tr>
           </thead>
           <tbody>
-          <tr></tr>
-          <tr>
-            <td colspan="7">
-              <span class="l-order-time">2017-07-22</span>
-              <span>订单号:170714064473</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <ul>
-                <li class="l-order-img">
-                  <a routerLink="/index/product-details">
-                    <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
-                  </a>
-                </li>
-                <li class="l-order-name">
-                  <a routerLink="/index/product-details">台湾凤梨</a>
-                </li>
-              </ul>
-            </td>
-            <td>
-              <p>￥39.90</p>
-            </td>
-            <td>
-              <p>1</p>
-            </td>
-            <td>
-              <p>退款/退货</p>
-            </td>
-            <td colspan="1" style="border-right: 1px solid #ddd;">
-              <p>￥59.90</p>
-            </td>
-            <td colspan="1" style="border-right: 1px solid #ddd;">
-              <p>已取消</p>
-            </td>
-            <td colspan="1" style="border-right: 1px solid #ddd;">
-              <P>查看订单</P>
-            </td>
-          </tr>
+            <tr></tr>
+            <tr>
+              <td colspan="7">
+                <span class="l-order-time">2017-07-22</span>
+                <span>订单号:170714064473</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li class="l-order-img">
+                    <a routerLink="/index/product-details">
+                      <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
+                    </a>
+                  </li>
+                  <li class="l-order-name">
+                    <a routerLink="/index/product-details">台湾凤梨</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <p>￥39.90</p>
+              </td>
+              <td>
+                <p>1</p>
+              </td>
+              <td>
+                <p>退款/退货</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <p>￥59.90</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;" class="orderDetil">
+                <p [class.tab_focus]="textShow==9" (click)="perNine()">订单详情</p>
+              </td>
+              <td colspan="1" style="border-right: 1px solid #ddd;">
+                <p>评价</p>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
+    <!--我的订单-->
     <div class="l-per-right" [style.display]="textShow==2?'':'none'">
       <div class="l-right-nav">
         <ul>
@@ -126,25 +128,25 @@
           </li>
           <li>
             <a href="javascript:void (0);">
-              <span>未完成</span>
+              <span>待付款</span>
               <i>|</i>
             </a>
           </li>
           <li>
             <a href="javascript:void (0);">
-              <span>已完成</span>
+              <span>待发货</span>
               <i>|</i>
             </a>
           </li>
           <li>
             <a href="javascript:void (0);">
-              <span>已取消</span>
+              <span>待收货</span>
               <i>|</i>
             </a>
           </li>
           <li>
             <a href="javascript:void (0);">
-              <span>已收货</span>
+              <span>待评价</span>
               <i>|</i>
             </a>
           </li>
@@ -154,13 +156,13 @@
         <table>
           <thead>
           <tr>
-            <th width="40%">商品</th>
-            <th width="10%">价格</th>
+            <th width="35%">商品</th>
+            <th width="10%">价格(元)</th>
             <th width="10%">数量</th>
             <th width="10%">商品操作</th>
-            <th width="10%">实付金额</th>
+            <th width="15%">实付金额(元)</th>
+            <th width="10%">交易状态</th>
             <th width="10%">交易操作</th>
-            <th width="10%">操作</th>
           </tr>
           </thead>
           <tbody>  <!-- 遍历tbody -->
@@ -193,20 +195,21 @@
             <td>
               <p>退款/退货</p>
             </td>
-            <td colspan="1" style="border-right: 1px solid #ddd;">
+            <td style="border-right: 1px solid #ddd;">
               <p>￥59.90</p>
             </td>
-            <td colspan="1" style="border-right: 1px solid #ddd;">
-              <p>已取消</p>
+            <td class="orderDetil" style="border-right: 1px solid #ddd;">
+              <p [class.tab_focus]="textShow==9" (click)="perNine()">订单详情</p>
             </td>
-            <td colspan="1" style="border-right: 1px solid #ddd;">
-              <P>查看订单</P>
+            <td style="border-right: 1px solid #ddd;">
+              <p>评价</p>
             </td>
           </tr>
           </tbody>
         </table>
       </div>
     </div>
+    <!--我的积分-->
     <div class="l-per-right" [style.display]="textShow==3?'':'none'">
       <div class="l-integral-title">
         <div>
@@ -235,7 +238,7 @@
                   </a>
                 </li>
                 <li class="l-integral-name">
-                  <a href="#/product-details">台湾凤梨</a>
+                  <a routerLink="#/product-details">台湾凤梨</a>
                   <p>编号：1003870002260814020</p>
                 </li>
               </ul>
@@ -254,15 +257,16 @@
         </table>
       </div>
     </div>
+    <!--收货地址-->
     <div class="l-per-right" [style.display]="textShow==4?'':'none'">
       <div class="l-address-title">
         <div>收货人信息</div>
-        <div>新增收货地址</div>
+        <div (click)="$add_address()">新增收货地址</div>
       </div>
       <div class="l-integral-content">
         <table>
           <thead>
-          <tr>
+            <tr>
             <th width="10%">姓名</th>
             <th width="10%">手机号</th>
             <th width="45%">地址</th>
@@ -271,31 +275,52 @@
           </tr>
           </thead>
           <tbody>
-          <tr></tr>
-          <tr class="l-integral-detail">  <!-- 遍历tr.l-integral-detail -->
-            <td>
-              <p>刘婷</p>
-            </td>
-            <td>
-              <p>18851191915</p>
-            </td>
-            <td>
-              <p>江苏省南京市栖霞区仙林街道羊山北路1号南京工业职业职业技</p>
-            </td>
-            <td>
-              <p style="cursor: pointer">默认</p>
-            </td>
-            <td>
-              <p>
-                <span>编辑</span>
-                <span style="color: #b1000f;" id="l-deladdr-btn" (click)="$remove_addr()">删除</span>
-              </p>
-            </td>
-          </tr>
+            <tr></tr>
+            <tr class="l-integral-detail">  <!-- 遍历tr.l-integral-detail -->
+              <td>
+                <p>刘婷</p>
+              </td>
+              <td>
+                <p>18851191915</p>
+              </td>
+              <td>
+                <p>江苏省南京市栖霞区仙林街道羊山北路1号南京工业职业职业技</p>
+              </td>
+              <td>
+                <p style="cursor: pointer">默认</p>
+              </td>
+              <td>
+                <p>
+                  <span (click)="$add_address()">编辑</span>
+                  <span style="color: #b1000f;" (click)="$remove_addr()">删除</span>
+                </p>
+              </td>
+            </tr>
+            <tr class="l-integral-detail">  <!-- 遍历tr.l-integral-detail -->
+              <td>
+                <p>左婷</p>
+              </td>
+              <td>
+                <p>18851191915</p>
+              </td>
+              <td>
+                <p>江苏省南京市栖霞区仙林街道羊山北路1号南京工业职业职业技</p>
+              </td>
+              <td class="Remarks">
+                <p>默认</p>
+              </td>
+              <td>
+                <p>
+                  <span (click)="$add_address()">编辑</span>
+                  <span style="color: #b1000f;" (click)="$remove_addr()">删除</span>
+                </p>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
+    <!--基本资料-->
     <div class="l-per-right" [style.display]="textShow==5?'':'none'">
       <h6>基本信息</h6>
       <form>
@@ -351,7 +376,7 @@
             <li class="l-basicinfo-telphone">
               <span>手机</span>
               <input type="text" disabled="disabled" value="18851191915">
-              <a >更换手机号</a>
+              <a [class.tab_focus]="textShow==10" (click)="perTen()">更换手机号</a>
             </li>
             <li class="l-basicinfo-mail">
               <span>邮箱</span>
@@ -362,24 +387,26 @@
         </div>
       </form>
     </div>
+    <!--密码修改-->
     <div class="l-per-right" [style.display]="textShow==6?'':'none'">
       <h6>密码修改</h6>
       <div class="l-password-box">
         <div>
           <label>原密码:</label>
-          <input id="l-oldPass" type="password" name="password">
+          <input type="password" name="password">
         </div>
         <div>
           <label>新密码:</label>
-          <input id="l-newPass" type="password" name="password">
+          <input type="password" name="password">
         </div>
         <div>
           <label class="sure-password">确认密码:</label>
-          <input id="l-sure-newPass" type="password" name="password">
+          <input type="password" name="password">
         </div>
         <div class="l-basic-submit btn btn-success">确认提交</div>
       </div>
     </div>
+    <!--我的收藏-->
     <div class="l-per-right" [style.display]="textShow==7?'':'none'">
       <h6>我的收藏</h6>
       <div class="l-collection-content">
@@ -421,11 +448,150 @@
         </table>
       </div>
     </div>
+    <!--通知设置-->
     <div class="l-per-right" [style.display]="textShow==8?'':'none'">
       <h6>通知设置</h6>
 
     </div>
+    <!--查看订单-->
+    <div class="l-per-right" [style.display]="textShow==9?'':'none'">
+      <h6>
+        <span style="color: #64A131">我的订单</span>
+          > 查看订单
+      </h6>
+      <!--收货信息-->
+      <div class="l-receiveInfo">
+        <dl>
+          <dt>收货信息</dt>
+          <dd class="l-receiveCommon">收货人：刘婷</dd>
+          <dd>手机号:18851191915</dd>
+          <dd>收货地址：江苏省南京市栖霞区仙林街道羊山北路一号南京工业职业技术学院</dd>
+        </dl>
+      </div>
+      <!--支付及配送方式-->
+      <div class="l-receiveInfo">
+        <dl>
+          <dt>支付及配送方式</dt>
+          <dd class="l-receiveCommon">支付方式：支付宝</dd>
+          <dd>发货时间：07-23 周日 09:00-18:00</dd>
+          <dd>物流方式：自建物流</dd>
+        </dl>
+      </div>
+      <!--备注-->
+      <div class="l-receiveInfo">
+        <dl>
+          <dt>备注</dt>
+          <dd class="l-receiveCommon">发票：无填写</dd>
+          <dd>留言：无填写</dd>
+          <dd>贺卡：无填写</dd>
+        </dl>
+      </div>
+      <div class="l-recent-order">
+        <table>
+          <thead>
+            <tr>
+              <th width="40%">商品</th>
+              <th width="10%">单价(元)</th>
+              <th width="10%">数量</th>
+              <th width="20%">实付金额(元)</th>
+              <th width="10%">交易状态</th>
+              <th width="10%">付款状态</th>
+            </tr>
+          </thead>
+          <tbody>  <!-- 遍历tbody -->
+            <tr></tr>
+            <tr>
+              <td colspan="7">
+                <span class="l-order-time">2017-07-22</span>
+                <span>订单号:170714064473</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li class="l-order-img">
+                    <a href="#/product-details">
+                      <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg">
+                    </a>
+                  </li>
+                  <li class="l-order-name">
+                    <a href="#/product-details">台湾凤梨</a>
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <p>￥39.90</p>
+              </td>
+              <td>
+                <p>1</p>
+              </td>
+              <td style="border-right: 1px solid #ddd;">
+                <p>￥59.90</p>
+              </td>
+              <td style="border-right: 1px solid #ddd;">
+                <p>已取消</p>
+              </td>
+              <td style="border-right: 1px solid #ddd;">
+                <p style="cursor: auto;">未付款</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="l-total">
+        <ul>
+          <li>
+            商品总价：<span>¥39.90</span>
+          </li>
+          <li>
+            运费：<span>¥20</span>
+          </li>
+          <li>
+            积分抵扣：<span>¥0.00</span>
+          </li>
+          <li>
+            优惠券抵扣：<span>¥0.00</span>
+          </li>
+          <li>
+            账户余额抵扣：<span>¥0.00</span>
+          </li>
+          <li>
+            其他抵扣：<span>¥0</span>
+          </li>
+        </ul>
+        <div class="l-extra">
+          实际应付款： <span>¥59.90</span>
+        </div>
+      </div>
+    </div>
+    <!--更换手机号-->
+    <div class="l-per-right" [style.display]="textShow==10?'':'none'">
+      <h6>
+        <span style="color: #64A131">基本资料</span>
+        > 更换手机号
+      </h6>
+      <div class="l-changeTel-box">
+        <div>
+          <label>原手机号码:</label>
+          <input value="18851191915" disabled="disabled" type="text">
+        </div>
+        <div>
+          <label>手机验证码:</label>
+          <input type="text">
+          <a href="javascript:;">发送验证码</a>
+          <span class="l-hide">还剩<b>60</b>秒</span>
+        </div>
+        <div>
+          <label>图片验证码:</label>
+          <input placeholder="请输入图片验证码" type="text">
+          <img src="../../../../assets/verificationImg.png" alt="点击刷新" class="l-verificationImg">
+        </div>
+        <div class="l-nextStep-submit btn btn-success">下一步</div>
+      </div>
+    </div>
   </div>
 
   <ele-confirm [(show)] = "s_confirm_flag" [content]="s_confirm_content" (sure)="$confirm_sure_click()"></ele-confirm>
+
+  <add-address [(addAdressShow)] = "s_addAdress_flag" (addAdress)="$confirm_sure_click()"></add-address>
 </div>

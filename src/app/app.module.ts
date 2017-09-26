@@ -25,6 +25,7 @@ import { BalanceFirstContentComponent } from './ZS/balance-firstContent/balance-
 import { BalanceSecondContentComponent } from './ZS/balance-secondContent/balance-secondContent.component';
 import { BalanceHeadComponent } from './ZS/balance-head/balanceHead.component';
 import { BalanceScAddressComponent } from './ZS/balance-sc-address/balanceScAddress.component';
+import {AddAddressComponent} from "./ZS/addAddress/addAddress.component";
 
 declare var $: any;
 @NgModule({
@@ -49,7 +50,8 @@ declare var $: any;
     BalanceFirstContentComponent,
     BalanceSecondContentComponent,
     BalanceHeadComponent,
-    BalanceScAddressComponent
+    BalanceScAddressComponent,
+    AddAddressComponent
   ],
   imports: [
     KSSwiperModule,

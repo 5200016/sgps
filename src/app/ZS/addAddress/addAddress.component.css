@@ -1,0 +1,136 @@
+.l-address-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 3s all linear 0s;
+}
+.l-address-wrapper{
+  width: 716px;
+  min-height: 365px;
+  margin: 200px auto;
+  background: #fff;
+  border: 1px solid #eeece8;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+.l-address-wrapper>div{
+  float: left;
+  width: 100%;
+}
+.l-address-wrapper .top{
+  padding: 10px;
+  background: rgba(96, 92, 92, 0.2);
+}
+.l-address-wrapper .top .title{
+  float: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+.l-address-wrapper .top .hide-icon{
+  float: right;
+  font-size: 20px;
+  font-weight: 700;
+  margin: -2px;
+  cursor: pointer;
+}
+.l-address-wrapper .l-address-content{
+  padding: 20px;
+  min-height: 300px;
+  background: #fff;
+}
+.formitem{
+  float: left;
+  width: 100%;
+  line-height: 30px;
+  margin: 0 0 15px;
+}
+.formitem>label{
+  float: left;
+  width: 90px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-weight: normal;
+  color: #999;
+  white-space: nowrap;
+}
+.VI-color1{
+  color: #f6ab00;
+}
+.formitem input.inpText{
+  float: left;
+  width: 160px;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0 15px 0 0;
+  border: 1px solid #ddd;
+  color: #555;
+  border-radius: 5px;
+}
+.formitem input.inpText:focus{
+  border-color: #64a131;
+  border-width: 1px;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.025),0 0 8px rgba(100,161,49,0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.025),0 0 8px rgba(100,161,49,0.6);
+}
+.formitem>.inpSel{
+  position: relative;
+  float: left;
+  width: 160px;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0 15px 0 0;
+  background: url(../../../assets/addAddress/selbg.png) no-repeat right 0;
+  border: 1px solid #ddd;
+  color: #555;
+  border-radius: 5px;
+}
+.formitem>.inpSel>span{
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.formitem>.inpSel>ul{
+  position: absolute;
+  top: 29px;
+  left: -1px;
+  width: 160px;
+  max-height: 150px;
+  overflow: auto;
+  background: #eee;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 5px rgba(175,175,175,0.75);
+}
+.formitem>.inpSel>ul>li{
+  padding: 0 10px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.formitem>input.inpCheck{
+  float: left;
+  margin: 8px 5px 0 80px;
+}
+.formitem>button{
+  margin-left: 100px;
+  min-width: 90px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+.formitem>button.addAdress{
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+
+
+
+
+
+

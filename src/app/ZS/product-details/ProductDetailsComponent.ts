@@ -23,7 +23,7 @@ export class ProductDetailsComponent implements OnInit {
   s_confirm_subTitle: string = '';
   textShow: number = 1 ;
   // 评论
-  coms: any = [
+ /* coms: any = [
     {
       id: '1',
       name: '188****1915',
@@ -38,7 +38,7 @@ export class ProductDetailsComponent implements OnInit {
       img: 'http://img.guocool.com/product/2017/06/23/ce887eb685ff4731855c5a33dbfeb674.jpg',
       date: new Date,
     }
-  ];
+  ];*/
   // 推荐类型物品
   rums: any = [
     {
@@ -58,9 +58,8 @@ export class ProductDetailsComponent implements OnInit {
   ];
 
   good: any;
-
 // 商品的属性
-  id: string;
+  goods_id: string;
   goodsName: string;
   goodsPrice: string;
   goodsImage: string;
@@ -73,6 +72,15 @@ export class ProductDetailsComponent implements OnInit {
   createTime: any;
   updateTime: any;
 
+  review: any;
+  // 商品评论
+  reviews_id: string;
+  content: string;
+  create_time: any;
+  update_time: any;
+  user_id: string;
+  nickname: string;
+  head_image: string;
   constructor(private http: Http) {
   }
   // 生命周期
@@ -82,6 +90,11 @@ export class ProductDetailsComponent implements OnInit {
         this.good = res.json();
         console.log(this.good);
       })
+    this.http.get('http://www.mobilebooks.cn/api/t-reviews')
+      .subscribe((res: Response) => {
+        this.review = res.json();
+        console.log(this.review);
+    })
   }
   goodDes() {
     this.textShow = 1;

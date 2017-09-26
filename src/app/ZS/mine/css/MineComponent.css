@@ -1,3 +1,10 @@
+.l-per-usercenter{
+  width: 100%;
+  max-width: 1920px;
+  margin: 30px auto;
+  padding: 0;
+  color: #555;
+}
 .l-per-usercenter ul{
   list-style: none;
   margin: 0;
@@ -6,20 +13,11 @@
 .l-per-usercenter a{
   text-decoration: none;
 }
-.l-per-usercenter{
-  width: 100%;
-  max-width: 1920px;
-  margin: 30px auto;
-  padding: 0;
-  text-align: center;
-  color: #555;
-}
 .l-per-layout{
   width: 1100px;
   height: 100%;
   margin: 0 auto;
   padding: 0;
-  text-align: center;
   position: relative;
 }
 /* 左边部分 */
@@ -61,6 +59,7 @@
   width: 860px;
   min-height: 560px;
   float: right;
+  margin-bottom: 30px;
 }
 /* 个人信息 */
 .l-per-tabmenu{
@@ -115,6 +114,7 @@
 .l-tabmenu-content>p:nth-child(2){
   color: #555;
 }
+
 .l-tabmenu-content>p:last-child{
   font-size: 16px;
   color: #64a131;
@@ -176,13 +176,13 @@
   margin: 5px 5px;
 }
 .l-recent-order>table>tbody>tr>td>ul>li.l-order-img{
-  width: 70px;
+  width: 80px;
 }
 .l-recent-order>table>tbody>tr>td>ul>li.l-order-img img{
   width: 100%;
 }
 .l-recent-order>table>tbody>tr>td>ul>li.l-order-name{
-  margin-left: 10px;
+  margin-left: 60px;
   margin-top: 30px;
 }
 .l-recent-order>table>tbody>tr>td>ul>li.l-order-name>a{
@@ -194,7 +194,7 @@
 }
 .l-recent-order>table>tbody>tr>td:last-child>p{
   cursor: pointer;
-  color: #64a131;
+  margin: 30px 14px;
 }
 .l-per-right>.l-right-nav{
   margin-top: 10px;
@@ -273,6 +273,7 @@
 }
 .l-integral-content>table>tbody>tr.l-integral-detail{
   border: 1px solid #ddd;
+  text-align: center;
 }
 .l-integral-content>table>tbody>tr>td{
   padding-top: 10px;
@@ -310,6 +311,14 @@
   margin-right: 5px;
   cursor: pointer;
 }
+.Remarks>p{
+  cursor: pointer;
+  display: none;
+  border: 1px solid #64A131;
+  color: #fff;
+  background-color: #64A131;
+  border-radius: 4px;
+}
 /* 基本资料 */
 .l-basic-information{
   /*background: #f1f1f1;*/
@@ -325,9 +334,6 @@
   margin-right: 40px;
 }
 .l-basic-information ul li>div{
-  float: left;
-}
-.l-basic-information ul li>a{
   float: left;
 }
 .l-basic-information ul li>select{
@@ -352,10 +358,11 @@
   height: 76px;
 }
 .l-basic-information ul li a{
+  float: left;
   color: #64a131;
   position: relative;
-  top: 50px;
   outline: none;
+  cursor: pointer;
 }
 /*昵称*/
 .l-basicinfo-nickname{
@@ -454,7 +461,6 @@
 .l-per-right .l-basic-submit:hover{
   background: #5e972e;
   outline: 0;
-
 }
 /* 密码修改 */
 .l-password-box{
@@ -491,6 +497,7 @@
   width: 100%;
   color: #555;
   font-size: 14px;
+  text-align: center;
 }
 .l-collection-content>table>thead>tr{
   border: 1px solid #ddd;
@@ -530,4 +537,121 @@
   color: #64A131;
   margin-right: 5px;
   cursor: pointer;
+}
+/*订单详情*/
+.orderDetil>p{
+  cursor: pointer;
+  color: #64A131;
+}
+.l-receiveInfo{
+  width: 100%;
+  margin-bottom: 12px;
+}
+.l-receiveInfo>dl{
+  border: 1px solid #ddd;
+}
+.l-receiveInfo>dl>dt{
+  color: #555;
+  font-size: 14px;
+  background: #f1f1f1;
+  height: 28px;
+  line-height: 28px;
+  border-bottom: 1px solid #ddd;
+  padding-left: 10px;
+}
+.l-receiveInfo>dl>dd{
+  padding-left: 10px;
+  line-height: 30px;
+  color: #555;
+}
+.l-receiveInfo>dl dd.l-receiveCommon{
+  padding-top: 10px;
+}
+.l-total>ul{
+  padding-right: 14px;
+  padding-top: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.l-total>ul>li{
+  text-align: right;
+  color: #555;
+  line-height: 30px;
+}
+.l-total>.l-extra{
+  padding-right: 14px;
+  text-align: right;
+  line-height: 30px;
+  color: #555;
+}
+/*更换手机号*/
+.l-changeTel-box{
+  border: 1px solid #ddd;
+  padding: 20px 0 70px 25px;
+}
+.l-changeTel-box>div{
+  margin-left: 0;
+  margin-bottom: 10px;
+  height: 35px;
+}
+.l-changeTel-box>div>label{
+  float: left;
+  font-weight: normal;
+  font-size: 14px;
+  color: #999;
+  margin-right: 25px;
+  line-height: 30px;
+}
+.l-changeTel-box>div>label.sure-password{
+  margin-right: 12px;
+}
+.l-changeTel-box>div>input{
+  float: left;
+  height: 30px;
+  width: 155px;
+  padding-left: 10px;
+  line-height: 30px;
+  border: 1px solid #ddd;
+}
+.l-changeTel-box>div>a{
+  /*display: inline-block;*/
+  float: left;
+  border: 1px solid #64a131;
+  background: #f5ffed;
+  padding: 2px 16px;
+  color: #64a131;
+  text-decoration: none;
+  width: 114px;
+  text-align: center;
+}
+.l-changeTel-box>div>span{
+  /*display: inline-block;*/
+  float: left;
+  border: 1px solid #64a131;
+  background: #f5ffed;
+  padding: 2px 16px;
+  color: #64a131;
+  text-decoration: none;
+  width: 112px;
+  text-align: center;
+}
+.l-hide{
+  display: none;
+}
+.l-changeTel-box>div>img.l-verificationImg{
+  width: 112px;
+  height: 30px;
+  position: static;
+  cursor: pointer;
+}
+.l-changeTel-box .l-nextStep-submit{
+  color: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  width: 100px;
+  margin-left: 70px;
+  float: left;
+}
+.l-changeTel-box .l-nextStep-submit:hover{
+  background: #5e972e;
+  outline: 0;
 }
