@@ -1,0 +1,82 @@
+<div class="l-address-dialog" *ngIf = "addAdressShow">
+  <div class="l-address-wrapper">
+    <div class="top">
+      <span class="title"> {{title}} </span>
+      <span class="hide-icon" (click)="$hideClick()">X</span>
+    </div>
+    <div class="l-address-content">
+      <form>
+        <div class="formitem">
+          <label>
+            <span class="VI-color1">*</span>收货人
+          </label>
+          <input class="inpText hasError" maxlength="15" value="" id="name" type="text">
+        </div>
+        <div class="formitem clearfix">
+          <label>
+            <span class="VI-color1">*</span>选择地区
+          </label>
+          <div class="inpSel hasError">
+            <input value="" id="provice" type="hidden">
+            <span>省/直辖市</span>
+            <ul class="list-unstyled" style="display: none;">
+              <li>广东省</li>
+              <li>浙江省</li>
+              <li>安徽省</li>
+              <li>江苏省</li>
+              <li>上海</li>
+              <li>河北</li>
+              <li>四川</li>
+            </ul>
+          </div>
+
+          <div class="inpSel disabl hasError">
+            <input value="" id="city" type="hidden">
+            <span id="spcity">市</span>
+            <ul class="list-unstyled" style="display: none;">
+              <li>广州</li>
+              <li>杭州</li>
+              <li>合肥</li>
+              <li>南京</li>
+              <li>上海市</li>
+              <li>石家庄</li>
+              <li>成都</li>
+            </ul>
+          </div>
+
+          <div class="inpSel sel1 disabl hasError">
+            <input value="" id="area" type="hidden">
+            <span id="sparea">区／县</span>
+            <ul id="lsarea" class="list-unstyled" style="display: none;">
+              <li>白云</li>
+              <li>上扬</li>
+              <li>栖霞区</li>
+              <li>金山区</li>
+              <li>石家庄</li>
+              <li>丰台区</li>
+            </ul>
+          </div>
+        </div>
+        <div class="formitem clearfix">
+          <label>
+            <span class="VI-color1">*</span>详细地址
+          </label>
+          <input class="inpText hasError" value="" style="width:540px; *width:520px;" id="detailAddr" type="text">
+        </div>
+        <div class="formitem clearfix">
+          <label>
+            <span class="VI-color1">*</span>手机号码
+          </label>
+          <input class="inpText hasError" value="" id="tel" type="tel">
+        </div>
+        <div class="formitem clearfix">
+          <input id="def" class="inpCheck" onclick="checkboxOnclick(this);" value="0" type="checkbox">
+          <label style="width:auto;">设为为默认收货地址</label>
+        </div>
+        <div class="formitem clearfix">
+          <button type="button" class="btn addAdress" id="submit" (click)="$keepAddress()">{{ keepAddress }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

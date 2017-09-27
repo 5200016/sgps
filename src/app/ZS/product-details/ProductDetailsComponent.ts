@@ -1,19 +1,29 @@
 /**
  * Created by 刘婷 on 2017/7/14.
  */
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/switchMap';
+import { Http, Response } from '@angular/http';
+
 @Component({
+  // moduleId: module.id,
   selector: 'product-details',
   templateUrl: './templates/ProductDetailsComponent.html',
   styleUrls: ['./css/ProductDetailsComponent.css'],
+  // providers: [ ProductDetailsService ] // service接口
 })
-export class ProductDetailsComponent {
+export class ProductDetailsComponent implements OnInit {
+
   s_confirm_addflag: boolean = false;
   s_confirm_folflag: boolean = false;
   s_confirm_content: string =  '';
   s_confirm_subTitle: string = '';
   textShow: number = 1 ;
-  coms: any = [
+  // 评论
+ /* coms: any = [
     {
       id: '1',
       name: '188****1915',
@@ -28,7 +38,8 @@ export class ProductDetailsComponent {
       img: 'http://img.guocool.com/product/2017/06/23/ce887eb685ff4731855c5a33dbfeb674.jpg',
       date: new Date,
     }
-  ];
+  ];*/
+  // 推荐类型物品
   rums: any = [
     {
       id: '1',
@@ -44,8 +55,46 @@ export class ProductDetailsComponent {
       price: '29.90',
       num: '2斤',
     }
-  ]
-  constructor() {
+  ];
+
+  good: any;
+// 商品的属性
+  goods_id: string;
+  goodsName: string;
+  goodsPrice: string;
+  goodsImage: string;
+  goodsClassify: number;
+  goodsIntroduction: string;
+  temperature: number;
+  nutritionInfo: string;
+  effect: string;
+  hot: number;
+  createTime: any;
+  updateTime: any;
+
+  review: any;
+  // 商品评论
+  reviews_id: string;
+  content: string;
+  create_time: any;
+  update_time: any;
+  user_id: string;
+  nickname: string;
+  head_image: string;
+  constructor(private http: Http) {
+  }
+  // 生命周期
+  ngOnInit(): void {
+    this.http.get('http://www.mobilebooks.cn/api/t-goods/2')
+      .subscribe((res: Response) => {
+        this.good = res.json();
+        console.log(this.good);
+      })
+    this.http.get('http://www.mobilebooks.cn/api/t-reviews')
+      .subscribe((res: Response) => {
+        this.review = res.json();
+        console.log(this.review);
+    })
   }
   goodDes() {
     this.textShow = 1;
@@ -74,3 +123,4 @@ export class ProductDetailsComponent {
     this.s_confirm_folflag = true;
   }
 }
+

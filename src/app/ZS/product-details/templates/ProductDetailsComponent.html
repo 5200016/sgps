@@ -7,7 +7,7 @@
     </strong>
     <span class="l-that">
        >
-      <a routerLink="/fruit">新鲜水果</a>
+      <a routerLink="/fruit">{{ good.goodsClassify }}</a>
        >
     </span>
     <span class="l-this">凤梨</span>
@@ -20,7 +20,7 @@
         <!--大图-->
         <div class="l-box" id="l-box">
           <div id="l-smallBox" class="l-small ">
-            <img src="http://img.guocool.com/800X800/product/2017/06/23/c76c6087d3154f9aa86c23ad6be604d6.jpg" width="420" height="370"/>
+            <img src="{{ good.goodsImage }}" width="420" height="370"/>
             <div id="l-mask" class="l-mask"></div>
           </div>
           <div id="l-bigBox" class="l-big">
@@ -54,13 +54,13 @@
       <!--商品id-->
       <input id="l-gd-des-id" value="" type="hidden">
       <div id="l-gd-des-name">
-        <h3>台湾凤梨</h3>
+        <h3>{{ good.goodsName }}</h3>
       </div>
       <!--价格-->
       <ul id="l-gd-des-pri">
         <li>
           商品价格：
-          <span id="l-gdp">￥ 19.90</span>
+          <span id="l-gdp">￥ {{ good.goodsPrice }}</span>
         </li>
       </ul>
       <!--规格-->
@@ -137,25 +137,29 @@
         <div [style.display]="textShow==1?'':'none'">
           <table width="100%" class="l-table">
             <tbody>
-            <tr>
-              <th width="10%">温馨提示</th>
-              <td width="80%">加工类产品采用健康无添加工艺制成，请您收到后尽快食用</td>
-            </tr>
               <tr>
-                <th width="10%">产地</th>
-                <td width="80%">南非</td>
+                <th width="10%">温馨提示</th>
+                <td width="80%">加工类产品采用健康无添加工艺制成，请您收到后尽快食用</td>
               </tr>
               <tr>
-                <th width="10%">存储方法</th>
-                <td width="80%">0度</td>
+                <th width="10%">商品介绍</th>
+                <td width="80%">{{ good.goodsIntroduction }}</td>
+              </tr>
+              <tr>
+                <th width="10%">热度</th>
+                <td width="80%">{{ good.hot }}</td>
+              </tr>
+              <tr>
+                <th width="10%">温度</th>
+                <td width="80%">{{ good.temperature }}度</td>
               </tr>
               <tr>
                 <th width="10%">营养成分</th>
-                <td width="80%">含有大量的果糖，葡萄糖，维生素A、B、C，磷，柠檬酸和蛋白酶等物</td>
+                <td width="80%">{{ good.nutritionInfo }}</td>
               </tr>
               <tr>
                 <th width="10%">功效</th>
-                <td width="80%">有清热解暑、生津止渴、利小便的功效，可用于伤暑、身热烦渴、腹中痞闷、消化不良、小便不利、头昏眼花等症</td>
+                <td width="80%">{{ good.effect }}</td>
               </tr>
               <tr>
                 <th width="10%">饮食禁忌</th>
@@ -164,10 +168,6 @@
                   2.不宜与牛奶同吃，两者同吃，波罗中的果酸会使牛奶中的蛋白质凝固，影响蛋白质消化吸收。<br/>
                   3.不宜与鸡蛋同吃，波萝中的果酸与鸡蛋中的蛋白质结合，是蛋白质凝固，不利消化。
                 </td>
-              </tr>
-              <tr>
-                <th width="10%">宜搭</th>
-                <td width="80%">草莓、香蕉</td>
               </tr>
               <tr>
                 <th width="10%">食用小知识</th>
@@ -240,7 +240,7 @@
             </div>
             <div id="l-com-box" class="l-det-allsays">
               <!--评论循环-->
-              <div class="l-user-says" *ngFor="let com of coms">
+              <div class="l-user-says" *ngFor="let com of review">
                   <div class="l-user-says-left">
                     <ul>
                       <li>
@@ -250,14 +250,14 @@
                         <img src="{{ com.img }}">
                       </li>
                       <li>
-                        <span class="gray">{{ com.date }}</span>
+                        <span class="gray">{{ com.create_time }}</span>
                       </li>
                       <li><ul></ul></li>
                     </ul>
                   </div>
                   <div class="l-user-says-right">
-                    <img class="img-circle" src="https://imgjd2.fruitday.com/up_images/default_userpic.png">
-                    <p>{{ com.name }}</p>
+                    <img class="img-circle" src="{{ com.head_image }}">
+                    <p>{{ com.nickname }}</p>
                   </div>
               </div>
             </div>
