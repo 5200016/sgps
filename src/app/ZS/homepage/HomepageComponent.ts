@@ -1,8 +1,10 @@
 /**
  * Created by lenovo on 2017/7/18.
  */
-import {Component, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { KSSwiperContainer } from 'angular2-swiper';
+import { Http, Response, RequestOptions, Headers, Jsonp, URLSearchParams } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'homepage',
@@ -10,145 +12,26 @@ import { KSSwiperContainer } from 'angular2-swiper';
   styleUrls: ['./css/HomepageComponent.css']
 })
 
-export class HomepageComponent{
-
-  saleFruits = [{
-        'id': 1,
-        'img': '../../../assets/fruit/tejia01.jpg',
-        'name': '【闪购】能量果花',
-        'price': '现：￥239.00 原：￥299.00'
-      },
-    {
-      'id': 2,
-      'img': '../../../assets/fruit/tejia02.jpg',
-      'name': '【闪购】能量果花',
-      'price': '现：￥239.00 原：￥299.00'
-    },
-    {
-      'id': 3,
-      'img': '../../../assets/fruit/tejia03.jpg',
-      'name': '【闪购】能量果花',
-      'price': '现：￥239.00 原：￥299.00'
-    },
-    {
-      'id': 4,
-      'img': '../../../assets/fruit/tejia04.jpg',
-      'name': '【闪购】能量果花',
-      'price': '现：￥239.00 原：￥299.00'
-    }
-  ];
-
-  freshFruits = [
-    {
-      'id': 1,
-      'img': '../../../assets/fruit/fruit01.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 2,
-      'img': '../../../assets/fruit/fruit02.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 3,
-      'img': '../../../assets/fruit/fruit03.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 4,
-      'img': '../../../assets/fruit/fruit04.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 5,
-      'img': '../../../assets/fruit/fruit05.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 6,
-      'img': '../../../assets/fruit/fruit06.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 7,
-      'img': '../../../assets/fruit/fruit01.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 8,
-      'img': '../../../assets/fruit/fruit02.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 9,
-      'img': '../../../assets/fruit/fruit03.jpg',
-      'name': '新疆硒砂瓜',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 10,
-      'img': '../../../assets/fruit/fruit04.jpg',
-      'name': '新疆硒砂瓜哈哈',
-      'price': '￥39.90/1个'
-    }
-    ];
-  fruitPackages = [
-    {
-      'id': 1,
-      'img': '../../../assets/fruit/fruit01.jpg',
-      'name': '新疆硒砂瓜哈哈1',
-      'price': '￥39.90/1个'
-     },
-    {
-      'id': 1,
-      'img': '../../../assets/fruit/fruit02.jpg',
-      'name': '新疆硒砂瓜哈哈2',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 1,
-      'img': '../../../assets/fruit/fruit03.jpg',
-      'name': '新疆硒砂瓜哈哈3',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 1,
-      'img': '../../../assets/fruit/fruit04.jpg',
-      'name': '新疆硒砂瓜哈哈4',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 1,
-      'img': '../../../assets/fruit/fruit05.jpg',
-      'name': '新疆硒砂瓜哈哈5',
-      'price': '￥39.90/1个'
-    },
-    {
-      'id': 1,
-      'img': '../../../assets/fruit/fruit06.jpg',
-      'name': '新疆硒砂瓜哈哈6',
-      'price': '￥39.90/1个'
-    }]
+export class HomepageComponent implements OnInit {
 
 // 单机上一个下一个的时候调用封装子组件中的方法
   @ViewChild(KSSwiperContainer)
   swiperContainer: KSSwiperContainer;
 
   // 图片数组
-  data: Array<number>;
-  img: Array<number>
+  saleFruits: Object;
+  freshFruits: Object;
+  fruitPackages: Object;
+  advertisements: Object;
+  s_confirm_addflag: boolean = false;
+  s_confirm_content: string =  '';
+  s_confirm_subTitle: string = '';
+  /*img: Array<number>*/
   // 配置
   swipeOptions: any;
-  swipeOptionsTwo: any;
-  constructor() {
+  /*swipeOptionsTwo: any;*/
+  constructor(private http:Http) {
+
     this.swipeOptions = {
       // 每页显示几张图片
       slidesPerView: 1,
@@ -160,9 +43,35 @@ export class HomepageComponent{
       paginationClickable: true
     };
 
-    this.data = [
-      1, 2, 3, 4, 5, 6
-    ];
-
   }
+  ngOnInit(){
+    this.http.get('http://www.mobilebooks.cn/api/t-bargains').subscribe((res:Response) =>{
+      this.saleFruits = res.json();
+       }
+    );
+    this.http.get('http://www.mobilebooks.cn/api/t-home-recommends-0').subscribe((res:Response) =>{
+        this.freshFruits = res.json();
+        console.log(this.freshFruits)
+      }
+    );
+    this.http.get('http://www.mobilebooks.cn/api/t-home-recommends-1').subscribe((res:Response) =>{
+        this.fruitPackages = res.json();
+        console.log(this.fruitPackages)
+      }
+    );
+    this.http.get('http://www.mobilebooks.cn/api/t-advertisements').subscribe((res:Response) =>{
+        this.advertisements = res.json();
+        console.log(this.advertisements)
+      }
+    );
+  }
+
+  $confirm_add_goods () {
+    this.s_confirm_subTitle = '确定加入购物车吗？';
+    /*this.s_confirm_content = '购物车中共<span class="tip">1</span>件商品 | 商品小计<span class="tip">￥19.90</span>';*/
+    this.s_confirm_addflag = true;
+  };
+
+
 }
+

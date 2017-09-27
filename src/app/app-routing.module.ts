@@ -20,7 +20,7 @@ const childRoutes: Routes = [
   { path: 'fixed-packages', component: FixedPackagesComponent },
   { path: 'custom-packages', component: CustomPackagesComponent },
   { path: 'mine', component: MineComponent },
-  { path: 'product-details', component: ProductDetailsComponent },
+  { path: 'product-details/:id', component: ProductDetailsComponent },
   { path: 'mine', component: MineComponent },
   { path: 'review', component: ReviewComponent }
 ]

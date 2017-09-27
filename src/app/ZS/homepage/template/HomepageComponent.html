@@ -1,12 +1,12 @@
 <!-- 图片轮播区 -->
 <div class="myslides" style="width: 100%">
   <ks-swiper-container [options]="swipeOptions">
-    <ks-swiper-slide  style="width: 100%!important;" *ngFor="let item of data">
-      <img src="../../../assets/fruit/banner0{{item}}.jpg" style="width: 100%; height: 500px">
+    <ks-swiper-slide  style="width: 100%!important;" *ngFor="let advertisement of advertisements">
+      <!--<img src="../../../assets/fruit/banner0{{item}}.jpg" style="width: 100%; height: 500px">-->
+      <a [routerLink]="['/ad-details']"><img src="{{advertisement.image}}" style="width: 100%; height: 500px"></a>
     </ks-swiper-slide>
   </ks-swiper-container>
 </div>
-
 <!-- 限时特价部分 -->
 <div class="fruit-middle-three">
   <div class="fruit-middle-three-small">
@@ -16,15 +16,17 @@
       </div>
     </div>
     <div class="fruit-middle-three-small-bottom">
-      <a class="fruit-middle-three-small-bottom-div-one"  *ngFor="let saleFruit of saleFruits">
-        <img class="fruit-middle-three-small-bottom-div-one-img" src="{{saleFruit.img}}">
+      <div class="fruit-middle-three-small-bottom-new">
+      <div class="fruit-middle-three-small-bottom-div-one"  *ngFor="let saleFruit of saleFruits">
+        <a [routerLink]="['/index/product-details',saleFruit.id]"><img class="fruit-middle-three-small-bottom-div-one-img" src="{{saleFruit.bargainImage}}"></a>
         <div class="fruit-middle-three-small-bottom-div-another">
-          <label class="fruit-middle-three-small-bottom-div-another-one">{{saleFruit.name}}</label>
-          <label class="fruit-middle-three-small-bottom-div-another-two">{{saleFruit.price}}</label>
+          <label class="fruit-middle-three-small-bottom-div-another-one">{{saleFruit.bargainName}}</label>
+          <label class="fruit-middle-three-small-bottom-div-another-two">{{saleFruit.bargainPrice}}</label>
         </div>
-      </a>
+      </div>
+      </div>
       <div class="fruit-middle-three-small-bottom-div-two">
-        <label class="fruit-middle-three-small-bottom-div-two-lab">更多特惠∨</label>
+        <a  [routerLink]="['/index/fresh-fruit']" class="fruit-middle-three-small-bottom-div-two-lab">更多特惠∨</a>
       </div>
     </div>
   </div>
@@ -35,18 +37,18 @@
   <!-- 鲜果标题提示部分 -->
   <div class="fruit-middle-one-top">
     <label class="fruit-middle-one-top-first">鲜果</label>
-    <label class="fruit-middle-one-top-second">MORE+</label>
+    <a [routerLink]="['/index/fresh-fruit']" class="fruit-middle-one-top-second">MORE+</a>
   </div>
   <!-- 鲜果展示部分10个 -->
   <div class="fruit-middle-one-bottom">
     <div class="fruit-middle-one-bottom-right-one" *ngFor="let freshFruit of freshFruits">
-      <a class="fruit-middle-one-bottom-right-one-div">
-        <img class="fruit-middle-one-bottom-right-one-img" src="{{freshFruit.img}}">
+      <a [routerLink]="['/index/product-details',freshFruit.id]" class="fruit-middle-one-bottom-right-one-div">
+        <img class="fruit-middle-one-bottom-right-one-img" src="{{freshFruit.goods.goodsImage}}">
       </a>
       <div class="fruit-middle-one-bottom-right-one-div-home">
-        <label class="fruit-middle-one-bottom-right-one-div-first">{{freshFruit.name}}</label>
-        <label class="fruit-middle-one-bottom-right-one-div-second">{{freshFruit.price}}</label>
-        <img class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
+        <label class="fruit-middle-one-bottom-right-one-div-first">{{freshFruit.goods.goodsName}}</label>
+        <label class="fruit-middle-one-bottom-right-one-div-second">{{freshFruit.goods.goodsPrice}}</label>
+        <img (click)="$confirm_add_goods()" class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
       </div>
     </div>
   </div>
@@ -58,7 +60,7 @@
   <!-- 套餐标题提示部分 -->
   <div class="fruit-middle-two-top">
     <label class="fruit-middle-two-top-first">套餐</label>
-    <label class="fruit-middle-two-top-second">MORE+</label>
+    <a [routerLink]="['/index/fixed-packages']" class="fruit-middle-two-top-second">MORE+</a>
   </div>
   <!-- 套餐展示部分两块左边自定义套餐右边6个商品展示 -->
   <div class="fruit-middle-two-bottom">
@@ -68,25 +70,28 @@
         <img class="fruit-middle-two-bottom-left-img" src="../../../../assets/fruit/fruit08.jpg">
       </div>
       <div class="info">
+        <a class="info-a-root" [routerLink]="['/index/custom-packages']">
         <div class="info-look">
           点击进入
         </div>
+        </a>
       </div>
     </a>
     <!-- 右边套餐展示6个 -->
     <div class="fruit-middle-two-bottom-right">
       <div class="fruit-middle-two-bottom-right-one"></div>
       <div class="fruit-middle-two-bottom-right-two" *ngFor="let fruitPackage of fruitPackages">
-        <a class="fruit-middle-one-bottom-right-two-div">
-          <img class="fruit-middle-two-bottom-right-two-img" src="{{fruitPackage.img}}">
+        <a [routerLink]="['/index/product-details',fruitPackage.id]" class="fruit-middle-one-bottom-right-two-div">
+          <img class="fruit-middle-two-bottom-right-two-img" src="{{fruitPackage.goods.goodsImage}}">
         </a>
         <div class="fruit-middle-two-bottom-right-two-div">
-          <label class="fruit-middle-two-bottom-right-two-la">{{fruitPackage.name}}</label>
-          <label class="fruit-middle-two-bottom-right-two-lab">{{fruitPackage.price}}</label>
-          <img class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
+          <label class="fruit-middle-two-bottom-right-two-la">{{fruitPackage.goods.goodsName}}</label>
+          <label class="fruit-middle-two-bottom-right-two-lab">{{fruitPackage.goods.goodsPrice}}</label>
+          <img (click)="$confirm_add_goods()" class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
         </div>
       </div>
     </div>
   </div>
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" ></ele-confirm>
 </div>
 
