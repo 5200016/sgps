@@ -1,5 +1,4 @@
 <balanceHead></balanceHead>
-<button (click)="makeRequest()"></button>
 <div class="cart w-750">
 
   <div class="cart-filter-bar pt-50">
@@ -24,25 +23,25 @@
     </ul>
     <!--商品详情-->
     <ul class="f-list-unstyled">
-      <li type="normal" *ngFor="let fruits of cars">
+      <li type="normal" *ngFor="let fruits of cars.shoppingCars">
         <div class="cartbox clearfix">
           <!--商品图-->
           <div class="f-cart-imgs pull-left">
             <a href="">
-              <img [src]="fruits.goodsImage">
+              <img [src]="fruits.goods.goodsImage">
             </a>
           </div>
           <!--商品名称-->
           <div class="f-cart-name pull-left">
-            <p><a href="/" >{{fruits.goodsName}}</a></p>
+            <p><a href="/" >{{fruits.goods.goodsName}}</a></p>
           </div>
           <!--商品规格-->
           <div class="f-spec-num pull-left">
-            <p>{{fruits.goodCount}}个</p>
+            <p>{{fruits.goodsCount}}个</p>
           </div>
           <!--商品价格-->
           <div class="f-price-singular pull-left">
-            <p>￥{{fruits.goodsPrice}}</p>
+            <p>￥{{fruits.goods.goodsPrice}}</p>
           </div>
           <!--数量-->
           <div class="f-num-sel f-cart-good pull-left">
@@ -184,5 +183,4 @@
       </li>
     </ul>
   </div>
-
 </div>

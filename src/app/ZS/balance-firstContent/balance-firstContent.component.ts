@@ -14,22 +14,22 @@ export class BalanceFirstContentComponent {
   id: string;
   userId: string;
   goodsId: number;
-  goodCount:number;
+  goodsCount:number;
   goodsName: string;
   goodsImage: string;
   goodsPrice: string;
   cars: any;
+
   constructor(private http: Http){
   }
   /*
   初始化方法
    */
   ngOnInit(){
-  }
-  makeRequest():void{//定义一个点击事件的实现方法
-    this.http.get('http://www.mobilebooks.cn/api/t-shopping-cars/2').subscribe((res: Response) => {
+    this.http.get('http://www.mobilebooks.cn/api/t-users/2').subscribe((res: Response) => {
       this.cars = res.json();
-      console.log(this.cars);
-    })
+      console.log(this.cars.shoppingCars);
+    });
   }
+
 }
