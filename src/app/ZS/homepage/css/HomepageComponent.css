@@ -91,8 +91,15 @@ a:hover .info {
   border-bottom: 1px solid #ECECEC;
   border-top: 3px solid #65A031;
 }
+.fruit-middle-three-small-bottom-new{
+  overflow: hidden;
+  width: 96%;
+  height: 270px;
+  float: left;
+}
 .fruit-middle-three-small-bottom-div-one{
-  width: 24%;
+  text-decoration: none;
+  width: 25%;
   height: 270px;
   float: left;
   text-align: center;
@@ -125,6 +132,8 @@ a:hover .info {
   text-align: center;
 }
 .fruit-middle-three-small-bottom-div-two-lab{
+  text-decoration: none;
+  color: #000;
   display: block;
   height: 100%;
   width: 32px;
@@ -149,6 +158,8 @@ a:hover .info {
   margin-top: 16px;
 }
 .fruit-middle-one-top-second{
+  color: black;
+  text-decoration: none;
   float: right;
   margin-top: 30px;
   font-size: 14px;
@@ -211,6 +222,8 @@ a:hover .info {
   margin-top: 16px;
 }
 .fruit-middle-two-top-second{
+  color: black;
+  text-decoration: none;
   float: right;
   margin-top: 30px;
   font-size: 14px;
@@ -262,6 +275,7 @@ a:hover .info {
   float:left;
 }
 .fruit-middle-one-bottom-right-two-div{
+  cursor: pointer;
   width: 96%;
   margin-left: 2%;
 }
@@ -283,10 +297,17 @@ a:hover .info {
   display: block;
   font-size: 14px;
 }
+.fruit-middle-one-bottom-right-one-div{
+  cursor: pointer;
+}
 .fruit-middle-one-bottom-right-one-div-icon{
   float: right;
   width: 38px;
   height: 36px;
   margin-top: -55px;
   margin-right: 12px;
+}
+.info-a-root{
+  text-decoration: none;
+  color: black;
 }

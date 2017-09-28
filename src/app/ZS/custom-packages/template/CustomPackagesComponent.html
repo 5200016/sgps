@@ -11,44 +11,27 @@
           </a>
         </div>
         <div class="pull-left right">
-          <a href="#"><span class="line">国产水果</span></a>
-          <a href="#"><span class="line">时令水果</span></a>
-          <a href="#"><span class="line">瓜类</span></a>
-          <a href="#"><span class="line">柑橘橙柚</span></a>
-          <a href="#"><span class="line">苹果</span></a>
-          <a href="#"><span class="line">香蕉</span></a>
-          <a href="#"><span class="line">椰子</span></a>
-          <a href="#"><span class="line">奇异果</span></a>
-          <a href="#"><span class="line">牛油果</span></a>
-          <a href="#"><span class="line">芒果</span></a>
-          <a href="#"><span class="line">草莓</span></a>
-          <a href="#"><span class="line">樱桃</span></a>
-          <a href="#"><span class="line">桃子</span></a>
-          <a href="#"><span class="line">西梅</span></a>
-          <a href="#"><span class="line">荔枝</span></a>
-          <a href="#"><span class="line">柠檬</span></a>
+          <a  *ngFor="let fruitClassify of fruitClassifys" (click)="$classifyFruit(fruitClassify.id)"><span class="line">{{fruitClassify.classifyName}}</span></a>
         </div>
       </div>
     </div>
-
   </div>
   <!--列表-->
 
   <div class="list f-clearfix">
     <div class="part pull-content">
       <ul>
-        <li *ngFor="let freshFruit of freshFruits">
+        <li *ngFor="let fruitDetail of fruitDetails.goods">
           <div class="wrapper">
             <div class="img">
-              <a href="#">
-                <img class="lazy" src="{{freshFruit.img}}">
+              <a [routerLink]="['/index/product-details',fruitDetail.id]">
+                <img class="lazy" src="{{fruitDetail.goodsImage}}">
               </a>
             </div>
             <div class="f-info">
-              <span class="f-name">{{freshFruit.name}}</span>
-              <span class="f-unit">{{freshFruit.price}}</span>
-              <img style="width: 32px;margin-top: -35px;float: right;margin-right: 10px;"
-                   src="../../../../assets/fruit/jiahao.png">
+              <span class="f-name">{{fruitDetail.goodsName}}</span>
+              <span class="f-unit">{{fruitDetail.goodsPrice}}</span>
+              <img (click)="$confirm_add_goods()" style="width: 32px;margin-top: -35px;float: right;margin-right: 10px;" src="../../../../assets/fruit/gouwuche.png">
             </div>
 
           </div>
@@ -140,5 +123,8 @@
       </div>
     </div>
   </div>
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" ></ele-confirm>
+
 </div>
+
 
