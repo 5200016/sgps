@@ -168,12 +168,12 @@
         </div>
       </li>-->
       <!--尾部-->
-      <li>
+      <li *ngFor="let fruits of cars.shoppingCars">
         <div class="f-footer">
           <div class="f-cart-buy pull-right">
             <span>
               已选择
-              <em>3件</em>
+              <em>{{fruits.goodsCount}}件</em>
                商品  |  订单金额
             </span>
             <span class="f-all-order">￥207.70</span>
