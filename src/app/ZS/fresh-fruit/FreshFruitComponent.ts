@@ -4,6 +4,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Http, Response} from '@angular/http';
 
+
 @Component({
   selector: 'fresh-fruit',
   templateUrl: './template/FreshFruitComponent.html',
@@ -11,6 +12,11 @@ import {Http, Response} from '@angular/http';
 })
 
 export class FreshFruitComponent implements OnInit {
+
+  s_confirm_addflag: boolean = false;
+  s_confirm_content: string =  '';
+  s_confirm_subTitle: string = '';
+
   id: string;
   goodsName: string;
   goodsImage: string;
@@ -45,12 +51,8 @@ export class FreshFruitComponent implements OnInit {
     })
   }
 
-  /*fruitsList = [
-    { img : '../../../assets/specialOffer/fruit1.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../assets/specialOffer/fruit2.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../assets/specialOffer/fruit3.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../assets/specialOffer/fruit1.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../assets/specialOffer/fruit2.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../assets/specialOffer/fruit3.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-  ]*/
+  $confirm_add_goods () {
+    this.s_confirm_subTitle = '确定加入购物车吗？';
+    this.s_confirm_addflag = true;
+  };
 }

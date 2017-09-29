@@ -44,6 +44,17 @@
         </div>
       </div>
     </div>
+    <!--特价-->
+    <div class="oc f-clearfix pull-left f-li">
+      <h5 class="pull-left">特价</h5>
+      <div class="f-select pull-left f-clearfix">
+        <div class="pull-left left">
+          <a href="#" class="active">
+            <span class="f-all line">全部</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <!--列表-->
   <div class="list f-clearfix">
@@ -59,7 +70,7 @@
             <div class="f-info">
               <div class="f-name">{{fruits.goodsName}}</div>
               <span class="f-unit">￥{{fruits.goodsPrice}}/斤</span>
-              <div class="f-shopping"></div>
+              <div class="f-shopping" (click)="$confirm_add_goods()"></div>
             </div>
 
           </div>
@@ -159,5 +170,6 @@
     </div>
 
   </div>
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" ></ele-confirm>
 </div>
 

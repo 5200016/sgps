@@ -8,6 +8,11 @@ import {Http, Response} from '@angular/http';
 })
 
 export class FixedPackagesComponent{
+
+  s_confirm_addflag: boolean = false;
+  s_confirm_content: string =  '';
+  s_confirm_subTitle: string = '';
+
   id: string;
   goodsName: string;
   goodsImage: string;
@@ -40,14 +45,11 @@ export class FixedPackagesComponent{
       this.fruit = res.json();
       console.log(this.fruit);
     })
-
   }
-  /*fruitsList = [
-    { img : '../../../../assets/specialOffer/fruit1.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../../assets/specialOffer/fruit2.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../../assets/specialOffer/fruit3.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../../assets/specialOffer/fruit1.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../../assets/specialOffer/fruit2.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-    { img : '../../../../assets/specialOffer/fruit3.jpg' , name : '荷兰青啤梨' , price: '39.90'},
-  ]*/
+
+  $confirm_add_goods () {
+    this.s_confirm_subTitle = '确定加入购物车吗？';
+    this.s_confirm_addflag = true;
+  };
+
 }

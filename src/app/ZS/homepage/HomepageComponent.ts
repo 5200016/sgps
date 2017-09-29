@@ -71,7 +71,5 @@ export class HomepageComponent implements OnInit {
     /*this.s_confirm_content = '购物车中共<span class="tip">1</span>件商品 | 商品小计<span class="tip">￥19.90</span>';*/
     this.s_confirm_addflag = true;
   };
-
-
 }
 

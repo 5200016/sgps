@@ -85,7 +85,7 @@
             <div class="f-info">
               <div class="f-name"> {{ item.goodsName}} </div>
               <span class="f-unit">￥{{item.goodsPrice}}/斤</span>
-              <div class="f-shopping"></div>
+              <div class="f-shopping" (click)="$confirm_add_goods()"></div>
             </div>
           </div>
         </li>
@@ -184,4 +184,5 @@
     </div>
 
   </div>
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" ></ele-confirm>
 </div>

@@ -20,14 +20,10 @@ export class BalanceSecondContentComponent {
 
   constructor(private http: Http){
   }
-  /*
-   初始化方法
-   */
   ngOnInit(){
     this.http.get('http://www.mobilebooks.cn/api/t-users/2').subscribe((res: Response) => {
       this.orders = res.json();
       console.log(this.orders.shoppingCars);
     });
   }
-
 }
