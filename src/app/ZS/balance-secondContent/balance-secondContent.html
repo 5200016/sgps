@@ -12,7 +12,7 @@
       </ul>
     </div>
     <h4>
-      <a href="/" class="pull-right" id="newAddress" [routerLink]="['/balanceScAddress']">新增收获地址</a>收获人信息
+      <a href="/" class="pull-right" id="newAddress" (click)="$add_address()">新增收获地址</a>收获人信息
     </h4>
     <div class="f-order-item">
       <ul class="f-list-unstyled clearfix order-item-addresslist" id="orderAddressList">
@@ -131,4 +131,5 @@
     </div>
 
   </div>
+  <add-address [(addAdressShow)] = "s_addAdress_flag" (addAdress)="$confirm_sure_click()"></add-address>
 </div>

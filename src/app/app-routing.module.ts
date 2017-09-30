@@ -10,7 +10,6 @@ import {AdDetailsComponent} from './ZS/ad-details/AdDetailsComponent';
 import { HomepageHeadComponent } from './ZS/homepage-head/HomepageHeadComponent';
 import { BalanceFirstContentComponent } from './ZS/balance-firstContent/balance-firstContent.component';
 import { BalanceSecondContentComponent } from './ZS/balance-secondContent/balance-secondContent.component';
-import { BalanceScAddressComponent } from './ZS/balance-sc-address/balanceScAddress.component';
 import { ReviewComponent } from './ZS/review/reviewComponent';
 /* 二级路由 */
 const childRoutes: Routes = [
@@ -40,10 +39,6 @@ const routes: Routes = [
   {
     path: 'balance-secondContent',
     component: BalanceSecondContentComponent
-  },
-  {
-    path: 'balanceScAddress',
-    component: BalanceScAddressComponent
   },
 
 ];

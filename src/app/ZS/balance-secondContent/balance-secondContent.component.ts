@@ -9,6 +9,9 @@ import { Http, Response } from '@angular/http';
   providers: []
 })
 export class BalanceSecondContentComponent {
+
+  s_addAdress_flag: boolean = false;
+
   id: string;
   userId: string;
   goodsId: number;
@@ -26,4 +29,13 @@ export class BalanceSecondContentComponent {
       console.log(this.orders.shoppingCars);
     });
   }
+
+  $add_address() {
+    this.s_addAdress_flag = true;
+  }
+  $confirm_sure_click () {
+    console.log('cancel ok');
+  }
+
+
 }
