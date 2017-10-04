@@ -39,8 +39,9 @@ h5, .h5 {
 .content .select .f-select .left {
   width: 48px;
 }
-.content .select .f-li a.active {
+.content .select .f-li .active {
   background-color: #64a131;
+  color:white;
 }
 .content .select a:link, .content .select a:visited {
   text-decoration: none;
@@ -48,7 +49,6 @@ h5, .h5 {
 
 .pull-left > a:focus {
   background-color: #64a131;
-
 }
 
 .content .select .f-select a {

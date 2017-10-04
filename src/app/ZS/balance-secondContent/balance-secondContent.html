@@ -12,7 +12,7 @@
       </ul>
     </div>
     <h4>
-      <a href="/" class="pull-right" id="newAddress" [routerLink]="['/balanceScAddress']">新增收获地址</a>收获人信息
+      <a href="/" class="pull-right" id="newAddress" (click)="$add_address()">新增收获地址</a>收获人信息
     </h4>
     <div class="f-order-item">
       <ul class="f-list-unstyled clearfix order-item-addresslist" id="orderAddressList">
@@ -47,24 +47,14 @@
     </h4>
     <div class="f-order-item clearfix">
       <ul class="f-order-item-cartlist f-list-unstyled pull-right">
-        <li>
-            <img src="../../assets/specialOffer/fruit1.jpg">
+        <li *ngFor="let fruits of orders.shoppingCars">
+            <img [src]= "fruits.goods.goodsImage">
             <div class="f-protitle">
-              越南火龙果
+              {{fruits.goods.goodsName}}
             </div>
             <div class="f-proinfo" >
-              ￥19.90 / 2个
-              <span>x 1</span>
-            </div>
-        </li>
-        <li>
-            <img src="../../assets/specialOffer/fruit1.jpg">
-            <div class="f-protitle">
-              越南火龙果
-            </div>
-            <div class="f-proinfo" >
-              ￥19.90 / 2个
-              <span>x 1</span>
+              ￥{{fruits.goods.goodsPrice}} / 1个
+              <span>x {{fruits.goodsCount}}</span>
             </div>
         </li>
       </ul>
@@ -141,4 +131,5 @@
     </div>
 
   </div>
+  <add-address [(addAdressShow)] = "s_addAdress_flag" (addAdress)="$confirm_sure_click()"></add-address>
 </div>

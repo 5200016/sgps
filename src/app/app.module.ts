@@ -24,7 +24,6 @@ import { ConfirmComponent } from './ZS/confirm/confirm.component';
 import { BalanceFirstContentComponent } from './ZS/balance-firstContent/balance-firstContent.component';
 import { BalanceSecondContentComponent } from './ZS/balance-secondContent/balance-secondContent.component';
 import { BalanceHeadComponent } from './ZS/balance-head/balanceHead.component';
-import { BalanceScAddressComponent } from './ZS/balance-sc-address/balanceScAddress.component';
 import { AddAddressComponent } from './ZS/addAddress/addAddress.component';
 import {ReviewComponent} from './ZS/review/reviewComponent';
 
@@ -51,7 +50,6 @@ declare var $: any;
     BalanceFirstContentComponent,
     BalanceSecondContentComponent,
     BalanceHeadComponent,
-    BalanceScAddressComponent,
     AddAddressComponent,
     ReviewComponent
   ],

@@ -10,11 +10,11 @@
   <div class="f-cart-main">
   <!--商品列表-->
     <ul id="f-cart-th" class="clear">
-      <li id="f-ct-inp">
+      <!--<li id="f-ct-inp">
         <input type="checkbox" name="all" checked="checked">
-      </li>
-      <li id="f-ct-all">全选</li>
-      <li id="f-ct-name">商品信息</li>
+      </li>-->
+      <!--<li id="f-ct-all">全选</li>-->
+      <li id="f-ct-name" style=" width: 355px;">商品信息</li>
       <li id="f-ct-gg">规格（单品/套餐）</li>
       <li id="f-ct-price">单价（元）</li>
       <li id="f-ct-number">数量</li>
@@ -55,7 +55,7 @@
           </div>
           <!--操作-->
           <div class="f-delete pull-left">
-            <p class="f-cartlist-delete">删除</p>
+            <p class="f-cartlist-delete" (click)="$remove_addr()">删除</p>
           </div>
         </div>
       </li>
@@ -173,7 +173,7 @@
           <div class="f-cart-buy pull-right">
             <span>
               已选择
-              <em>3件</em>
+              <em>{{cars.goodsCount}}件</em>
                商品  |  订单金额
             </span>
             <span class="f-all-order">￥207.70</span>
@@ -183,4 +183,5 @@
       </li>
     </ul>
   </div>
+
 </div>

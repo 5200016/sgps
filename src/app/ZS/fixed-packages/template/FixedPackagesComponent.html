@@ -6,9 +6,7 @@
       <h5 class="pull-left">种类</h5>
       <div class="f-select pull-left f-clearfix">
         <div class="pull-left left">
-          <a href="#" class="active">
-            <span class="f-all line">全部</span>
-          </a>
+            <span class="f-all line active">全部</span>
         </div>
         <div class="pull-left right">
           <a href="#"><span class="line" *ngFor="let classifys of data">{{classifys.classifyName}}</span></a>
@@ -20,9 +18,7 @@
       <h5 class="pull-left">规格</h5>
       <div class="f-select pull-left f-clearfix">
         <div class="pull-left left">
-          <a href="#" class="active">
-            <span class="f-all line">全部</span>
-          </a>
+            <span class="f-all line active">全部</span>
         </div>
         <div class="pull-left right">
           <a href="#"><span class="line" *ngFor="let sizes of size" >{{sizes.classifyName}}</span></a>
@@ -34,13 +30,22 @@
       <h5 class="pull-left">排序</h5>
       <div class="f-select pull-left f-clearfix">
         <div class="pull-left left">
-          <a href="#" class="active">
-            <span class="f-all line">默认</span>
-          </a>
+            <span class="f-all line active">默认</span>
         </div>
         <div class="pull-left right">
           <a href="#"><span class="line">价格从低到高</span></a>
           <a href="#"><span class="line">价格从高到低</span></a>
+        </div>
+      </div>
+    </div>
+    <!--特价-->
+    <div class="oc f-clearfix pull-left f-li">
+      <h5 class="pull-left">特价</h5>
+      <div class="f-select pull-left f-clearfix">
+        <div class="pull-left left">
+          <a href="#" class="active">
+            <span class="f-all line">全部</span>
+          </a>
         </div>
       </div>
     </div>
@@ -59,7 +64,7 @@
             <div class="f-info">
               <div class="f-name">{{fruits.goodsName}}</div>
               <span class="f-unit">￥{{fruits.goodsPrice}}/斤</span>
-              <div class="f-shopping"></div>
+              <div class="f-shopping" (click)="$confirm_add_goods()"></div>
             </div>
 
           </div>
@@ -159,5 +164,6 @@
     </div>
 
   </div>
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" ></ele-confirm>
 </div>
 

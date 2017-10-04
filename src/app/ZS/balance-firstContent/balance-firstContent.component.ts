@@ -11,6 +11,11 @@ import { Http, Response } from '@angular/http';
   providers: []
 })
 export class BalanceFirstContentComponent {
+
+  s_confirm_flag: boolean = false;
+  s_confirm_content: string =  '';
+  s_addAdress_flag: boolean = false;
+
   id: string;
   userId: string;
   goodsId: number;
@@ -31,5 +36,11 @@ export class BalanceFirstContentComponent {
       console.log(this.cars.shoppingCars);
     });
   }
+
+  $remove_addr() {
+    this.s_confirm_content =  '您确定要删除该条收货地址？';
+    this.s_confirm_flag = true;
+  };
+
 
 }
