@@ -160,3 +160,6 @@ img {
   height: 34px;
   background: url(../../../../assets/specialOffer/coll.png);
 }
+a{
+  cursor: pointer;
+}

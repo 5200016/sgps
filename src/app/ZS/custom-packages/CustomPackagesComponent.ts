@@ -10,24 +10,54 @@ import 'rxjs/add/operator/map';
   templateUrl: './template/CustomPackagesComponent.html',
   styleUrls: ['./css/CustomPackagesComponent.css']
 })
+
 export class CustomPackagesComponent implements OnInit{
-  fruitClassifys :Object;
+  fruitClassifys: Object;
   url: string;
+  allUrl: string;
+  selectedData: any = "";   //初始化
   fruitDetails: any;
-  s_confirm_addflag: boolean = false;
-  s_confirm_content: string =  '';
-  s_confirm_subTitle: string = '';
+  /*s_confirm_addflag: boolean = false;*/
+ /* s_confirm_content: string =  '';*/
+/*  s_confirm_subTitle: string = '';*/
 
   constructor(private http:Http){
   }
+
   $classifyFruit(id:any){
-    this.url= 'http://www.mobilebooks.cn/api/t-classifies/' + id;
+    this.url =  'http://www.mobilebooks.cn/api/t-classifies/' + id;
     this.http.get(this.url).subscribe((res:Response) =>{
-        this.fruitDetails= res.json();
-        console.log(this.fruitDetails)
+        this.fruitDetails = res.json();
+        console.log(this.fruitDetails);
       }
     );
+  }
 
+  $allFruits(){
+    this.allUrl = 'http://www.mobilebooks.cn/api/t-classifies/1';
+    this.http.get(this.allUrl).subscribe((res:Response) => {
+        this.fruitDetails = res.json();
+        console.log(this.fruitDetails);
+    }
+    );
+  }
+
+  /*$deleteEle3(){
+    let parent = document.getElementsByClassName("z-custom-bottom-one-small-div");
+    let child = document.getElementsByClassName("custom-already");
+    parent.removeChild(child);
+  }
+*/
+  $custom_add_goods(goodsName: any,id: any){
+      this.selectedData += `<div class="z-custom-small-selected" style="width: 100%;height: 50px;border-bottom: 1px solid #ECECEC;">
+                                <label style="float: left;font-size: 18px;margin-top: 10px; ">${ goodsName }</label>
+                                <img (click)="$deleteEle3(id)" style="float: right;width: 34px;margin-top: 6px;" src="../../../assets/fruit/jianhao.png">
+                               </div>`;
+        document.getElementById("z-side-aa").innerHTML = this.selectedData;
+  /*  this.s_confirm_subTitle = '确定选择吗？';
+    this.s_confirm_addflag = true;*/
+  }
+  $deleteEle3(id){
   }
   ngOnInit(){//初始化
     //品类
@@ -35,20 +65,14 @@ export class CustomPackagesComponent implements OnInit{
         this.fruitClassifys = res.json();
       }
     );
-    this.url= 'http://www.mobilebooks.cn/api/t-classifies/' + 2;
-    this.http.get(this.url).subscribe((res:Response) =>{
-        this.fruitDetails= res.json();
+
+    this.allUrl = 'http://www.mobilebooks.cn/api/t-classifies/1';
+    this.http.get(this.allUrl).subscribe((res:Response) => {
+        this.fruitDetails = res.json();
         console.log(this.fruitDetails);
       }
     );
   }
-
-  $confirm_add_goods () {
-    this.s_confirm_subTitle = '确定加入购物车吗？';
-    /*this.s_confirm_content = '购物车中共<span class="tip">1</span>件商品 | 商品小计<span class="tip">￥19.90</span>';*/
-    this.s_confirm_addflag = true;
-  };
-
 
 }
 
