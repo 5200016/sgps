@@ -67,6 +67,5 @@ declare var $: any;
 })
 
 export class AppModule {
-
 }
 
