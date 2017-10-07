@@ -83,7 +83,6 @@ export class HomepageComponent implements OnInit {
   this.goodsUrl = "http://www.mobilebooks.cn/api/t-shopping-cars";
   this.s_confirm_addflag = true;
   };
-<<<<<<< HEAD
 
 /*  delGroup(id:string){
     this.delUrl = '';
@@ -93,9 +92,5 @@ export class HomepageComponent implements OnInit {
       }
     );
   }*/
-
-
-=======
->>>>>>> 1a4a24b361f80c90d5b9701484201e7b1e354b6e
 }
 
