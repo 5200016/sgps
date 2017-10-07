@@ -42,13 +42,13 @@
   <!-- 鲜果展示部分10个 -->
   <div class="fruit-middle-one-bottom">
     <div class="fruit-middle-one-bottom-right-one" *ngFor="let freshFruit of freshFruits">
-      <a [routerLink]="['/index/product-details',freshFruit.id]" class="fruit-middle-one-bottom-right-one-div">
+      <a [routerLink]="['/index/product-details',freshFruit.goods.id]" class="fruit-middle-one-bottom-right-one-div">
         <img class="fruit-middle-one-bottom-right-one-img" src="{{freshFruit.goods.goodsImage}}">
       </a>
       <div class="fruit-middle-one-bottom-right-one-div-home">
         <label class="fruit-middle-one-bottom-right-one-div-first">{{freshFruit.goods.goodsName}}</label>
         <label class="fruit-middle-one-bottom-right-one-div-second">{{freshFruit.goods.goodsPrice}}</label>
-        <img (click)="$confirm_add_goods()" class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
+        <img (click)="$confirm_add_goods(2,freshFruit.goods.id,1)" class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
       </div>
     </div>
   </div>
@@ -81,16 +81,21 @@
     <div class="fruit-middle-two-bottom-right">
       <div class="fruit-middle-two-bottom-right-one"></div>
       <div class="fruit-middle-two-bottom-right-two" *ngFor="let fruitPackage of fruitPackages">
-        <a [routerLink]="['/index/product-details',fruitPackage.id]" class="fruit-middle-one-bottom-right-two-div">
+        <a [routerLink]="['/index/product-details',fruitPackage.goods.id]" class="fruit-middle-one-bottom-right-two-div">
           <img class="fruit-middle-two-bottom-right-two-img" src="{{fruitPackage.goods.goodsImage}}">
         </a>
         <div class="fruit-middle-two-bottom-right-two-div">
           <label class="fruit-middle-two-bottom-right-two-la">{{fruitPackage.goods.goodsName}}</label>
           <label class="fruit-middle-two-bottom-right-two-lab">{{fruitPackage.goods.goodsPrice}}</label>
-          <img (click)="$confirm_add_goods()" class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
+          <img (click)="$confirm_add_goods(2,fruitPackage.goods.id,1)" class="fruit-middle-one-bottom-right-one-div-icon" src="../../../../assets/fruit/gouwuche.png">
         </div>
       </div>
     </div>
   </div>
+<<<<<<< HEAD
+  <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" [fruitObject]="s_confirm_addObject" [url]="goodsUrl"></ele-confirm></div>
+
+=======
   <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" ></ele-confirm>
 </div>
+>>>>>>> 1a4a24b361f80c90d5b9701484201e7b1e354b6e

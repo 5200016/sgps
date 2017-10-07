@@ -6,9 +6,9 @@
       <h5 class="pull-left">品类</h5>
       <div class="f-select pull-left f-clearfix">
         <div class="pull-left left">
-          <a href="#" class="active">
+         <!-- <a (click)="$allFruits()" class="active">
             <span class="f-all line">全部</span>
-          </a>
+          </a>-->
         </div>
         <div class="pull-left right">
           <a  *ngFor="let fruitClassify of fruitClassifys" (click)="$classifyFruit(fruitClassify.id)"><span class="line">{{fruitClassify.classifyName}}</span></a>
@@ -31,7 +31,7 @@
             <div class="f-info">
               <span class="f-name">{{fruitDetail.goodsName}}</span>
               <span class="f-unit">{{fruitDetail.goodsPrice}}</span>
-              <img (click)="$confirm_add_goods()" style="width: 32px;margin-top: -35px;float: right;margin-right: 10px;" src="../../../../assets/fruit/gouwuche.png">
+              <img (click)="$custom_add_goods(fruitDetail.goodsName,fruitDetail.id)" style="width: 32px;margin-top: -35px;float: right;margin-right: 10px;" src="../../../../assets/fruit/jiahao.png">
             </div>
 
           </div>
@@ -52,55 +52,44 @@
 <!-- 底部自定义详情部分 -->
 <div class="z-custom-bottom" style="width: 100%;height: 339px;float: left;border-top: 1px solid #ECECEC;">
   <div class="z-custom-bottom" style="width: 1280px;height: 100%;margin: 0 auto;">
-    <div class="z-custom-bottom-one" style="width: 30%;height: 100%;float: left;text-align: center;border: 1px solid #ECECEC;box-shadow: 0 0 3px #A5A5A5;">
-      <img style="width: 380px;margin-top: -20px;" src="../../../../assets/fruit/lanzi.gif">
-    </div>
-    <div class="z-custom-bottom-one" style="width: 35%;height: 100%;float: left;">
+   <!-- 最左边-->
+    <div class="z-custom-bottom-one-a" style="margin-left:25px;width: 30%;height: 100%;float: left;">
       <div class="z-custom-bottom-one-small"
-           style="width: 80%;margin: 0 auto;height: 100%;border-left: 1px solid #ECECEC;box-shadow: 0 0 3px #A5A5A5;border-right:1px solid #ECECEC;text-align: center">
+           style="width: 100%;margin: 0 auto;height: 100%;border-left: 1px solid #ECECEC;box-shadow: 0 0 3px #A5A5A5;border-right:1px solid #ECECEC;text-align: center">
         <label class="z-custom-bottom-one-small-lab" style="font-size: 20px;">选中的商品 ：</label>
-        <div class="z-custom-bottom-one-small-div" style="width: 100%;height: 302px;overflow: auto;text-align: left;">
-          <div style="width: 100%;height: 50px;border-bottom: 1px solid #ECECEC;">
-            <label style="float: left;font-size: 18px;margin-top: 10px; ">傻妹傻妹苹果</label>
-            <img style="float: right;width: 34px;margin-top: 6px;" src="../../../../assets/fruit/jianhao.png">
-          </div>
-          <div style="width: 100%;height: 50px;border-bottom: 1px solid #ECECEC;">
-            <label style="float: left;font-size: 18px;margin-top: 10px; ">傻妹傻妹苹果</label>
-            <img style="float: right;width: 34px;margin-top: 6px;" src="../../../../assets/fruit/jianhao.png">
-          </div>
-          <div style="width: 100%;height: 50px;border-bottom: 1px solid #ECECEC;">
-            <label style="float: left;font-size: 18px;margin-top: 10px; ">傻妹傻妹苹果</label>
-            <img style="float: right;width: 34px;margin-top: 6px;" src="../../../../assets/fruit/jianhao.png">
-          </div>
-          <div style="width: 100%;height: 50px;border-bottom: 1px solid #ECECEC;">
-            <label style="float: left;font-size: 18px;margin-top: 10px; ">傻妹傻妹苹果</label>
-            <img style="float: right;width: 34px;margin-top: 6px;" src="../../../../assets/fruit/jianhao.png">
-          </div>
-          <div style="width: 100%;height: 50px;border-bottom: 1px solid #ECECEC;">
-            <label style="float: left;font-size: 18px;margin-top: 10px; ">傻妹傻妹苹果</label>
-            <img style="float: right;width: 34px;margin-top: 6px;" src="../../../../assets/fruit/jianhao.png">
-          </div>
-          <div style="width: 100%;height: 50px;border-bottom: 1px solid #ECECEC;">
-            <label style="float: left;font-size: 18px;margin-top: 10px; ">傻妹傻妹苹果</label>
-            <img style="float: right;width: 34px;margin-top: 6px;" src="../../../../assets/fruit/jianhao.png">
-          </div>
+        <div id="z-side-aa" class="z-custom-bottom-one-small-div" style="width: 100%;height: 302px;overflow: auto;text-align: left;">
         </div>
       </div>
     </div>
-    <div class="z-custom-bottom-one" style="width: 35%;border: 1px solid #ECECEC;box-shadow: 0 0 3px #A5A5A5;height: 100%;float: left;">
-      <div style="text-align: center;">
+    <!--中间-->
+    <div class="z-custom-bottom-one-b" style="margin-left:40px;width: 30%;height: 100%;float: left;text-align: center;border: 1px solid #ECECEC;box-shadow: 0 0 3px #A5A5A5;">
+      <!--<img style="width: 380px;margin-top: -20px;" src="../../../../assets/fruit/lanzi.gif">-->
+      <div class="z-custom-bottom-one-b-message" style="text-align: center;">
         <label style="font-size: 20px;">爱心提示 ：</label>
       </div>
-      <div style="border: 1px solid white;width: 100%;height: 300px;text-align: left;">
-        <span style="font-size: 18px;float: left;display: block;height: 26px;">更多推荐 :</span>
+      <div class="z-custom-bottom-one-b-div" style="border: 1px solid white;width: 100%;height: 300px;text-align: left;">
+        <!--  <span style="font-size: 18px;float: left;display: block;height: 26px;">更多推荐 :</span>-->
         <div style="width: 100%;height: 270px;margin-top: 27px;overflow: auto;text-align: center;">
-          <div style="width: 100%;height: 90px;border-bottom: 1px solid #ECECEC;">
-            <img src="../../../../assets/fruit/fruit03.jpg" style="width: 88px;float: left">
-            <div style="width: 200px;height: 80px;float: left;text-align: left;margin-left: 10px;">
-                <span style="display: block;margin-top: 15px;">荷兰青啤梨</span>
-                <span style="display: block;">￥39.90/斤</span>
+
+        </div>
+      </div>
+    </div>
+
+    <!--最右边-->
+    <div class="z-custom-bottom-one-c" style="margin-left:40px;width: 30%;border: 1px solid #ECECEC;box-shadow: 0 0 3px #A5A5A5;height: 100%;float: left;">
+      <div class="z-custom-bottom-one-c-message" style="text-align: center;">
+        <label style="font-size: 20px;">更多推荐 ：</label>
+      </div>
+      <div class="z-custom-bottom-one-c-big-div" style="border: 1px solid white;width: 100%;height: 300px;text-align: left;">
+      <!--  <span style="font-size: 18px;float: left;display: block;height: 26px;">更多推荐 :</span>-->
+        <div class="z-custom-bottom-one-c-big-div-a" style="width: 100%;height: 270px;margin-top: 27px;overflow: auto;text-align: center;">
+          <div class="z-custom-bottom-one-c-small-div" style="width: 100%;height: 90px;border-bottom: 1px solid #ECECEC;">
+            <img class="z-custom-bottom-one-c-small-div-img" src="../../../../assets/fruit/fruit03.jpg" style="width: 88px;float: left">
+            <div class="z-custom-bottom-one-c-small-div-tuijian" style="width: 200px;height: 80px;float: left;text-align: left;margin-left: 10px;">
+                <span class="z-custom-bottom-one-c-small-div-span-a" style="display: block;margin-top: 15px;">荷兰青啤梨</span>
+                <span class="z-custom-bottom-one-c-small-div-span-b" style="display: block;">￥39.90/斤</span>
             </div>
-            <img style="width: 32px;margin-top: 26px;float: right;margin-right: 10px;" src="../../../../assets/fruit/jiahao.png">
+            <img class="z-custom-bottom-one-c-small-div-add" style="width: 32px;margin-top: 26px;float: right;margin-right: 10px;" src="../../../../assets/fruit/jiahao.png">
 
           </div>
           <div style="width: 100%;height: 90px;border-bottom: 1px solid #ECECEC;">
@@ -126,5 +115,3 @@
   <ele-confirm [subTitle]="s_confirm_subTitle" cancelText="取消" sureText="确定"  [(show)] = "s_confirm_addflag" [content]="s_confirm_content" ></ele-confirm>
 
 </div>
-
-
